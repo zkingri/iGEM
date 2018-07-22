@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation 1</title>
+</head>
+<body>
+<canvas id="root" width="600" height="400"></canvas>
+<script>
+    let start=undefined;
+    drawInit();
+    setTimeout(drawCombine,1000);
+    setTimeout(drawRotate,2000);
+
+    function drawInit(){
+        let canvas = document.getElementById('root');
+        if (!canvas.getContext) return;
+        let c = canvas.getContext("2d");
+
+        /*背景*/
+        c.fillStyle='#ffff80';
+        c.fillRect(0,0,600,600);
+
+        /*液晶*/
+        c.save();
+        c.translate(30,20);
+        let i,j;
+        c.fillStyle='rgb(0,128,255)';
+        for(i=0;i<10;++i)
+            for(j=0;j<10;++j)
+                c.fillRect(i*60-10,j*40+3,20,6);
+        c.restore();
+
+        c.save();
+        c.translate(300,200);
+        /*抗原*/
+        c.save();
+        c.translate(-30,0);
+        c.beginPath();
+        c.arc(0,0,70,-Math.PI/2,-Math.PI*3/2,true);
+        c.fillStyle='rgb(255,0,0)';
+        c.fill();
+        c.closePath();
+        c.font="14px sans";
+        c.fillStyle='white';
+        c.fillText('antigen',-60,0);
+        c.restore();
+        /*抗体*/
+        c.save();
+        c.translate(30,0);
+        c.beginPath();
+        c.arc(0,0,70,-Math.PI/2,-Math.PI*3/2,false);
+        c.fillStyle='rgb(255,128,0)';
+        c.fill();
+        c.closePath();
+        c.font="14px sans";
+        c.fillStyle='white';
+        c.fillText('antibody',5,0);
+        c.restore();
+        c.restore();
+    }
+
+    function drawCombine() {
+        if (typeof(start) === "undefined")
+            start = Date.now();
+        /*仅在初始时对start赋值*/
+
+        const time = 1000;
+        let canvas = document.getElementById('root');
+        if (!canvas.getContext) return;
+        let c = canvas.getContext("2d");
+        let raf = requestAnimationFrame(drawCombine);
+
+        if (Date.now() - start <= time) {
+            c.save();
+            c.clearRect(0, 0, 600, 400);
+            c.fillStyle = '#ffff80';
+            c.fillRect(0, 0, 600, 600);
+
+            c.save();
+            c.translate(30,20);
+            let i,j;
+            c.fillStyle='rgb(0,128,255)';
+            for(i=0;i<10;++i)
+                for(j=0;j<10;++j)
+                    c.fillRect(i*60-10,j*40+3,20,6);
+            c.restore();
+
+            c.translate(300,200);
+            /*抗原*/
+            c.save();
+            c.translate(-30*(1-(Date.now()-start)/time),0);
+            c.beginPath();
+            c.arc(0,0,70,-Math.PI/2,-Math.PI*3/2,true);
+            c.fillStyle='rgb(255,0,0)';
+            c.fill();
+            c.closePath();
+            c.font="14px sans";
+            c.fillStyle='white';
+            c.fillText('antigen',-60,0);
+            c.restore();
+            /*抗体*/
+            c.save();
+            c.translate(30*(1-(Date.now()-start)/time),0);
+            c.beginPath();
+            c.arc(0,0,70,-Math.PI/2,-Math.PI*3/2,false);
+            c.fillStyle='rgb(255,128,0)';
+            c.fill();
+            c.closePath();
+            c.font="14px sans";
+            c.fillStyle='white';
+            c.fillText('antibody',5,0);
+            c.restore();
+            c.restore();
+        }
+        else {
+            cancelAnimationFrame(raf);
+            start = undefined;
+        }
+    }
+
+    function drawRotate() {
+        if (typeof(start) === "undefined")
+            start = Date.now();
+        /*仅在初始时对start赋值*/
+
+        const time=1000;
+        const degree=90;
+        /*在1000ms内顺时针旋转90度*/
+
+        let canvas = document.getElementById('root');
+        if (!canvas.getContext) return;
+        let c = canvas.getContext("2d");
+        let raf=requestAnimationFrame(drawRotate);
+
+        if(Date.now()-start<=time)
+        {
+            c.save();
+            c.clearRect(0,0,600,400);
+            c.fillStyle='#ffff80';
+            c.fillRect(0,0,600,600);
+
+            let i,j;
+            c.fillStyle='rgb(0,128,255)';
+            for(i=0;i<10;++i)
+                for(j=0;j<10;++j) {
+                    c.save();
+                    c.translate(30+i*60,20+j*40);
+                    c.rotate((Date.now()-start)/time*degree/180*Math.PI);
+                    c.fillRect(-10,3, 20, 6);
+                    c.restore();
+                }
+            c.restore();
+
+            c.save();
+            c.translate(300,200);
+            /*抗原*/
+            c.beginPath();
+            c.arc(0,0,70,-Math.PI/2,-Math.PI*3/2,true);
+            c.fillStyle='rgb(255,0,0)';
+            c.fill();
+            c.closePath();
+            c.font="14px sans";
+            c.fillStyle='white';
+            c.fillText('antigen',-60,0);
+            /*抗体*/
+            c.beginPath();
+            c.arc(0,0,70,-Math.PI/2,-Math.PI*3/2,false);
+            c.fillStyle='rgb(255,128,0)';
+            c.fill();
+            c.closePath();
+            c.font="14px sans";
+            c.fillStyle='white';
+            c.fillText('antibody',5,0);
+            c.restore();
+        }
+        else {
+            cancelAnimationFrame(raf);
+            start = undefined;
+        }
+    }
+</script>
+</body>
+</html>
