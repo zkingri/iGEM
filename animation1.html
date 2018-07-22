@@ -10,7 +10,7 @@
     let start=undefined;
     drawInit();
     setTimeout(drawCombine,1000);
-    setTimeout(drawRotate,2000);
+    setTimeout(drawRotate,2200);
 
     function drawInit(){
         let canvas = document.getElementById('root');
@@ -61,6 +61,7 @@
     }
 
     function drawCombine() {
+        console.log('combine');
         if (typeof(start) === "undefined")
             start = Date.now();
         /*仅在初始时对start赋值*/
@@ -120,6 +121,7 @@
     }
 
     function drawRotate() {
+        console.log('rotate');
         if (typeof(start) === "undefined")
             start = Date.now();
         /*仅在初始时对start赋值*/
