@@ -1,0 +1,83 @@
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+ul.menu{
+    height: 2em;
+    background-color: powderblue;
+    width: max-content;
+    padding:0;
+}
+
+ul.menu > li {
+    list-style: none;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 2em;
+    text-align: center;
+}
+
+ul.menu > li:hover{
+    color:inherit;
+}
+
+ul.menu > li > ul.subMenu {
+    padding: 0;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+}
+
+ul.menu > li:hover > ul.subMenu {
+    animation-name: fadeInDown;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(.19, 1, .22, 1);
+    animation-delay: 0s;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column;
+}
+
+ul.menu > li > ul.subMenu > li {
+    display: block;
+    position: relative;
+    background-color: #f7f7f7;
+    padding: 5px 20px;
+}
+
+ul.menu > li > ul.subMenu > li:before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 33px rgba(9, 16, 43, .15);
+    z-index: -1;
+}
+
+ul.menu > li:after {
+    transition: all .8s cubic-bezier(.19, 1, .22, 1);
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    position:relative;
+    bottom:3px;
+    background: #41cd52;
+    z-index: 1;
+}
+ul.menu > li:hover:after {
+    width: 100%;
+}

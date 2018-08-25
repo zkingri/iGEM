@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Comfortaa;
+    src: url("../fonts/Comfortaa-Regular.ttf");
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url("../fonts/Comfortaa-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: DidactGothic;
+    src: url("../fonts/DidactGothic-Regular.ttf");
+}
+
+@font-face {
+    font-family: GFSNeohellenic;
+    src: url("../fonts/GFSNeohellenic.ttf");
+}
+
+@font-face {
+    font-family: GFSNeohellenic;
+    src: url("../fonts/GFSNeohellenicBold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: GFSNeohellenic;
+    src: url("../fonts/GFSNeohellenicItalic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: GFSNeohellenic;
+    src: url("../fonts/GFSNeohellenicBoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Lato;
+    src:url("../fonts/LatoLatin-Regular.woff");
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+body{
+    background-color: #f7f7f7;
+    color:#424242;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.7em;
+}
+
+sup, sub {
+    font-size: 75%;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    bottom: 1ex;
+}
+
+sub {
+    top: .5ex;
+}
+.c {
+    font-family: Comfortaa,sans-serif;
+}
+.cb{
+    font-family: Comfortaa,sans-serif;
+    font-weight: bold;
+}
+.d{
+    font-family: DidactGothic,sans-serif;
+}
+.g{
+    font-family: GFSNeohellenic,sans-serif;
+}
+.gb{
+    font-family: GFSNeohellenic,sans-serif;
+    font-weight: bold;
+}
+.gi{
+    font-family: GFSNeohellenic,sans-serif;
+    font-style: italic;
+}
+.gbi{
+    font-family: GFSNeohellenic,sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.l{
+    font-family: Lato,sans-serif;
+}
