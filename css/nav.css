@@ -46,6 +46,7 @@ ul.menu > li:hover > ul.subMenu {
     display: -ms-flexbox;
     display: flex;
     flex-flow: column;
+    margin:0;
 }
 
 ul.menu > li > ul.subMenu > li {
@@ -53,6 +54,7 @@ ul.menu > li > ul.subMenu > li {
     position: relative;
     background-color: #f7f7f7;
     padding: 5px 20px;
+    margin: 0;
 }
 
 ul.menu > li > ul.subMenu > li:before {

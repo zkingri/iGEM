@@ -1,46 +1,6 @@
 @font-face {
-    font-family: Comfortaa;
-    src: url("../fonts/Comfortaa-Regular.ttf");
-}
-
-@font-face {
-    font-family: Comfortaa;
-    src: url("../fonts/Comfortaa-Bold.ttf");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: DidactGothic;
-    src: url("../fonts/DidactGothic-Regular.ttf");
-}
-
-@font-face {
-    font-family: GFSNeohellenic;
-    src: url("../fonts/GFSNeohellenic.ttf");
-}
-
-@font-face {
-    font-family: GFSNeohellenic;
-    src: url("../fonts/GFSNeohellenicBold.ttf");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: GFSNeohellenic;
-    src: url("../fonts/GFSNeohellenicItalic.ttf");
-    font-style: italic;
-}
-
-@font-face {
-    font-family: GFSNeohellenic;
-    src: url("../fonts/GFSNeohellenicBoldItalic.ttf");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
     font-family: Lato;
-    src:url("../fonts/LatoLatin-Regular.woff");
+    src:url("http://2018.igem.org/wiki/images/0/0b/T--DLUT_China_B--LatoLatin-Regular.woff");
 }
 
 a {
@@ -49,12 +9,25 @@ a {
 }
 
 a:visited {
+    text-decoration: none;
     color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+}
+a:-webkit-any-link{
+    text-decoration: none;
 }
 
 body{
     background-color: #f7f7f7;
     color:#424242;
+}
+
+#HQ_page p,h1,h2,h3,h4,h5,h6{
+    font-family: Lato, sans-serif;
+    font-size: medium;
 }
 
 p{
@@ -77,33 +50,11 @@ sup {
 sub {
     top: .5ex;
 }
-.c {
-    font-family: Comfortaa,sans-serif;
-}
-.cb{
-    font-family: Comfortaa,sans-serif;
-    font-weight: bold;
-}
-.d{
-    font-family: DidactGothic,sans-serif;
-}
-.g{
-    font-family: GFSNeohellenic,sans-serif;
-}
-.gb{
-    font-family: GFSNeohellenic,sans-serif;
-    font-weight: bold;
-}
-.gi{
-    font-family: GFSNeohellenic,sans-serif;
-    font-style: italic;
-}
-.gbi{
-    font-family: GFSNeohellenic,sans-serif;
-    font-style: italic;
-    font-weight: bold;
-}
 
-.l{
-    font-family: Lato,sans-serif;
+#top_title{
+    display:none;
+}
+#content{
+    margin: 0;
+    width:auto;
 }
