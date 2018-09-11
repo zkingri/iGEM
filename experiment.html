@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2018 iGEM_DLUT_B</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bubbles.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/bubbles.js"></script>
+    <script src="js/typed.js"></script>
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/bubbles.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/typed.js&action=raw&ctype=text/javascript"></script>-->
+</head>
+<body>
+<div id="dlutb">
+    <div id="moduleHeader">
+        <div id="nav"></div>
+        <br>
+        <div class="moduleTitle">Module Name</div>
+        <div class="subModule">
+            <span>Sub Module Name</span>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="title">Slide Show</h2>
+        <div id="box">
+            <div id="box_img">
+                <ul></ul>
+            </div>
+            <div id="word">
+                <ul></ul>
+            </div>
+            <div id="controller">
+                <div id="backward"><i class="fas fa-angle-left"></i></div>
+                <div id="forward"><i class="fas fa-angle-right"></i></div>
+            </div>
+            <script>
+                let data = [
+                    {
+                        "src": "http://2018.igem.org/wiki/images/2/29/T--DLUT_China_B--logo.png",
+                        "title": "DLUT China B Logo",
+                        "description": "DLUT China B Logo",
+                        "link": "#"
+                    },
+                    {
+                        "src": "http://2018.igem.org/wiki/images/9/96/T--DLUT_China_B--laboratory.jpg",
+                        "title": "Laboratory",
+                        "description": "Laboratory.",
+                        "link": "#"
+                    },
+                    {
+                        "src": "http://2018.igem.org/wiki/images/b/b6/T--DLUT_China_B--Clean_Bench.jpg",
+                        "title": "Clean Bench",
+                        "description": "Clean Bench.",
+                        "link": "#"
+                    }
+                ];
+                $(document).ready(slideshow(data));
+            </script>
+        </div>
+        <br>
+    </div>
+
+    <div id="fixed1"></div>
+
+    <div>
+        <h2 class="title">Chart</h2>
+        <p class="mainText"><a href="http://www.chartjs.org/samples/latest/">http://www.chartjs.org/samples/latest/</a></p>
+    </div>
+
+    <div id="fixed2"></div>
+
+    <div>
+        <h2 class="title">To Be Completed</h2>
+        <p class="mainText">There is nothing here at the moment.</p>
+    </div>
+
+    <div id="footer">
+        <div id="address">
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p>No.2 Linggong Road, Ganjingzi District, Dalian City, Liaoning Province, P.R.C., 116024</p>
+        </div>
+        <div id="follow">
+            <h3>Follow Us</h3>
+            <div id="platformName">
+                <p><i class="fab fa-weixin"></i> WeChat</p>
+                <p></p>
+                <p><i class="fab fa-weibo"></i> Weibo</p>
+            </div>
+            <div id="qrCode">
+                <div><img src="img/wechat.png" width="100"></div><!--http://2018.igem.org/wiki/images/c/c6/T--DLUT_China_B--wechat.png-->
+                <div></div>
+                <div><img src="img/weibo.png" width="100"></div><!--http://2018.igem.org/wiki/images/6/6b/T--DLUT_China_B--weibo.png-->
+            </div>
+        </div>
+    </div>
+
+    <div id="back" class="btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <script src="js/script.js"></script>
+</div>
+</body>
+</html>

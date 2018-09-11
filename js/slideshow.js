@@ -1,30 +1,10 @@
-$(document).ready(function () {
+function slideshow(data) {
     let interval = 3000;
-    let slideshow = [
-        {
-            "src": "http://2018.igem.org/wiki/images/2/29/T--DLUT_China_B--logo.png",
-            "title": "DLUT China B Logo",
-            "description": "DLUT China B Logo",
-            "link": "#"
-        },
-        {
-            "src": "http://2018.igem.org/wiki/images/9/96/T--DLUT_China_B--laboratory.jpg",
-            "title": "Laboratory",
-            "description": "Laboratory.",
-            "link": "#"
-        },
-        {
-            "src": "http://2018.igem.org/wiki/images/b/b6/T--DLUT_China_B--Clean_Bench.jpg",
-            "title": "Clean Bench",
-            "description": "Clean Bench.",
-            "link": "#"
-        }
-    ];
-    let length = slideshow.length;
+    let length = data.length;
     for (let i = 0; i < length; i++) {
         // $('#box_tab').append('<a href="javascript:(void)">' + (i+1) + '</a>');
-        $('#box_img ul').append('<li><a href="' + slideshow[i].link + '"><img src="' + slideshow[i].src + '"></a>');
-        $('#word ul').append("<li><h4>" + slideshow[i].title + "</h4><p>" + slideshow[i].description + "</p></li>");
+        $('#box_img ul').append('<li><a href="' + data[i].link + '"><img src="' + data[i].src + '"></a>');
+        $('#word ul').append("<li><h4>" + data[i].title + "</h4><p>" + data[i].description + "</p></li>");
     }
     let active = 0;
 
@@ -69,4 +49,4 @@ $(document).ready(function () {
     }, function () {
         si = setInterval(move, interval, true);
     });
-});
+}
