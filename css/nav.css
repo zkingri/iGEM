@@ -1,17 +1,22 @@
 @keyframes fadeInDown {
     0% {
         opacity: 0;
+        -moz-opacity: 0;
         transform: translate3d(0, -30px, 0);
+        -moz-transform: translate3d(0,-30px,0);
     }
     100% {
         opacity: 1;
+        -moz-opacity: 1;
         transform: none;
+        -moz-transform: none;
     }
 }
 
 ul.menu {
     height: 2em;
     width: max-content;
+    width:-moz-max-content;
     padding: 0;
 }
 
@@ -38,13 +43,20 @@ ul.menu > li > ul.subMenu {
 }
 
 ul.menu > li:hover > ul.subMenu {
-    animation-name: fadeInDown;
-    animation-fill-mode: forwards;
-    animation-duration: .4s;
-    animation-timing-function: cubic-bezier(.19, 1, .22, 1);
+    -webkit-animation: fadeInDown forwards .4s cubic-bezier(.19, 1, .22, 1);
+    -o-animation: fadeInDown forwards .4s cubic-bezier(.19, 1, .22, 1);
+    -moz-animation: fadeInDown forwards .4s cubic-bezier(.19,1,.22,1);
+    animation: fadeInDown forwards .4s cubic-bezier(.19, 1, .22, 1);
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
     animation-delay: 0s;
-    display: -ms-flexbox;
-    display: flex;
+    display:flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    display:-o-flex;
+    display:-webkit-flex;
+    -webkit-flex-flow: column;
     flex-flow: column;
     margin: 0;
 }
@@ -74,6 +86,10 @@ ul.menu > li > ul.subMenu > li:before {
 }
 
 ul.menu > li:after {
+    -webkit-transition: all .8s cubic-bezier(.19, 1, .22, 1);
+    -moz-transition: all .8s cubic-bezier(.19, 1, .22, 1);
+    -ms-transition: all .8s cubic-bezier(.19, 1, .22, 1);
+    -o-transition: all .8s cubic-bezier(.19, 1, .22, 1);
     transition: all .8s cubic-bezier(.19, 1, .22, 1);
     content: "";
     display: block;

@@ -2,31 +2,35 @@
 let nav = document.getElementById("nav");
 let navData = [
     {
+        "menu": "Home",
+        "link": "http://2018.igem.org/Team:DLUT_China_B"
+    },
+    {
         "menu": "Project",
         "subMenu": [
             {
                 "name": "Description",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Description"
             },
             {
                 "name": "Design",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Design"
             },
             {
                 "name": "Demonstrate",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Demonstrate"
             },
             {
                 "name": "Experiments",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Experiments"
             },
             {
                 "name": "InterLab",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/InterLab"
             },
             {
                 "name": "Notebook",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Notebook"
             }
         ]
     },
@@ -35,15 +39,15 @@ let navData = [
         "subMenu": [
             {
                 "name": "Parts Overview",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/PartsOverview"
             },
             {
                 "name": "Basic Parts",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/BasicParts"
             },
             {
                 "name": "Composite Parts",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/CompositeParts"
             }
         ]
     },
@@ -52,15 +56,15 @@ let navData = [
         "subMenu": [
             {
                 "name": "Condition Optimization",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/ConditionOptimization"
             },
             {
                 "name": "Standard Curve",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/StandardCurve"
             },
             {
                 "name": "Result",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Result"
             }
         ]
     },
@@ -69,15 +73,15 @@ let navData = [
         "subMenu": [
             {
                 "name": "Applied Design",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/AppliedDesign"
             },
             {
                 "name": "Hardware",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Hardware"
             },
             {
                 "name": "Software",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Software"
             }
         ]
     },
@@ -86,11 +90,11 @@ let navData = [
         "subMenu": [
             {
                 "name": "Human Practice",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/HumanPractice"
             },
             {
                 "name": "Education",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Education"
             }
         ]
     },
@@ -99,22 +103,28 @@ let navData = [
         "subMenu": [
             {
                 "name": "Team Members",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/TeamMembers"
             },
             {
                 "name": "Attributions",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Attributions"
             },
             {
                 "name": "Collaboration",
-                "link": "#"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Collaboration"
             }
         ]
     }
 ];
 let ul = document.createElement("ul");
 ul.setAttribute("class", "menu");
-for (let i = 0; i < navData.length; ++i) {
+let home=document.createElement("li");
+let homeName=document.createElement("a");
+homeName.innerText=navData[0]["menu"];
+homeName.setAttribute("href",navData[0]["link"]);
+home.appendChild(homeName);
+ul.appendChild(home);
+for (let i = 1; i < navData.length; ++i) {
     let menu = document.createElement("li");
     let menuName = document.createElement("a");
     menuName.innerText = navData[i]["menu"];
