@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>2018 iGEM_DLUT_B</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
@@ -20,8 +22,15 @@
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/bubbles.js&action=raw&ctype=text/javascript"></script>-->
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/typed.js&action=raw&ctype=text/javascript"></script>-->
+    
+    <script>
+        function check() {
+            if((navigator.userAgent.indexOf("compatible") > -1 && navigator.userAgent.indexOf("MSIE") > -1) || (navigator.userAgent.indexOf('Trident') > -1 && navigator.userAgent.indexOf("rv:11.0") > -1))
+                alert('We are sorry but Microsoft Internet Explorer may be too old to display this page correctly.\nIt is recommended to update your browser, otherwise your experience may suffer.');
+        }
+    </script>
 </head>
-<body>
+<body onload="check()">
 <div id="dlutb">
     <div id="header">
         <div id="nav"></div>

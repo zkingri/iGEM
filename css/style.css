@@ -95,8 +95,9 @@ body {
 #dlutb h2.title {
     font-size: 20px;
     border-bottom: 2px #41cd52 solid;
-    width: fit-content;
-    width: -moz-fit-content;
+    /*width: fit-content;
+    width: -moz-fit-content;*/
+    display: table;
     margin: 60px auto 50px auto;
     padding-bottom: 10px;
     text-align: center;
@@ -107,15 +108,17 @@ body {
     font-family: Lato, sans-serif;
     border-bottom: 2px #41cd52 solid;
     margin: 200px auto 0 auto;
-    width: fit-content;
-    width: -moz-fit-content;
+    /*width: fit-content;
+    width: -moz-fit-content;*/
+    display: table;
 }
 
 #dlutb .moduleTitle {
     font-size: 20px;
     border-bottom: 2px #41cd52 solid;
-    width: fit-content;
-    width: -moz-fit-content;
+    /*width: fit-content;
+    width: -moz-fit-content;*/
+    display: table;
     margin: 170px auto 50px auto;
     padding-bottom: 10px;
     text-align: center;
@@ -127,8 +130,9 @@ body {
     border: white 2px solid;
     padding: 15px;
     height: fit-content;
-    width: fit-content;
-    width: -moz-fit-content;
+    /*width: fit-content;
+    width: -moz-fit-content;*/
+    display: table;
     margin: 50px auto 0 auto;
     min-height: 60px;
     font-size: 40px;
@@ -142,10 +146,10 @@ body {
 
 #dlutb #start {
     font-size: 20px;
-    width: fit-content;
-    width: -moz-fit-content;
+    /*width: fit-content;
+    width: -moz-fit-content;*/
+    display: table;
     margin: 50px auto 0 auto;
-    display: block;
     cursor: pointer;
 }
 
@@ -153,8 +157,9 @@ body {
     clear: both;
     border: white 2px solid;
     padding: 15px;
-    width: fit-content;
-    width: -moz-fit-content;
+    /*width: fit-content;
+    width: -moz-fit-content;*/
+    display: table;
     margin: 50px auto 0 auto;
     height: 50px;
     font-size: 30px;
