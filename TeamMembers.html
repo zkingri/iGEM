@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2018 iGEM_DLUT_B</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <!--<link rel="stylesheet" href="css/slideshow.css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/typed.js"></script>
+    <!--<script src="js/slideshow.js"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/typed.js&action=raw&ctype=text/javascript"></script>-->
+
+</head>
+<body>
+<div id="dlutb">
+    <div id="header">
+        <div id="nav"></div>
+        <br>
+        <div class="title" id="teamName">DLUT China B</div>
+        <div id="typed">
+            <span id="slogan"></span>
+        </div>
+        <br>
+        <a class="btn" id="start">Get Started</a>
+    </div>
+
+    <div id="footer">
+        <div id="address">
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p>No.2 Linggong Road, Ganjingzi District, Dalian City, Liaoning Province, P.R.C., 116024</p>
+            <h3><i class="fas fa-at"></i> E-mail</h3>
+            <p>igem_dlut_china_B#163.com (Please replace # with @)</p>
+        </div>
+        <div id="follow">
+            <h3>Follow Us</h3>
+            <div id="platformName">
+                <p><i class="fab fa-weixin"></i> WeChat</p>
+                <p></p>
+                <p><i class="fab fa-weibo"></i> Weibo</p>
+            </div>
+            <div id="qrCode">
+                <div><img src="img/wechat.png" width="100"></div>
+                <!--<div><img src="http://2018.igem.org/wiki/images/c/c6/T&#45;&#45;DLUT_China_B&#45;&#45;wechat.png" width="100"></div>-->
+                <div></div>
+                <div><img src="img/weibo.png" width="100"></div>
+                <!--<div><img src="http://2018.igem.org/wiki/images/6/6b/T&#45;&#45;DLUT_China_B&#45;&#45;weibo.png" width="100"></div>-->
+            </div>
+        </div>
+    </div>
+
+    <div id="back" class="btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <script src="js/script.js"></script>
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>-->
+    <script>
+        /*口号*/
+        let options = {
+            strings: ["We can put our slogan here", "Or other things to be said"],
+            typeSpeed: 100,
+            loop: true,
+            startDelay: 100,
+            backSpeed: 50
+        };
+        let typed = new Typed("#slogan", options);
+
+        /*开始*/
+        $('#start').click(function () {
+            $('html,body').animate({scrollTop: $('#meetUs').offset().top - 60}, 500);
+        });
+    </script>
+</div>
+</body>
+</html>

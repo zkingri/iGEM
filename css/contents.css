@@ -1,0 +1,35 @@
+#contents{
+    padding: 70px 10px 10px 10px;
+    margin:10px 10px 10px 30px;
+    border-left: #41cd52 2px solid;
+    position: sticky;
+    top:0;
+}
+#contents ul{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+#contents li{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#contents li.active, #contents li:hover{
+    color:#41cd52;
+}
+#contents:before{
+    content: '';
+    background: url("../img/character.png") no-repeat;
+    background-size: 80px 80px;
+    height: 80px;
+    width:80px;
+    position: absolute;
+    top:0;
+    left:-40px;
+}

@@ -73,8 +73,6 @@ body {
 }
 
 #dlutb #header {
-    background: url("http://2018.igem.org/wiki/images/3/35/T--DLUT_China_B--kidney.png") no-repeat fixed center center;
-    background-size: cover;
     width: 100%;
     height: 100vh;
     min-height: 600px;
@@ -88,15 +86,14 @@ body {
 }
 
 #dlutb #nav {
-    float: right;
-    margin-top: 38px;
+    position: absolute;
+    right:0;
+    top:38px;
 }
 
 #dlutb h2.title {
     font-size: 20px;
     border-bottom: 2px #41cd52 solid;
-    /*width: fit-content;
-    width: -moz-fit-content;*/
     display: table;
     margin: 60px auto 50px auto;
     padding-bottom: 10px;
@@ -108,16 +105,12 @@ body {
     font-family: Lato, sans-serif;
     border-bottom: 2px #41cd52 solid;
     margin: 200px auto 0 auto;
-    /*width: fit-content;
-    width: -moz-fit-content;*/
     display: table;
 }
 
 #dlutb .moduleTitle {
     font-size: 20px;
     border-bottom: 2px #41cd52 solid;
-    /*width: fit-content;
-    width: -moz-fit-content;*/
     display: table;
     margin: 170px auto 50px auto;
     padding-bottom: 10px;
@@ -130,8 +123,6 @@ body {
     border: white 2px solid;
     padding: 15px;
     height: fit-content;
-    /*width: fit-content;
-    width: -moz-fit-content;*/
     display: table;
     margin: 50px auto 0 auto;
     min-height: 60px;
@@ -146,8 +137,6 @@ body {
 
 #dlutb #start {
     font-size: 20px;
-    /*width: fit-content;
-    width: -moz-fit-content;*/
     display: table;
     margin: 50px auto 0 auto;
     cursor: pointer;
@@ -157,8 +146,6 @@ body {
     clear: both;
     border: white 2px solid;
     padding: 15px;
-    /*width: fit-content;
-    width: -moz-fit-content;*/
     display: table;
     margin: 50px auto 0 auto;
     height: 50px;
@@ -171,32 +158,12 @@ body {
 }
 
 #dlutb .mainText {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: justify;
-    margin-bottom: 60px;
 }
 
 #dlutb .mainText p {
     font-size: 18px;
     text-indent: 2em;
-}
-
-#dlutb #fixed1, #fixed3 {
-    background: url("http://2018.igem.org/wiki/images/2/29/T--DLUT_China_B--logo.png") no-repeat fixed center center;
-    background-size: cover;
-    width: 100%;
-    height: 150px;
-    filter: brightness(40%);
-}
-
-#dlutb #fixed2, #fixed4 {
-    background: url("http://2018.igem.org/wiki/images/3/35/T--DLUT_China_B--kidney.png") no-repeat fixed center center;
-    background-size: cover;
-    width: 100%;
-    height: 150px;
-    filter: brightness(40%);
 }
 
 #dlutb #footer {
@@ -257,8 +224,28 @@ body {
     right: 70px;
     text-align: center;
     font-size: 28px;
+    cursor:pointer;
 }
 
 #dlutb #chatBubbles {
     margin: 0 auto 60px auto;
+}
+
+#dlutb #circle{
+    display: table;
+    margin:25px auto 25px auto;
+}
+
+#dlutb .tr{
+    display: table-row;
+}
+#dlutb .td{
+    display: table-cell;
+}
+
+#dlutb #contents{
+    float:left;
+}
+#dlutb #article{
+    display: table-cell;
 }

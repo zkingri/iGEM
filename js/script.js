@@ -146,11 +146,14 @@ document.getElementById('nav').appendChild(ul);
 
 /*至顶按钮*/
 $('#back').click(function () {
-    $('html').animate( {scrollTop: 0}, 500);
+    if(navigator.userAgent.indexOf("Edge")>-1)
+        $('body').animate( {scrollTop: 0}, 500);
+    else
+        $('html').animate( {scrollTop: 0}, 500);
 });
-document.onscroll=function () {
-    if($('html').scrollTop()>600)
+function topToggle() {
+    if($(window).scrollTop()>600)
         document.getElementById("back").style.display="block";
     else
         document.getElementById("back").style.display="none";
-};
+}
