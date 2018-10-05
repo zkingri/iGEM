@@ -65,36 +65,97 @@
                 <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>
 
 
-
-
                     <head>
                         <meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
                         <title>2018 iGEM_DLUT_B</title>
                         <link rel="stylesheet" href="css/style.css">
                         <link rel="stylesheet" href="css/nav.css">
                         <link rel="stylesheet" href="css/bubbles.css">
-                        <link rel="stylesheet" href="css/slideshow.css">
                         <link rel="stylesheet" href="css/fontawesome.css">
+                        <link rel="stylesheet" href="css/slideshow.css">
+                        <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">-->
+                        <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">-->
+                        <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
+                        <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
+                        <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">-->
+
                         <script src="js/jquery.js"></script>
-                        <script src="js/slideshow.js"></script>
                         <script src="js/bubbles.js"></script>
-                        <script src="js/typed.js"></script>
+                        <script src="js/slideshow.js"></script>
+                        <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
+                        <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/bubbles.js&action=raw&ctype=text/javascript"></script>-->
+
+                        <script>
+                            function check() {
+                                let a = false, b = false;
+                                if (navigator.userAgent.indexOf("compatible") > -1)
+                                    if (navigator.userAgent.indexOf("MSIE") > -1)
+                                        a = true;
+                                if (navigator.userAgent.indexOf('Trident') > -1)
+                                    if (navigator.userAgent.indexOf("rv:11.0") > -1)
+                                        b = true;
+                                if (a || b)
+                                    alert('We are sorry but Microsoft Internet Explorer may be too old to display this page correctly.\nIt is recommended to update your browser, otherwise your experience may suffer.');
+                            }
+                        </script>
                     </head>
-                    <body>
+                    <body onload="check()">
                     <div id="dlutb">
                         <div id="header">
+                            <div id="box">
+                                <div id="box_img">
+                                    <ul></ul>
+                                </div>
+                                <div id="word">
+                                    <ul></ul>
+                                </div>
+                                <div id="controller">
+                                    <div id="backward"><i class="fas fa-angle-left"></i></div>
+                                    <div id="forward"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                                <script>
+                                    let data = [
+                                        {
+                                            "src": "http://2018.igem.org/wiki/images/2/29/T--DLUT_China_B--logo.png",
+                                            "title": "DLUT China B Logo",
+                                            "description": "DLUT China B Logo",
+                                        },
+                                        {
+                                            "src": "http://2018.igem.org/wiki/images/9/96/T--DLUT_China_B--laboratory.jpg",
+                                            "title": "Laboratory",
+                                            "description": "Laboratory.",
+                                        },
+                                        {
+                                            "src": "http://2018.igem.org/wiki/images/b/b6/T--DLUT_China_B--Clean_Bench.jpg",
+                                            "title": "Clean Bench",
+                                            "description": "Clean Bench.",
+                                        }
+                                    ];
+                                    $(document).ready(slideshow(data));
+                                </script>
+                            </div>
+
                             <div id="nav"></div>
                             <br>
-                            <div class="title" id="teamName">DLUT China B</div>
-                            <div id="typed">
-                                <span id="slogan"></span>
+                        </div>
+
+                        <h2 class="title">Circles</h2>
+                        <div id="circle">
+                            <div class="tr">
+                                <div class="td">a</div>
+                                <div class="td">b</div>
+                                <div class="td">c</div>
                             </div>
-                            <br>
-                            <a class="btn" id="start">Get Started</a>
+                            <div class="tr">
+                                <div class="td">d</div>
+                                <div class="td">e</div>
+                                <div class="td">f</div>
+                            </div>
                         </div>
 
                         <div>
-                            <h2 class="title" id="meetUs">Chat Bubbles</h2>
+                            <h2 class="title">Chat Bubbles</h2>
                             <div id="chatBubbles"></div>
                         </div>
 
@@ -102,6 +163,8 @@
                             <div id="address">
                                 <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
                     <p>No.2 Linggong Road, Ganjingzi District, Dalian City, Liaoning Province, P.R.C., 116024</p>
+                    <h3><i class="fas fa-at"></i> E-mail</h3>
+                    <p>igem_dlut_china_B#163.com (Please replace # with @)</p>
                 </div>
                 <div id="follow">
                     <h3>Follow Us</h3>
@@ -111,11 +174,11 @@
                         <p><i class="fab fa-weibo"></i> Weibo</p>
                     </div>
                     <div id="qrCode">
-                        <div><img src="img/wechat.png" width="100"></div>
-                        <!--http://2018.igem.org/wiki/images/c/c6/T--DLUT_China_B--wechat.png-->
+                        <!--<div><img src="img/wechat.png" width="100"></div>-->
+                        <div><img src="http://2018.igem.org/wiki/images/c/c6/T--DLUT_China_B--wechat.png" width="100"></div>
                         <div></div>
-                        <div><img src="img/weibo.png" width="100"></div>
-                        <!--http://2018.igem.org/wiki/images/6/6b/T--DLUT_China_B--weibo.png-->
+                        <!--<div><img src="img/weibo.png" width="100"></div>-->
+                        <div><img src="http://2018.igem.org/wiki/images/6/6b/T--DLUT_China_B--weibo.png" width="100"></div>
                     </div>
                 </div>
             </div>
@@ -127,21 +190,6 @@
             <script src="js/script.js"></script>
             <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>-->
             <script>
-                /*口号*/
-                let options = {
-                    strings: ["We can put our slogan here", "Or other things to be said"],
-                    typeSpeed: 100,
-                    loop: true,
-                    startDelay: 100,
-                    backSpeed: 50
-                };
-                let typed = new Typed("#slogan", options);
-
-                /*开始*/
-                $('#start').click(function () {
-                    $('html,body').animate({scrollTop: $('#meetUs').offset().top - 60}, 500);
-                });
-
                 /*对话气泡*/
                 let conversation = {
                     ice: {
@@ -204,8 +252,8 @@
                             }
                         ]
                     },
-                    "listen1":{
-                        says:[
+                    "listen1": {
+                        says: [
                             "Here is iGEM_DLUT_China_B.",
                             "I'll introduce our project for you.",
                             "We know that there are many diseases in the world that can be predicted and cured,",
@@ -213,85 +261,85 @@
                             "For example, diabetic and hypertensive patients may suffer from chronic kidney disease.",
                             "Older people over the age of 60 may be suffering from Alzheimer's disease."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"And then?",
-                                answer:"listen2"
+                                question: "And then?",
+                                answer: "listen2"
                             }
                         ]
                     },
-                    "listen2":{
-                        says:["The second step is to have regular medical examination to intervene disease early to prevent its progression."],
-                        reply:[
+                    "listen2": {
+                        says: ["The second step is to have regular medical examination to intervene disease early to prevent its progression."],
+                        reply: [
                             {
-                                question:"Yes, it makes sense, but how can that be achieved?",
-                                answer:"listen3"
+                                question: "Yes, it makes sense, but how can that be achieved?",
+                                answer: "listen3"
                             }
                         ]
                     },
-                    "listen3":{
-                        says:[
+                    "listen3": {
+                        says: [
                             "You may not believe that",
                             "we can know our physical condition through the urine.",
                             "Urine is regard as \"gold mine\" for the identification of disease markers."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"Is that true?",
-                                answer:"listen4"
+                                question: "Is that true?",
+                                answer: "listen4"
                             }
                         ]
                     },
-                    "listen4":{
-                        says:[
+                    "listen4": {
+                        says: [
                             "Absolutely, it's like a mirror that reflects one's health.",
                             "In the early stages of the disease, we can use the protein markers in the urine to screen the disease."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"But how do you test it?",
-                                answer:"listen5"
+                                question: "But how do you test it?",
+                                answer: "listen5"
                             }
                         ]
                     },
-                    "listen5":{
-                        says:["To be honest, we use a very tiny nano-antibody, and liquid crystal sensor to show reaction results for us."],
-                        reply:[
+                    "listen5": {
+                        says: ["To be honest, we use a very tiny nano-antibody, and liquid crystal sensor to show reaction results for us."],
+                        reply: [
                             {
-                                question:"Liquid crystal? How?",
-                                answer:"listen6"
+                                question: "Liquid crystal? How?",
+                                answer: "listen6"
                             }
                         ]
                     },
-                    "listen6":{
-                        says:[
+                    "listen6": {
+                        says: [
                             "In our daily life, we usually see the LCD screen is black. However, it becomes colorful as it works.",
                             "Our products are similar in principle.",
                             "The combination of the nano-antibody and the protein in the urine resulted in a slight change in the liquid crystalline substrate.",
                             "Changes in the brightness and color of the liquid crystal film,",
                             "so the liquid crystal brightness can directly reflect the antigen concentration."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"That means we can see directly how we are physically in the state.",
-                                answer:"listen7"
+                                question: "That means we can see directly how we are physically in the state.",
+                                answer: "listen7"
                             }
                         ]
                     },
-                    "listen7":{
-                        says:[
+                    "listen7": {
+                        says: [
                             "Yes, but we need to do a more accurate quantitative analysis.",
                             "We take photos, and then grayscale processing and analysis of the average gray value.",
                             "This can correspond to the concentration-gray curve that we have reached, thus we can accurately obtain the content of the marker."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"You did something amazing!",
-                                answer:"last"
+                                question: "You did something amazing!",
+                                answer: "last"
                             }
                         ]
                     },
-                    "last":{
+                    "last": {
                         says: [
                             "Summary has ended, the following is for each plate specific content.",
                             "Please select the destination you want to go to."
@@ -327,100 +375,100 @@
                             }
                         ]
                     },
-                    "projectIntroduction":{
-                        says:[
+                    "projectIntroduction": {
+                        says: [
                             "Wow, you chose the project as the destination.",
                             "Are you ready to go?"
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"Yes.",
-                                answer:"goProjectIntroduction"
+                                question: "Yes.",
+                                answer: "goProjectIntroduction"
                             },
                             {
-                                question:"Wait a second.",
-                                answer:"dest"
+                                question: "Wait a second.",
+                                answer: "dest"
                             }
                         ]
                     },
-                    "parts":{
-                        says:[
+                    "parts": {
+                        says: [
                             "Didi, you are about to reach parts.",
                             "You will learn about the main components we use such as messages."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"OK, let`s go.",
-                                answer:"goParts"
+                                question: "OK, let`s go.",
+                                answer: "goParts"
                             },
                             {
-                                question:"Wait a second.",
-                                answer:"dest"
+                                question: "Wait a second.",
+                                answer: "dest"
                             }
                         ]
                     },
-                    "model":{
-                        says:[
+                    "model": {
+                        says: [
                             "Do you make the model as your destination?",
                             "Project optimization and results will be exhibited here."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"Go and visit.",
-                                answer:"goModel"
+                                question: "Go and visit.",
+                                answer: "goModel"
                             },
                             {
-                                question:"I want a different destination.",
-                                answer:"dest"
+                                question: "I want a different destination.",
+                                answer: "dest"
                             }
                         ]
                     },
-                    "awards":{
-                        says:[
+                    "awards": {
+                        says: [
                             "You will find the treasures of application designing at the awards office."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"Departure. (￣) ￣) ↗",
-                                answer:"goAwards"
+                                question: "Departure. (￣) ￣) ↗",
+                                answer: "goAwards"
                             },
                             {
-                                question:"I`m not interested in treasure hunt.",
-                                answer:"dest"
+                                question: "I`m not interested in treasure hunt.",
+                                answer: "dest"
                             }
                         ]
                     },
-                    "humanPractice":{
-                        says:[
+                    "humanPractice": {
+                        says: [
                             "We are committed to education and publicity.",
                             "Choose \"Learn more\" and will arrive at the human practice.",
                             "Choose \"Back\", you can re-select the destination."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"Learn more",
-                                answer:"goHumanPractice"
+                                question: "Learn more",
+                                answer: "goHumanPractice"
                             },
                             {
-                                question:"Back",
-                                answer:"dest"
+                                question: "Back",
+                                answer: "dest"
                             }
                         ]
                     },
-                    "teamworkAndCooperation":{
-                        says:[
+                    "teamworkAndCooperation": {
+                        says: [
                             "Choose \"Learn more\" will lead to team introduction,",
                             "and learn about team members and collaboration between teams.",
                             "Choose \"Back\", you can re-select the destination."
                         ],
-                        reply:[
+                        reply: [
                             {
-                                question:"Learn more",
-                                answer:"goTeamworkAndCooperation"
+                                question: "Learn more",
+                                answer: "goTeamworkAndCooperation"
                             },
                             {
-                                question:"Back",
-                                answer:"dest"
+                                question: "Back",
+                                answer: "dest"
                             }
                         ]
                     },
@@ -437,50 +485,58 @@
                         ]
                     }
                 };
-                goProjectIntroduction=function(){
-                    window.location.href="Description.html";
+                goProjectIntroduction = function () {
+                    window.location.href = "http://2018.igem.org/Team:DLUT_China_B/Description";
                 };
-                goParts=function(){
-                    window.location.href="PartsOverview.html";
+                goParts = function () {
+                    window.location.href = "http://2018.igem.org/Team:DLUT_China_B/PartsOverview";
                 };
-                goModel=function(){
-                    window.location.href="ConditionOptimization.html";
+                goModel = function () {
+                    window.location.href = "http://2018.igem.org/Team:DLUT_China_B/ConditionOptimization";
                 };
-                goAwards=function(){
-                    window.location.href="AppliedDesign.html";
+                goAwards = function () {
+                    window.location.href = "http://2018.igem.org/Team:DLUT_China_B/AppliedDesign";
                 };
-                goHumanPractice=function(){
+                goHumanPractice = function () {
                     console.log('aa');
-                    window.location.href="HumanPractice.html";
+                    window.location.href = "http://2018.igem.org/Team:DLUT_China_B/HumanPractice";
                 };
-                goTeamworkAndCooperation=function(){
-                    window.location.href="TeamMembers.html";
+                goTeamworkAndCooperation = function () {
+                    window.location.href = "http://2018.igem.org/Team:DLUT_China_B/TeamMembers";
                 };
 
-                function isShow($el){
-                    let winH = $(window).height(),/*获取窗口高度*/
-                        scrollH = $(window).scrollTop(),/*获取窗口滚动高度*/
-                        top = $el.offsetTop;/*获取元素距离窗口顶部偏移高度*/
+                function isShow($el) {
+                    let winH = $(window).height(), /*获取窗口高度*/
+                        scrollH = $(window).scrollTop(), /*获取窗口滚动高度*/
+                        top = $el.offsetTop;
+                    /*获取元素距离窗口顶部偏移高度*/
                     return top < scrollH + winH;
                 }
+
                 let chatWindow;
-                document.onscroll=function () {
-                    if(document.getElementById("chat")==null&&isShow(document.getElementById("chatBubbles")))
-                    {
-                        let chat=document.createElement("div");
-                        chat.setAttribute("id","chat");
-                        document.getElementById("chatBubbles").appendChild(chat);
-                        chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow");
-                        chatWindow.talk(conversation);
-                    }
-                };
+
+                function lazyLoad() {
+                    if (document.getElementById("chat") == null)
+                        if (isShow(document.getElementById("chatBubbles"))) {
+                            let chat = document.createElement("div");
+                            chat.setAttribute("id", "chat");
+                            document.getElementById("chatBubbles").appendChild(chat);
+                            chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow");
+                            chatWindow.talk(conversation);
+                        }
+                }
+
+                $(document).ready(function () {
+                    $(window).scroll(function () {
+                        topToggle();
+                    });
+                    $(window).scroll(function () {
+                        lazyLoad();
+                    });
+                })
             </script>
         </div>
 </body>
-
-
-
-
 
 </p>
 <!--

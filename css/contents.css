@@ -19,17 +19,19 @@
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 #contents li.active, #contents li:hover{
     color:#41cd52;
 }
 #contents:before{
     content: '';
-    background: url("../img/character.png") no-repeat;
+    /*background: url("../img/character.png") no-repeat;*/
+    background: url("http://2018.igem.org/wiki/images/f/f2/T--DLUT_China_B--character.png") no-repeat;
     background-size: 80px 80px;
     height: 80px;
     width:80px;
     position: absolute;
-    top:0;
+    top:12px;
     left:-40px;
 }

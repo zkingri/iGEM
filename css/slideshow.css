@@ -7,6 +7,7 @@
 #word ul li h4, #word p, #box_img ul {
     margin: 0;
     padding: 0;
+    line-height: normal;
 }
 
 #word ul li h4, #word ul li p{
@@ -31,6 +32,7 @@
 }
 
 #box_img ul li {
+    width:100vw;
     position: absolute;
     display: none;
     margin: 0;
