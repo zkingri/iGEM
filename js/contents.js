@@ -1,11 +1,12 @@
-let elem = $('h2.title,h3.title');
+//let elem = $('h2.title,h3.title');
+let elem = $('h2.title');
 let tree = document.createElement("ul");
 let node = undefined;
 for (let i = 0; i < elem.length; ++i) {
     node = document.createElement("li");
     node.innerHTML = elem[i].innerHTML;
-    if (elem[i].tagName.toUpperCase() === 'H3')
-        node.style.paddingLeft = "1em";
+    /*if (elem[i].tagName.toUpperCase() === 'H3')
+        node.style.paddingLeft = "1em";*/
     tree.appendChild(node);
     elem[i].setAttribute("id", "title" + i);
 }

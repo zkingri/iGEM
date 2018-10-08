@@ -1,6 +1,6 @@
 #contents{
-    padding: 70px 10px 10px 10px;
-    margin:10px 10px 10px 30px;
+    padding: 190px 10px 10px 10px;
+    margin:10px 10px 10px 10px;
     border-left: #41cd52 2px solid;
     position: sticky;
     top:0;
@@ -28,10 +28,10 @@
     content: '';
     /*background: url("../img/character.png") no-repeat;*/
     background: url("http://2018.igem.org/wiki/images/f/f2/T--DLUT_China_B--character.png") no-repeat;
-    background-size: 80px 80px;
-    height: 80px;
-    width:80px;
+    background-size: 200px 200px;
+    height: 200px;
+    width:200px;
     position: absolute;
     top:12px;
-    left:-40px;
+    /*left:-100px;*/
 }
