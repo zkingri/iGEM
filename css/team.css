@@ -1,0 +1,188 @@
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -moz-opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+        -moz-transform: translate3d(-30px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -moz-opacity: 1;
+        transform: none;
+        -moz-transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -moz-opacity: 0;
+        transform: translate3d(30px, 0, 0);
+        -moz-transform: translate3d(30px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -moz-opacity: 1;
+        transform: none;
+        -moz-transform: none;
+    }
+}
+
+#dlutb #header {
+    background: url("../img/Team/1.jpg") bottom center;
+    background-size: cover;
+    height: 100vh;
+}
+
+#dlutb #ourTeam {
+    color: white;
+    text-shadow: 2px 2px 1px rgb(91, 155, 213);
+    text-align: center;
+    font-size: 72px;
+}
+
+#dlutb #teamName {
+    margin-top: 100px;
+}
+
+#dlutb #meetUs #students,#dlutb #meetUs #professors{
+    margin: 50px auto;
+    max-width: calc(100vw - 200px);
+    position: relative;
+}
+
+#dlutb #meetUs .td {
+    position: relative;
+}
+
+#dlutb #meetUs #students,#dlutb #meetUs #professors{
+    display: table;
+}
+
+#dlutb #meetUs #students div.tr div.td:nth-child(1), #dlutb #meetUs #students div.tr div.td:nth-child(3) {
+    width: 30%;
+}
+
+#dlutb #meetUs #students div.tr div.td:nth-child(2) {
+    width: 40%;
+}
+
+#dlutb #meetUs #professors div.tr div.td{
+    width: 33%;
+}
+
+#dlutb #meetUs img {
+    max-width: 100%;
+}
+
+#dlutb #meetUs .intro {
+    padding:10px;
+    background: rgb(230, 230, 230);
+    color: black;
+    font-size: 18px;
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+#dlutb #meetUs #part1, #dlutb #meetUs #part3, #dlutb #meetUs #part8 {
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#dlutb #meetUs #part2, #dlutb #meetUs #part4 {
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+#dlutb #meetUs #part5,#dlutb #meetUs #part6,#dlutb #meetUs #part7 {
+    width: 20%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+}
+
+#dlutb #meetUs #part5{
+    left:20%;
+}
+
+#dlutb #meetUs #part6 {
+    left: 40%;
+}
+
+#dlutb #meetUs #part7 {
+    left: 60%;
+}
+
+#dlutb #meetUs #part2:hover div, #dlutb #meetUs #img2:hover div, #dlutb #meetUs #part4:hover div, #dlutb #meetUs #img5:hover div, #dlutb #meetUs #part7:hover div,#dlutb #meetUs #img9:hover div,#dlutb #meetUs #img11:hover div {
+    -webkit-animation: fadeInLeft forwards .4s cubic-bezier(.19, 1, .22, 1);
+    -o-animation: fadeInLeft forwards .4s cubic-bezier(.19, 1, .22, 1);
+    animation: fadeInLeft forwards .4s cubic-bezier(.19, 1, .22, 1);
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+    display: block;
+    position: absolute;
+    right: 0;
+}
+
+#dlutb #meetUs #part1:hover div, #dlutb #meetUs #img3:hover div, #dlutb #meetUs #part3:hover div, #dlutb #meetUs #img6:hover div, #dlutb #meetUs #part5:hover div, #dlutb #meetUs #part6:hover div, #dlutb #meetUs #part8:hover div,#dlutb #meetUs #img10:hover div,#dlutb #meetUs #img12:hover div {
+    -webkit-animation: fadeInRight forwards .4s cubic-bezier(.19, 1, .22, 1);
+    -o-animation: fadeInRight forwards .4s cubic-bezier(.19, 1, .22, 1);
+    animation: fadeInRight forwards .4s cubic-bezier(.19, 1, .22, 1);
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+    display: block;
+    position: absolute;
+}
+
+#dlutb #meetUs #img2:hover div,#dlutb #meetUs #img5:hover div, #dlutb #meetUs #part7:hover div,#dlutb #meetUs #img9:hover div,#dlutb #meetUs #img11:hover div{
+    width: calc(133% - 20px);
+}
+
+#dlutb #meetUs #part2:hover div,#dlutb #meetUs #part4:hover div{
+    width:calc(150% - 20px);
+}
+
+#dlutb #meetUs #part5:hover div {
+    left: -475%;
+    width: calc(375% - 20px);
+}
+
+#dlutb #meetUs #part6:hover div {
+    left: -575%;
+    width: calc(375% - 20px);
+}
+
+#dlutb #meetUs #part7:hover div {
+    left: 200%;
+    width: calc(375% - 20px);
+}
+
+#dlutb #meetUs #img3:hover div, #dlutb #meetUs #img6:hover div {
+    left: -133%;
+    width: calc(133% - 20px);
+}
+
+#dlutb #meetUs #part1:hover div, #dlutb #meetUs #part3:hover div, #dlutb #meetUs #part8:hover div {
+    left: -150%;
+    width: calc(150% - 20px);
+}
+#dlutb #meetUs #img10:hover div,#dlutb #meetUs #img12:hover div{
+    left:-100%;
+    width:calc(100% - 20px);
+}
