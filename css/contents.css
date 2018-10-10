@@ -1,7 +1,7 @@
 #contents{
     padding: 190px 10px 10px 10px;
     margin:10px 10px 10px 10px;
-    border-left: #41cd52 2px solid;
+    border-left: #f68925 2px solid;
     position: sticky;
     top:0;
 }
@@ -20,17 +20,18 @@
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 16px;
+    color:#7f5115;
 }
 #contents li.active, #contents li:hover{
-    color:#41cd52;
+    color:#f68925;
 }
 #contents:before{
     content: '';
-    /*background: url("../img/character.png") no-repeat;*/
     background: url("http://2018.igem.org/wiki/images/f/f2/T--DLUT_China_B--character.png") no-repeat;
     background-size: 200px 200px;
     height: 200px;
     width:200px;
     position: absolute;
     top:12px;
+    z-index: -1;
 }

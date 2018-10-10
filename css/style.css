@@ -30,7 +30,10 @@ body {
 #HQ_page p, h1, h2, h3, h4, h5, h6 {
     font-family: Lato, sans-serif;
 }
-
+#dlutb{
+    background-color: #fbf2e6;
+    /*background:linear-gradient(to left,#ee9e3f,#f6c954);*/
+}
 #dlutb p, #dlutb .mainText ol, #dlutb .mainText ul, #dlutb .mainText li {
     font-size: 18px;
     line-height: 1.7em;
@@ -83,15 +86,10 @@ body {
     height: 470px;
 }
 
-#dlutb #nav {
-    position: absolute;
-    right:0;
-    top:38px;
-}
-
 #dlutb h2.title {
     font-size: 20px;
-    border-bottom: 2px #41cd52 solid;
+    color:#f68925;
+    border-bottom: 2px #f3af42 solid;
     display: table;
     margin: 60px auto 50px auto;
     padding-bottom: 10px;
@@ -100,26 +98,50 @@ body {
 
 #dlutb h3.title {
     font-size: 18px;
-    border-bottom: 2px #41cd52 solid;
+    color:#f68925;
+    border-bottom: 2px #f3af42 solid;
     display: table;
 }
 
 #dlutb #teamName {
     font-size: 20px;
     font-family: Lato, sans-serif;
-    border-bottom: 2px #41cd52 solid;
+    color:#f68925;
+    border-bottom: 2px #f3af42 solid;
     margin: 200px auto 0 auto;
     display: table;
 }
 
 #dlutb .moduleTitle {
     font-size: 20px;
-    border-bottom: 2px #41cd52 solid;
+    color:#f68925;
+    border-bottom: 2px #f3af42 solid;
     display: table;
     margin: 170px auto 50px auto;
     padding-bottom: 10px;
     text-align: center;
     font-family: Lato, sans-serif;
+}
+#dlutb #box{
+    position: relative;
+}
+#dlutb #box img{
+    width:100%;
+}
+#dlutb #box #word{
+    position: absolute;
+    top:35%;
+    left:20%;
+}
+#dlutb #box #word h2{
+    margin:15px auto;
+    font-size: 36px;
+    color:white;
+}
+#dlutb #box #word p{
+    margin:15px auto;
+    font-size: 24px;
+    color:white;
 }
 
 #dlutb #typed {
@@ -139,21 +161,15 @@ body {
     line-height: 60px;
 }
 
-#dlutb #start {
-    font-size: 20px;
-    display: table;
-    margin: 50px auto 0 auto;
-    cursor: pointer;
-}
-
 #dlutb .subModule {
     clear: both;
-    border: white 2px solid;
+    /*border: white 2px solid;*/
     padding: 15px;
     display: table;
     margin: 50px auto 0 auto;
     height: 50px;
     font-size: 30px;
+    color:#f68925;
 }
 
 #dlutb .subModule > span {
@@ -163,6 +179,7 @@ body {
 
 #dlutb .mainText {
     text-align: justify;
+    color:#f68925;
 }
 
 #dlutb .mainText p {
@@ -172,9 +189,14 @@ body {
 #dlutb .mainText .img{
     text-align: center;
     max-width: 100%;
+    border:none;
 }
 #dlutb .mainText .img img{
     max-width: 100%;
+}
+#dlutb .mainText .img td{
+    padding:2px;
+    border:none;
 }
 #dlutb .mainText p.footnote  {
     font-size: 12px;
@@ -184,7 +206,7 @@ body {
 }
 
 #dlutb #footer {
-    background-color: hsl(197, 55%, 20%);
+    background-color: #ee9349;
     padding: 30px 60px 30px 60px;
 }
 
@@ -196,7 +218,7 @@ body {
 }
 
 #dlutb #footer p {
-    color: hsl(197, 55%, 70%);
+    color: #7f5115;
     font-size: 16px;
 }
 
@@ -215,8 +237,8 @@ body {
 
 #dlutb .btn {
     border-radius: 30px;
-    border: 2px #41cd52 solid;
-    color: #41cd52;
+    border: 2px #f3af42 solid;
+    color: #f3af42;
     font-size: 18px;
     line-height: 30px;
     transition: 0.5s;
@@ -224,12 +246,12 @@ body {
 }
 
 #dlutb .btn:visited {
-    color: #41cd52;
+    color: #f3af42;
 }
 
 #dlutb .btn:hover {
     color: white;
-    background-color: #41cd52;
+    background-color: #f3af42;
 }
 
 #dlutb #back {
@@ -242,6 +264,7 @@ body {
     text-align: center;
     font-size: 28px;
     cursor:pointer;
+    border:none;
 }
 
 #dlutb #chatBubbles {
@@ -251,6 +274,32 @@ body {
 #dlutb #circle{
     display: table;
     margin:25px auto 25px auto;
+}
+#dlutb #circle div.td{
+    position: relative;
+}
+#dlutb #circle div.td div{
+    -webkit-transition: ease-in-out 0.3s;
+    -moz-transition: ease-in-out 0.3s;
+    -ms-transition: ease-in-out 0.3s;
+    -o-transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.3s;
+    opacity: 0;
+    /*background: url("../img/Circle.png") no-repeat;*/
+    background: url("http://2018.igem.org/wiki/images/6/6c/T--DLUT_China_B--Circle.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    text-align: center;
+    line-height: 234px;
+    font-size: 30px;
+    color:white;
+}
+#dlutb #circle div.td:hover div{
+    opacity: 1;
 }
 
 #dlutb .tr{

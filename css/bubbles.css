@@ -205,13 +205,15 @@
 }
 /* setup container styles */
 .bubble-container {
-	background: #dcdde0;
+	/*background: #dcdde0;*/
+    background: #f8e8d3;
 	height: 520px;
 	max-width: 750px;
 	width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
 	position: relative;
+    border-radius: 20px;
 }
 .bubble-wrap {
 	position: absolute;
@@ -249,4 +251,37 @@
 	0% {}
 	50% { background-color:rgb(0,0,0); }
 	100% {}
+}
+.bubble.say{
+    position: relative;
+    left:40px;
+}
+.bubble.say:before{
+    content: '';
+    /*background:url("../img/character4.png") no-repeat;*/
+    background: url("http://2018.igem.org/wiki/images/2/23/T--DLUT_China_B--character4.png") no-repeat;
+    background-size: cover;
+    height:40px;
+    width:40px;
+    position: absolute;
+    left:-40px;
+    top:0;
+}
+.bubble.reply.say{
+    left: auto;
+    right: 25px;
+}
+.bubble.reply.say:before{
+    content: none;
+}
+.bubble.reply.say:after{
+    content: '';
+    /*background:url("../img/character3.png") no-repeat;*/
+    background: url("http://2018.igem.org/wiki/images/8/81/T--DLUT_China_B--character3.png") no-repeat;
+    background-size: cover;
+    height:40px;
+    width:40px;
+    position: absolute;
+    right:-43px;
+    top:3px;
 }
