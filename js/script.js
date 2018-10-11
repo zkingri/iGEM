@@ -60,7 +60,7 @@ let navData = [
         "subMenu": [
             {
                 "name": "Applied Design",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/AppliedDesign"
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Applied_Design"
             },
             {
                 "name": "Hardware",
@@ -73,11 +73,11 @@ let navData = [
         ]
     },
     {
-        "menu": "Human Practice",
+        "menu": "Human Practices",
         "subMenu": [
             {
-                "name": "Human Practice",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/HumanPractice"
+                "name": "Human Practices",
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Human_Practices"
             },
             {
                 "name": "Education",
@@ -97,8 +97,8 @@ let navData = [
                 "link": "http://2018.igem.org/Team:DLUT_China_B/Attributions"
             },
             {
-                "name": "Collaboration",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/Collaboration"
+                "name": "Collaborations",
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Collaborations"
             }
         ]
     }
