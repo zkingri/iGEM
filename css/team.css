@@ -104,7 +104,7 @@
     text-indent: 0;
 }
 
-#dlutb #meetUs #part1, #dlutb #meetUs #part3, #dlutb #meetUs #part8 {
+#dlutb #meetUs #part1, #dlutb #meetUs #part3, #dlutb #meetUs #part8,#dlutb #meetUs #part9 {
     width: 50%;
     height: 100%;
     z-index: 1;
@@ -113,7 +113,7 @@
     top: 0;
 }
 
-#dlutb #meetUs #part2, #dlutb #meetUs #part4 {
+#dlutb #meetUs #part2, #dlutb #meetUs #part4,#dlutb #meetUs #part10 {
     width: 50%;
     height: 100%;
     z-index: 1;
@@ -142,7 +142,7 @@
     left: 60%;
 }
 
-#dlutb #meetUs #part2:hover div, #dlutb #meetUs #img2:hover div, #dlutb #meetUs #part4:hover div, #dlutb #meetUs #img5:hover div, #dlutb #meetUs #part7:hover div, #dlutb #meetUs #img9:hover div, #dlutb #meetUs #img11:hover div {
+#dlutb #meetUs #part2:hover div, #dlutb #meetUs #img2:hover div, #dlutb #meetUs #part4:hover div, #dlutb #meetUs #img5:hover div, #dlutb #meetUs #part7:hover div, #dlutb #meetUs #img10:hover div, #dlutb #meetUs #img12:hover div,#dlutb #meetUs #part10:hover div {
     -webkit-animation: fadeInLeft forwards .4s cubic-bezier(.19, 1, .22, 1);
     -o-animation: fadeInLeft forwards .4s cubic-bezier(.19, 1, .22, 1);
     animation: fadeInLeft forwards .4s cubic-bezier(.19, 1, .22, 1);
@@ -155,7 +155,7 @@
     right: 0;
 }
 
-#dlutb #meetUs #part1:hover div, #dlutb #meetUs #img3:hover div, #dlutb #meetUs #part3:hover div, #dlutb #meetUs #img6:hover div, #dlutb #meetUs #part5:hover div, #dlutb #meetUs #part6:hover div, #dlutb #meetUs #part8:hover div, #dlutb #meetUs #img10:hover div, #dlutb #meetUs #img12:hover div {
+#dlutb #meetUs #part1:hover div, #dlutb #meetUs #img3:hover div, #dlutb #meetUs #part3:hover div, #dlutb #meetUs #img6:hover div, #dlutb #meetUs #part5:hover div, #dlutb #meetUs #part6:hover div, #dlutb #meetUs #part8:hover div, #dlutb #meetUs #img11:hover div, #dlutb #meetUs #img13:hover div,#dlutb #meetUs #part9:hover div {
     -webkit-animation: fadeInRight forwards .4s cubic-bezier(.19, 1, .22, 1);
     -o-animation: fadeInRight forwards .4s cubic-bezier(.19, 1, .22, 1);
     animation: fadeInRight forwards .4s cubic-bezier(.19, 1, .22, 1);
@@ -167,11 +167,11 @@
     position: absolute;
 }
 
-#dlutb #meetUs #img2:hover div, #dlutb #meetUs #img5:hover div, #dlutb #meetUs #part7:hover div, #dlutb #meetUs #img9:hover div, #dlutb #meetUs #img11:hover div {
+#dlutb #meetUs #img2:hover div, #dlutb #meetUs #img5:hover div, #dlutb #meetUs #part7:hover div, #dlutb #meetUs #img10:hover div, #dlutb #meetUs #img12:hover div {
     width: calc(133% - 20px);
 }
 
-#dlutb #meetUs #part2:hover div, #dlutb #meetUs #part4:hover div {
+#dlutb #meetUs #part2:hover div, #dlutb #meetUs #part4:hover div,#dlutb #meetUs #part10:hover div {
     width: calc(150% - 20px);
 }
 
@@ -195,12 +195,12 @@
     width: calc(133% - 20px);
 }
 
-#dlutb #meetUs #part1:hover div, #dlutb #meetUs #part3:hover div, #dlutb #meetUs #part8:hover div {
+#dlutb #meetUs #part1:hover div, #dlutb #meetUs #part3:hover div, #dlutb #meetUs #part8:hover div,#dlutb #meetUs #part9:hover div {
     left: -150%;
     width: calc(150% - 20px);
 }
 
-#dlutb #meetUs #img10:hover div, #dlutb #meetUs #img12:hover div {
+#dlutb #meetUs #img11:hover div, #dlutb #meetUs #img13:hover div {
     left: -100%;
     width: calc(100% - 20px);
 }

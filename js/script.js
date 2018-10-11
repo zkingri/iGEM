@@ -36,20 +36,7 @@ let navData = [
     },
     {
         "menu": "Parts",
-        "subMenu": [
-            {
-                "name": "Parts Overview",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/PartsOverview"
-            },
-            {
-                "name": "Basic Parts",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/BasicParts"
-            },
-            {
-                "name": "Composite Parts",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/CompositeParts"
-            }
-        ]
+        "link": "http://2018.igem.org/Team:DLUT_China_B/Parts"
     },
     {
         "menu": "Model",
@@ -118,28 +105,29 @@ let navData = [
 ];
 let ul = document.createElement("ul");
 ul.setAttribute("class", "menu");
-let home=document.createElement("li");
-let homeName=document.createElement("a");
-homeName.innerText=navData[0]["menu"];
-homeName.setAttribute("href",navData[0]["link"]);
-home.appendChild(homeName);
-ul.appendChild(home);
-for (let i = 1; i < navData.length; ++i) {
+for (let i = 0; i < navData.length; ++i) {
     let menu = document.createElement("li");
     let menuName = document.createElement("a");
     menuName.innerText = navData[i]["menu"];
-    let subMenu = document.createElement("ul");
-    subMenu.setAttribute("class", "subMenu");
-    for (let j = 0; j < navData[i]["subMenu"].length; ++j) {
-        let subMenuName = document.createElement("li");
-        let subMenuNameA = document.createElement("a");
-        subMenuNameA.innerText = navData[i]["subMenu"][j]["name"];
-        subMenuNameA.setAttribute("href", navData[i]["subMenu"][j]["link"]);
-        subMenuName.appendChild(subMenuNameA);
-        subMenu.appendChild(subMenuName);
+
+    if(navData[i].hasOwnProperty("subMenu")) {
+        let subMenu = document.createElement("ul");
+        subMenu.setAttribute("class", "subMenu");
+        for (let j = 0; j < navData[i]["subMenu"].length; ++j) {
+            let subMenuName = document.createElement("li");
+            let subMenuNameA = document.createElement("a");
+            subMenuNameA.innerText = navData[i]["subMenu"][j]["name"];
+            subMenuNameA.setAttribute("href", navData[i]["subMenu"][j]["link"]);
+            subMenuName.appendChild(subMenuNameA);
+            subMenu.appendChild(subMenuName);
+        }
+        menu.appendChild(menuName);
+        menu.appendChild(subMenu);
     }
-    menu.appendChild(menuName);
-    menu.appendChild(subMenu);
+    else {
+        menuName.setAttribute("href", navData[i]["link"]);
+        menu.appendChild(menuName);
+    }
     ul.appendChild(menu);
 }
 document.getElementById('nav').appendChild(ul);

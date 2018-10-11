@@ -21,10 +21,13 @@ a:hover {
 a:-webkit-any-link {
     text-decoration: none;
 }
-
+html{
+    width:100%;
+}
 body {
     font-family: Lato, sans-serif;
     margin: 0;
+    width: 100%;
 }
 
 #HQ_page p, h1, h2, h3, h4, h5, h6 {
@@ -39,6 +42,10 @@ body {
     line-height: 1.7em;
     margin-top: 0.5ex;
     margin-bottom: 0.5ex;
+}
+
+#dlutb .mainText li{
+    list-style: disc none;
 }
 
 #dlutb sup, #dlutb sub {

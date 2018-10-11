@@ -1,0 +1,22 @@
+#dlutb #article .mainText{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+#dlutb #article .mainText img{
+    display: table;
+    margin:5px auto;
+}
+#dlutb #article .mainText table{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: solid 2px #f68925;
+}
+#dlutb #article .mainText table *{
+    border: solid 1px #f68925;
+    padding: 5px;
+}
+#dlutb #article .mainText table thead{
+    text-align: center;
+}
