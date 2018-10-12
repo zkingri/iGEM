@@ -40,7 +40,8 @@ let navData = [
     },
     {
         "menu": "Model",
-        "subMenu": [
+        "link": "http://2018.igem.org/Team:DLUT_China_B/Model"
+        /*"subMenu": [
             {
                 "name": "Condition Optimization",
                 "link": "http://2018.igem.org/Team:DLUT_China_B/ConditionOptimization"
@@ -53,7 +54,7 @@ let navData = [
                 "name": "Result",
                 "link": "http://2018.igem.org/Team:DLUT_China_B/Result"
             }
-        ]
+        ]*/
     },
     {
         "menu": "Awards",
@@ -80,8 +81,8 @@ let navData = [
                 "link": "http://2018.igem.org/Team:DLUT_China_B/Human_Practices"
             },
             {
-                "name": "Education",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/Education"
+                "name": "Public Engagement",
+                "link": "http://2018.igem.org/Team:DLUT_China_B/Public_Engagement"
             }
         ]
     },
