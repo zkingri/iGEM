@@ -86,39 +86,65 @@ body {
     width: 100%;
 }
 
+#dlutb #team{
+    position: absolute;
+    left: 20px;
+    font-size: 18px;
+    line-height: 60px;
+    color:white;
+    font-weight: bold;
+}
+
 #dlutb #moduleHeader {
-    /*background: url("http://2018.igem.org/wiki/images/2/29/T--DLUT_China_B--logo.png") no-repeat fixed center center;*/
+    height: 530px;
+    margin-bottom: 50px;
+}
+#dlutb #moduleHeader #background{
     background-size: cover;
     width: 100%;
     height: 470px;
+    filter: brightness(80%);
+    -webkit-filter: brightness(80%);
 }
 #dlutb .awards{
-    background: url("../img/Background/Awards.jpg") no-repeat center center;
+    background: url("http://2018.igem.org/wiki/images/b/b3/T--DLUT_China_B--Background--Awards.jpg") no-repeat center center;
 }
 #dlutb .demonstrate{
-    background: url("../img/Background/Demonstrate.jpg") no-repeat top center;
+    background: url("http://2018.igem.org/wiki/images/3/35/T--DLUT_China_B--Background--Demonstrate.jpg") no-repeat top center;
 }
 #dlutb .description{
-    background: url("../img/Background/Description.jpg") no-repeat bottom center;
+    background: url("http://2018.igem.org/wiki/images/5/54/T--DLUT_China_B--Background--Description.jpg") no-repeat bottom center;
 }
 #dlutb .design{
-    background: url("../img/Background/Design.jpg") no-repeat center center;
+    background: url("http://2018.igem.org/wiki/images/b/b4/T--DLUT_China_B--Background--Design.jpg") no-repeat center center;
 }
-#dlutb .humanPractice{
-    background: url("../img/Background/HumanPractices.jpg") no-repeat center center;
+#dlutb .humanPractices{
+    background: url("http://2018.igem.org/wiki/images/5/5e/T--DLUT_China_B--Background--HumanPractices.jpg") no-repeat center center;
 }
 #dlutb .interLab{
-    background: url("../img/Background/InterLab.jpg") no-repeat center center;
+    background: url("http://2018.igem.org/wiki/images/4/4b/T--DLUT_China_B--Background--InterLab.jpg") no-repeat center center;
 }
 #dlutb .notebook{
-    background: url("../img/Background/Notebook.jpg") no-repeat center center;
+    background: url("http://2018.igem.org/wiki/images/f/f7/T--DLUT_China_B--Background--Notebook.jpg") no-repeat center center;
 }
 #dlutb .parts{
-    background: url("../img/Background/Parts.jpg") no-repeat center center;
+    background: url("http://2018.igem.org/wiki/images/c/c8/T--DLUT_China_B--Background--Parts.jpg") no-repeat center center;
+}
+#dlutb .moduleTitle{
+    font-size: 30px;
+    color:white;
+    border-bottom: 2px solid white;
+    margin:0 auto;
+    padding-bottom: 10px;
+    font-family: Lato, sans-serif;
+    display: table;
+    position: relative;
+    top:-259px;
 }
 
 #dlutb h2.title {
     font-size: 20px;
+    font-weight: bold;
     color:#f68925;
     border-bottom: 2px #f3af42 solid;
     display: table;
@@ -129,6 +155,7 @@ body {
 
 #dlutb h3.title {
     font-size: 18px;
+    font-weight: bold;
     color:#f68925;
     border-bottom: 2px #f3af42 solid;
     display: table;
@@ -143,36 +170,27 @@ body {
     display: table;
 }
 
-#dlutb .moduleTitle {
-    font-size: 20px;
-    color:#f68925;
-    border-bottom: 2px #f3af42 solid;
-    display: table;
-    margin: 170px auto 50px auto;
-    padding-bottom: 10px;
-    text-align: center;
-    font-family: Lato, sans-serif;
-}
 #dlutb #box{
     position: relative;
 }
 #dlutb #box img{
     width:100%;
 }
-#dlutb #box #word{
+#dlutb #box h2{
+    position: absolute;
+    top:10%;
+    left:63%;
+    margin:15px auto;
+    font-size: 36px;
+    color:#7f5115;
+}
+#dlutb #box p{
     position: absolute;
     top:27%;
     left:7%;
-}
-/*#dlutb #box #word h2{*/
-    /*margin:15px auto;*/
-    /*font-size: 36px;*/
-    /*color:white;*/
-/*}*/
-#dlutb #box #word p{
     width:45%;
     font-size: 22px;
-    color:white;
+    color:#7f5115;
     text-indent: 2em;
     overflow: paged-y;
 }
@@ -194,25 +212,9 @@ body {
     line-height: 60px;
 }
 
-#dlutb .subModule {
-    clear: both;
-    /*border: white 2px solid;*/
-    padding: 15px;
-    display: table;
-    margin: 50px auto 0 auto;
-    height: 50px;
-    font-size: 30px;
-    color:#f68925;
-}
-
-#dlutb .subModule > span {
-    text-align: center;
-    line-height: 50px;
-}
-
 #dlutb .mainText {
     text-align: justify;
-    color:#f68925;
+    color:#7f5115;
 }
 
 #dlutb .mainText p {
@@ -242,13 +244,14 @@ body {
     background: none;
 }
 #dlutb #article .mainText table *{
-    color: #f68925;
+    color: #7f5115;
     background: none;
 }
 
 #dlutb #footer {
     background-color: #ee9349;
     padding: 30px 60px 30px 60px;
+    margin-top: 50px;
 }
 
 #dlutb #footer h3 {
@@ -326,7 +329,6 @@ body {
     -o-transition: ease-in-out 0.3s;
     transition: ease-in-out 0.3s;
     opacity: 0;
-    /*background: url("../img/Circle.png") no-repeat;*/
     background: url("http://2018.igem.org/wiki/images/6/6c/T--DLUT_China_B--Circle.png") no-repeat;
     background-size: contain;
     position: absolute;
@@ -336,11 +338,21 @@ body {
     width:100%;
     text-align: center;
     line-height: 234px;
-    font-size: 30px;
+    font-size: 48px;
     color:white;
+    font-weight: bold;
 }
 #dlutb #circle div.td:hover div{
     opacity: 1;
+}
+#dlutb #circle div.td div#humanPracticesCircle p{
+    position: absolute;
+    line-height: normal;
+    top:18%;
+    left:10%;
+    font-size: 48px;
+    color:white;
+    font-weight: bold;
 }
 
 #dlutb .tr{

@@ -75,20 +75,19 @@
     display: table;
 }
 
-#dlutb #meetUs #students div.tr div.td:nth-child(1), #dlutb #meetUs #students div.tr div.td:nth-child(3) {
+#dlutb #meetUs #students div.tr div.td:nth-child(1), #dlutb #meetUs #students div.tr div.td:nth-child(3),#dlutb #meetUs #instructors div.tr div.td:nth-child(1), #dlutb #meetUs #instructors div.tr div.td:nth-child(3) {
     width: 30%;
 }
 
-#dlutb #meetUs #students div.tr div.td:nth-child(2) {
+#dlutb #meetUs #students div.tr div.td:nth-child(2),#dlutb #meetUs #instructors div.tr div.td:nth-child(2) {
     width: 40%;
-}
-
-#dlutb #meetUs #instructors div.tr div.td {
-    width: 33%;
 }
 
 #dlutb #meetUs img {
     max-width: 100%;
+}
+#dlutb #meetUs .avatar{
+    float: left;
 }
 
 #dlutb #meetUs .intro {
@@ -102,6 +101,7 @@
     left: 100%;
     top: 0;
     text-indent: 0;
+    z-index: 2;
 }
 
 #dlutb #meetUs #part1, #dlutb #meetUs #part3, #dlutb #meetUs #part8,#dlutb #meetUs #part9 {
@@ -201,6 +201,11 @@
 }
 
 #dlutb #meetUs #img11:hover div, #dlutb #meetUs #img13:hover div {
-    left: -100%;
-    width: calc(100% - 20px);
+    left: -133%;
+    width: calc(133% - 20px);
+}
+
+#dlutb #meetUs #img12:hover div,#dlutb #meetUs #img13:hover div{
+    top:auto;
+    bottom:0;
 }

@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Parts</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <!--<link rel="stylesheet" href="css/nav.css">-->
     <!--<link rel="stylesheet" href="css/bubbles.css">-->
     <!--<link rel="stylesheet" href="css/slideshow.css">-->
-    <link rel="stylesheet" href="css/fontawesome.css">
+    <!--<link rel="stylesheet" href="css/fontawesome.css">-->
     <!--<link rel="stylesheet" href="css/contents.css">-->
-    <link rel="stylesheet" href="css/parts.css">
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="css/parts.css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">
 
-    <script src="js/jquery.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
     <!--<script src="js/slideshow.js"></script>-->
     <!--<script src="js/bubbles.js"></script>-->
     <!--<script src="js/typed.js"></script>-->
@@ -29,13 +29,11 @@
 </head>
 <body>
 <div id="dlutb">
-    <div id="moduleHeader" class="parts">
+    <div id="moduleHeader">
         <div id="nav"></div>
-        <br>
+        <div id="background" class="parts"></div>
         <div class="moduleTitle">Parts</div>
-        <div class="subModule">
-            <span>Parts</span>
-        </div>
+
     </div>
 
     <div id="article">
@@ -47,18 +45,16 @@
                 formylglycine-generating enzyme (FGE). It contains two sections: nanobody and ald tag, which is
                 precursor
                 of aldehyde label. Firstly it can cambein with beta2 microglobulin because of antigen-antibody
-                interaction. Then its special lable allow fixed point fixing or other fixed point decoration
+                interaction. Then its special label allow fixed point fixing or other fixed point decoration
                 possible.</p>
-            <!--<img src="img/Parts/Parts1.png">-->
             <img src="http://2018.igem.org/wiki/images/c/cc/T--DLUT_China_B--Parts1.png">
             <p>Another one is Formylglycine-generating enzyme(BBa_K2772018). FGE can specifically identify ald-Tag,
                 which is consisted of 6 base pair or 13 base pair, then it oxidze sulfhydryl group of sulfhydryl group
                 to aldehyde group. Conveniently, it can be used for in vivo catalysis of the substrate label of the
                 precursor, i.e. higher conversion can be achieved without purification separation.</p>
-            <!--<img src="img/Parts/Parts2.png">-->
             <img src="http://2018.igem.org/wiki/images/1/11/T--DLUT_China_B--Parts2.png">
             <p>Here is the list of our submitted parts.</p>
-            <table>
+            <table id="partsData">
                 <thead>
                 <tr>
                     <th>Name</th>
@@ -67,12 +63,12 @@
                 </tr>
                 </thead>
                 <tr>
-                    <td>BBa_K2772000</td>
+                    <td><a href="http://parts.igem.org/wiki/index.php?title=Part:BBa_K2772000" target="_blank">BBa_K2772000</a></td>
                     <td>Nanobody with aldehyde-based precursor label</td>
                     <td>528bp</td>
                 </tr>
                 <tr>
-                    <td>BBa_K2772018</td>
+                    <td><a href="http://parts.igem.org/wiki/index.php?title=Part:BBa_K2772018" target="_blank">BBa_K2772018</a></td>
                     <td>Formylglycine-generating enzyme</td>
                     <td>863bp</td>
                 </tr>
@@ -95,10 +91,8 @@
                 <p><i class="fab fa-weibo"></i> Weibo</p>
             </div>
             <div id="qrCode">
-                <!--<div><img src="img/wechat.png" width="100"></div>-->
                 <div><img src="http://2018.igem.org/wiki/images/c/c6/T--DLUT_China_B--wechat.png" width="100"></div>
                 <div></div>
-                <!--<div><img src="img/weibo.png" width="100"></div>-->
                 <div><img src="http://2018.igem.org/wiki/images/6/6b/T--DLUT_China_B--weibo.png" width="100"></div>
 
             </div>
@@ -109,9 +103,9 @@
         <i class="fas fa-angle-up"></i>
     </div>
 
-    <script src="js/script.js"></script>
+    <!--<script src="js/script.js"></script>-->
     <!--<script src="js/contents.js"></script>-->
-    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>-->
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>-->
     <script>
         $(document).ready(function () {

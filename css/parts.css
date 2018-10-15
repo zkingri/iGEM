@@ -7,20 +7,20 @@
     display: table;
     margin:5px auto;
 }
-#dlutb #article .mainText table{
+#dlutb #article .mainText table#partsData{
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    border: solid 2px #f68925;
+    border: solid 2px #7f5115;
     background: none;
 }
-#dlutb #article .mainText table *{
-    border: solid 1px #f68925;
+#dlutb #article .mainText table#partsData td,#dlutb #article .mainText table#partsData th{
+    border: solid 1px #7f5115;
     padding: 5px;
-    color: #f68925;
+    color: #7f5115;
     font-size: 16px;
     background: none;
 }
-#dlutb #article .mainText table thead{
+#dlutb #article .mainText table#partsData thead{
     text-align: center;
 }
