@@ -21,10 +21,6 @@ let navData = [
                 "link": "http://2018.igem.org/Team:DLUT_China_B/Demonstrate"
             },
             {
-                "name": "Experiments",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/Experiments"
-            },
-            {
                 "name": "InterLab",
                 "link": "http://2018.igem.org/Team:DLUT_China_B/InterLab"
             },
@@ -41,20 +37,6 @@ let navData = [
     {
         "menu": "Model",
         "link": "http://2018.igem.org/Team:DLUT_China_B/Model"
-        /*"subMenu": [
-            {
-                "name": "Condition Optimization",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/ConditionOptimization"
-            },
-            {
-                "name": "Standard Curve",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/StandardCurve"
-            },
-            {
-                "name": "Result",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/Result"
-            }
-        ]*/
     },
     {
         "menu": "Awards",
@@ -66,10 +48,6 @@ let navData = [
             {
                 "name": "Hardware",
                 "link": "http://2018.igem.org/Team:DLUT_China_B/Hardware"
-            },
-            {
-                "name": "Software",
-                "link": "http://2018.igem.org/Team:DLUT_China_B/Software"
             }
         ]
     },

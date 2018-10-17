@@ -2,8 +2,8 @@ function slideshow(data) {
     let interval = 3000;
     let length = data.length;
     for (let i = 0; i < length; i++) {
-        $('#box_img ul').append('<li><img src="' + data[i].src + '">');
-        $('#word ul').append("<li><h4>" + data[i].title + "</h4><p>" + data[i].description + "</p></li>");
+        $('#box_img ul').append('<li><a href="'+data[i].src+'" target="_blank"><img src="' + data[i].src + '"></a>');
+        $('#word ul').append("<li><h4>" + data[i].title + "</h4></li>");
     }
     let active = 0;
 
@@ -32,5 +32,10 @@ function slideshow(data) {
         move(false);
     };
 
-    setInterval(move, interval, true);
+    let si = setInterval(move, interval);
+    $('#box').hover(function () {
+        clearInterval(si);
+    }, function () {
+        si = setInterval(move, interval, true);
+    });
 }

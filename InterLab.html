@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>InterLab</title>
-    <!--<link rel="stylesheet" href="css/style.css">-->
-    <!--<link rel="stylesheet" href="css/nav.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
     <!--<link rel="stylesheet" href="css/bubbles.css">-->
     <!--<link rel="stylesheet" href="css/slideshow.css">-->
-    <!--<link rel="stylesheet" href="css/fontawesome.css">-->
-    <!--<link rel="stylesheet" href="css/contents.css">-->
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/contents.css">
     <!--<link rel="stylesheet" href="css/parts.css">-->
-    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">
-    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
-    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">-->
 
-    <!--<script src="js/jquery.js"></script>-->
+    <script src="js/jquery.js"></script>
     <!--<script src="js/slideshow.js"></script>-->
     <!--<script src="js/bubbles.js"></script>-->
     <!--<script src="js/typed.js"></script>-->
@@ -35,12 +35,93 @@
         <div class="moduleTitle">InterLab</div>
     </div>
 
-    <div id="article">
-        <div class="mainText">
-            <p>There is nothing here at the moment.</p>
+    <div id="mainBody">
+        <div id="contents"></div>
+        <div id="article">
+            <div class="mainText">
+                <p>The goal of the iGEM InterLab Study is to identify and correct the sources of systematic variability
+                    in synthetic biology measurements, so that eventually, measurements that are taken in different labs
+                    will be no more variable than measurements taken within the same lab. </p>
+                <p>This year, we use two orthogonal approaches to compute the cell count in our samples.</p>
+                <ol>
+                    <li>Converting between absorbance of cells to absorbance of a known concentration of beads.</li>
+                    <li>Counting colony-forming units (CFUs) from the sample.</li>
+                </ol>
+            </div>
+            <div>
+                <h2 class="title">Plate reader and CFU</h2>
+                <div class="mainText">
+                    <h3 class="title">Calibration protocol</h3>
+                    <p>Before we started the plate reader measurement, we obtained the OD600 reference point, the
+                        fluorescein fluorescence curve and the particle standard curve in the microplate reader to
+                        standardize the absorbance reading, cell-based fluorescence reading and the number of
+                        cells.</p>
+                    <p>Our model was a SpectraMax M2e Plate Reader. For the plate reader our excitation and emission
+                        settings were 485 nm and 525 nm respectively (Same setting was used for all experiments
+                        below).</p>
+                    <h3 class="title">Cell measurement protocol</h3>
+                    <p>Transformation</p>
+                    <p>We transformed the plasmids (listed below) resuspended from the Distribution Kit into E. coli
+                        DH5-alpha cells. Colonies were given 16 hours to grow.</p>
+                    <!--todo 图片链接 -->
+                    <div class="img"><img src="img/InterLab/1.png"></div>
+                    <p>2 colonies of each device were inoculated over night into 5 ml Luria-Bertani media with 25 μg/mL
+                        Chloramphenicol in a 37°C, 220 rpm shaking incubator. Cell cultures were diluted to a target
+                        OD600 of 0.02 into same LB medium in 50 mL falcon tube covered with foil before use Diluted
+                        cultures were further grown at 37°C and 220 rpm. At 0, and 6 hours of incubation, 500 μL aliquot
+                        was taken from each two colonies of the 8 devices and were placed immediately on ice to prevent
+                        further growth. At the end of sampling point, 4 replicates 100 μl of each sample was pipetted
+                        into a 96-well microplate with the arrangement. Data was imported into the Excel Sheet for
+                        submission.</p>
+                    <h3 class="title">Protocol: Colony Forming Units per 0.1OD<sub>600</sub> E.coli cultures</h3>
+                    <p>This protocol can be calibrate OD<sub>600</sub> to colony forming unit(CFU) counts, which are
+                        directly relatable to the cell concentration of the culture. At this protocol, we first Dilute
+                        our overnight culture to OD<sub>600</sub> =0.1in 1ml of LB+Cam media. We further diluted the
+                        culture according to the experimental protocol than cultivate these dilutions for 18-20hours.
+                        Counting colony-forming units (CFUs) from the sample.</p>
+                    <h3 class="title">Results and Discussion</h3>
+                    <p>Below is the Fluorescein Standard Curve and the particle standard curve we obtained.</p>
+                    <div class="img"><img src="img/InterLab/2.png"></div>
+                    <div class="img"><img src="img/InterLab/3.png"></div>
+                    <div class="img"><img src="img/InterLab/4.png"></div>
+                    <p>In the Fluorescein Standard Curve, one of the four sets of data we measured had a problem with
+                        dilution.</p>
+                    <p>Below is Cell measurement protocol.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/InterLab/5.png"></td>
+                            <td><img src="img/InterLab/6.png"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h2 class="title">Flow Cytome Protocol</h2>
+                <div class="mainText">
+                    <p>In addition, we also done the Flow Cytome Protocol. We used a flow cytometer and SpheroTech
+                        calibration beads collected and submitted flow cytometry data. But our flow cytometer cannot be
+                        directly measured using 96 well plate, so we only measured A1-A10, E1-E9 for each time. As for
+                        well A9 and E9, we used the same blank media - 200 μL of LB + Cam for each time. Below is some
+                        results.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/InterLab/7.png"></td>
+                            <td><img src="img/InterLab/8.png"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/InterLab/9.png"></td>
+                            <td><img src="img/InterLab/10.png"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/InterLab/11.png"></td>
+                            <td><img src="img/InterLab/12.png"></td>
+                        </tr>
+                    </table>
+                    <p>SpheroTech calibration beads</p>
+                </div>
+            </div>
         </div>
     </div>
-
     <div id="footer">
         <div id="address">
             <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
@@ -68,9 +149,9 @@
         <i class="fas fa-angle-up"></i>
     </div>
 
-    <!--<script src="js/script.js"></script>-->
-    <!--<script src="js/contents.js"></script>-->
-    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>
+    <script src="js/script.js"></script>
+    <script src="js/contents.js"></script>
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>-->
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>-->
     <script>
         $(document).ready(function () {

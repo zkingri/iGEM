@@ -1,72 +1,77 @@
-#box_img ul, #word ul {
+#dlutb #box_img ul,#dlutb  #word ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#word ul li h4, #word p, #box_img ul {
+#dlutb #word ul li h4, #dlutb #box_img ul {
     margin: 0;
     padding: 0;
     line-height: normal;
 }
 
-#word ul li h4, #word ul li p{
+#dlutb #word ul li h4{
     color: white;
+    margin-top: 25px;
 }
 
-#box {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
+#dlutb #box {
+    width: 500px;
+    height: 730px;
+    margin: 0 auto;
     padding: 0;
     overflow: hidden;
     position: relative;
+    display: table;
 }
 
-#box_img {
-    width: 100%;
-    height: 100vh;
+#dlutb #box_img {
+    width: 500px;
+    height: 730px;
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
-#box_img ul li {
-    width:100vw;
+#dlutb #box_img ul li {
+    width:500px;
     position: absolute;
     display: none;
     margin: 0;
     padding: 0;
 }
 
-#box_img ul li img {
+#dlutb #box_img ul li img {
     display: block;
-    width: 100%;
-    height: 100vh;
+    width: 500px;
+    height: 730px;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-#word {
+#dlutb #word {
+    background: linear-gradient(to bottom, rgba(100, 111, 156, 0) 0, #09102b 100%);
     position: absolute;
-    left: 10%;
-    top:50%;
+    height: 60px;
+    width:100%;
+    bottom: 0;
     margin: 0;
     padding: 0;
-    width:35%;
 }
 
-#word ul li {
+#dlutb #word ul li {
     position: absolute;
+    top: 0;
+    left: 80px;
     display: none;
     color: white;
     margin: 0;
     padding: 0;
-    font-size: 36px;
+    list-style-type: none;
 }
 
-#controller {
+#dlutb #controller {
     color: white;
     position: absolute;
     bottom: 15px;
@@ -75,9 +80,10 @@
     font-size: 0;
     margin: 0;
     padding: 0;
+    /*top:695px;*/
 }
 
-#forward, #backward {
+#dlutb #forward, #dlutb #backward {
     display: inline-block;
     margin: 0;
     width: 25px;

@@ -44,7 +44,7 @@ body {
     margin-bottom: 0.5ex;
 }
 
-#dlutb .mainText li{
+#dlutb .mainText ul li{
     list-style: disc none;
 }
 
@@ -103,11 +103,14 @@ body {
     background-size: cover;
     width: 100%;
     height: 470px;
-    filter: brightness(80%);
-    -webkit-filter: brightness(80%);
+    filter: brightness(75%);
+    -webkit-filter: brightness(75%);
 }
 #dlutb .awards{
     background: url("http://2018.igem.org/wiki/images/b/b3/T--DLUT_China_B--Background--Awards.jpg") no-repeat center center;
+}
+#dlutb .collaborations{
+    background: url("http://2018.igem.org/wiki/images/f/f5/T--DLUT_China_B--Background--Collaborations.jpg") no-repeat left center;
 }
 #dlutb .demonstrate{
     background: url("http://2018.igem.org/wiki/images/3/35/T--DLUT_China_B--Background--Demonstrate.jpg") no-repeat top center;
@@ -124,6 +127,9 @@ body {
 #dlutb .interLab{
     background: url("http://2018.igem.org/wiki/images/4/4b/T--DLUT_China_B--Background--InterLab.jpg") no-repeat center center;
 }
+#dlutb .model{
+    background: url("http://2018.igem.org/wiki/images/7/76/T--DLUT_China_B--Background--Model.jpg") no-repeat center center;
+}
 #dlutb .notebook{
     background: url("http://2018.igem.org/wiki/images/f/f7/T--DLUT_China_B--Background--Notebook.jpg") no-repeat center center;
 }
@@ -131,7 +137,7 @@ body {
     background: url("http://2018.igem.org/wiki/images/c/c8/T--DLUT_China_B--Background--Parts.jpg") no-repeat center center;
 }
 #dlutb .moduleTitle{
-    font-size: 30px;
+    font-size: 46px;
     color:white;
     border-bottom: 2px solid white;
     margin:0 auto;
@@ -139,7 +145,7 @@ body {
     font-family: Lato, sans-serif;
     display: table;
     position: relative;
-    top:-259px;
+    top:-269px;
 }
 
 #dlutb h2.title {
@@ -226,6 +232,10 @@ body {
     max-width: 100%;
     border:none;
 }
+#dlutb .mainText table.img{
+    margin-left: auto;
+    margin-right: auto;
+}
 #dlutb .mainText .img img{
     max-width: 100%;
 }
@@ -235,9 +245,12 @@ body {
 }
 #dlutb .mainText p.footnote  {
     font-size: 12px;
-    text-align: center;
+    /*text-align: center;*/
     margin: 0;
     padding: 0;
+}
+#dlutb .mainText table p.footnote{
+    text-align: center;
 }
 
 #dlutb #article .mainText table{
@@ -338,7 +351,7 @@ body {
     width:100%;
     text-align: center;
     line-height: 234px;
-    font-size: 48px;
+    font-size: 46px;
     color:white;
     font-weight: bold;
 }
@@ -350,9 +363,10 @@ body {
     line-height: normal;
     top:18%;
     left:10%;
-    font-size: 48px;
+    font-size: 46px;
     color:white;
     font-weight: bold;
+    text-align: center;
 }
 
 #dlutb .tr{
@@ -367,4 +381,8 @@ body {
 }
 #dlutb #article{
     display: table-cell;
+}
+#dlutb .js-plotly-plot{
+    display: table;
+    margin:0 auto;
 }

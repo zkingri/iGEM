@@ -9,7 +9,7 @@
     <!--<link rel="stylesheet" href="css/bubbles.css">-->
     <!--<link rel="stylesheet" href="css/slideshow.css">-->
     <link rel="stylesheet" href="css/fontawesome.css">
-    <!--<link rel="stylesheet" href="css/contents.css">-->
+    <link rel="stylesheet" href="css/contents.css">
     <!--<link rel="stylesheet" href="css/parts.css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">-->
@@ -23,21 +23,524 @@
     <!--<script src="js/slideshow.js"></script>-->
     <!--<script src="js/bubbles.js"></script>-->
     <!--<script src="js/typed.js"></script>-->
+    <script type="text/javascript" async src="js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="js/plotly.min.js"></script>
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/bubbles.js&action=raw&ctype=text/javascript"></script>-->
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/typed.js&action=raw&ctype=text/javascript"></script>-->
+
 </head>
 <body>
 <div id="dlutb">
     <div id="moduleHeader">
         <div id="nav"></div>
-        <!--todo 背景图片-->
+        <div id="background" class="model"></div>
         <div class="moduleTitle">Model</div>
     </div>
 
-    <div id="article">
-        <div class="mainText">
-            <p>There is nothing here at the moment.</p>
+    <div id="mainBody">
+        <div id="contents"></div>
+        <div id="article">
+            <div class="mainText">
+                <p>By building a mathematical model, we demonstrate the principles of the project and provide guidance
+                    for optimizing product design and its application.</p>
+            </div>
+
+            <div>
+                <h2 class="title">Gray value-density model <sub>The relationship between the gray value and the added
+                    substance concentration</sub></h2>
+                <div class="mainText">
+                    <p>We have established a grayscale model to describe our results in antigen fixation, antibody
+                        immobilization and detection, and to digitize the results into accurate numbers. This model can
+                        guide us to more accurately determine the relationship between the reaction results and our
+                        effects in three phases. Especially in the detection, the concentration of the analyte can be
+                        embodied and digitized, thus giving us a better and specific detection limit.</p>
+                    <p>For the gray value calculation of a resulting image, we first grayscale it. In order to calculate
+                        the gray value of the color picture, we have grayed out with MATLAB. At the same time, in order
+                        to give a clear grayscale picture, we performed image equalization and gave a balanced
+                        picture<sup>[Attachment 1]</sup>. After obtaining the grayscale image, we use the formula (1) to
+                        calculate the grayscale of the image. In order to obtain accurate data more conveniently, we use
+                        the programming language to design a small software <sup>[Attachment 2]</sup>, which can
+                        calculate the average grayscale of the image. There is an error in the data for the no grayscale
+                        picture. According to our experimental results, it is about 5% when the gray value is not too
+                        low. Compared with the equalized grayscale image, the error is about 10%.</p>
+                    <p>$$ g_w = \sum_{i=0}^{255} i \times T_i \div T \tag{1} $$</p>
+                    <p>For the experimental results, we can understand whether it is fixed antigen, immobilized antibody
+                        or detection. In the initial stage, the gray value is positively correlated with the
+                        concentration of the additive; and as the concentration of the additive increases, the gray
+                        value is not proportional to the increase. There are two models that satisfy these properties,
+                        namely equation (2) and formula (3):</p>
+                    <p>Michaelis-Menten model: $$ y = \frac{\alpha x}{\beta + x} \tag{2} $$</p>
+                    <p>Exponential growth model: $$ y = \alpha (1- exp(-\beta x)) \tag{3} $$</p>
+                    <p>We substituting the above two formulas into the literature we examined<sup>[2]</sup>, where model (2) is in
+                        good agreement. At the same time model (2) if the enzyme is compared to our slide, the substrate
+                        is analogous to our addition. The resulting enzymatic reaction rate-substrate concentration and
+                        gray value-addition concentration have a good fit. So we decided to use this model. And in the
+                        other literature<sup>[1]</sup> of the model, the results obtained are also consistent. The gray value and
+                        concentration relationship in this model are shown in Fig. 1(a), This applies to both fixed
+                        antigens, immobilized antibodies and assays. The different added substances are shown in
+                        Fig.2(b).</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <div id="fig1a"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(a) Addition of added substances</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="fig1b"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(b) Relationship between different additions and gray values (joined separately)</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="fig1c"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">(c) Fixed antigen grayscale model curve</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig. 1 Gray value and additive concentration relationship</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p>In the step of immobilizing the antigen, we control the amount of antigen added, the fixed time,
+                        and the brightness and the observation magnification at the time of sampling, and use a large
+                        amount of experimental data to average and reduce the error. Experimental Results After data
+                        processing, the Figures 1(c), Equations \(\mathrm{Y_1}\), can be obtained. The resulting image was used to
+                        predict other data and found good agreement. Explain that the gray value-concentration model we
+                        built is in line with our experiments. Thus, we further established the model on antibody
+                        immobilization and obtained the results of equations \(\mathrm{Z_1}\). From the model and our experimental
+                        data, it can be stated that the gray value and the additive concentration are positively
+                        correlated when the concentration is not large. From the model and our experimental data, it can
+                        be stated that the gray value and the additive concentration are positively correlated when the
+                        concentration is not very large and more than 0.4 μg/ml.</p>
+                    <p>$$ y = 6.4904 x \tag{Y_1} $$</p>
+                    <p>$$ y = 9.3506 x \tag{Z_1} $$</p>
+                    <p>There is a bias when the antigen is not fixed. Therefore, we perform a statistical average of the
+                        gray values of the unfixed antigen. The \(\mathrm{Y_1}\) equation is the result of correcting the zero
+                        point deviation and the post-processing of the comparison relation \(\mathrm{Ψ_q}\). \(\mathrm{Z_1}\) can be obtained
+                        by treating the modified antibody model in the same manner.
+                    </p>
+                    <p class="footnote">[1]Zhang Jiao, Su Xiuxia, Yang Dong, Luan Chonglin,Label-free liquid crystal
+                        biosensor for cecropin B detection,Talanta,Volume 186,2018,Pages 60-64,ISSN 0039-9140, <a
+                                href="https://doi.org/10.1016/j.talanta.2018.04.004">https://doi.org/10.1016/j.talanta.2018.04.004</a>.
+                    </p>
+                    <p class="footnote">[2]Li Xian, Li Guang, Yang Meng, Chen Long-Cong, Xiong Xing-Liang,Gold
+                        nanoparticle based signal enhancement liquid crystal biosensors for tyrosine assays,Sensors and
+                        Actuators B: Chemical,Volume 215,2015,Pages 152-158,ISSN 0925-4005, <a
+                                href="https://doi.org/10.1016/j.snb.2015.03.054">https://doi.org/10.1016/j.snb.2015.03.054</a>.
+                    </p>
+                    <p class="footnote">[Attachment 1] Name:(Picture grayscale processing code) <a
+                            href="https://github.com/zkingri/gray">https://github.com/zkingri/gray</a></p>
+                    <p class="footnote">[Attachment 2] Except for all documents in Annex 1. <a
+                            href="https://github.com/zkingri/gray">https://github.com/zkingri/gray</a></p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title">Kinetic model <sub>The relationship between residual antigen concentration and
+                    time</sub></h2>
+                <div class="mainText">
+                    <p>In order to optimize the antigen fixation time, we did the relationship between the remaining
+                        antigen concentration and time when the antigen was immobilized.</p>
+                    <p>In our step of fixing the antigen concentration, we can get the reaction formula \(\mathrm{\alpha}\) and give the
+                        pattern diagram ω<sub>1</sub>, where \(A\) is the antigen and \(M\) is the reaction site concentration
+                        on the
+                        slide. Since the addition liquid fixation and treatment methods are unchanged, \(M_0\) does not
+                        change.</p>
+                    <p>$$A+M\overset{K_a}{\underset{K_d}{\rightleftharpoons}}A-M \tag{ \alpha }$$</p>
+                    <div class="img"><img src="img/Model/1.png"></div>
+                    <p>If \(\theta=\frac{[A-M]}{M_0}\), that is, the position occupied by the immobilized antigen
+                        accounts for the percentage of all positions of the entire slide. Then by the dynamics
+                        relationship, we can list the relationship:</p>
+                    <p>$$-\frac{d[A]}{dt}=K_a(1-\theta)[M_0][A]-K_d\theta[M_0]$$</p>
+                    <p>If we determine a \(\theta\), that is, we want the percentage of the fixed position on the slide,
+                        generally the maximum concentration under the premise of disturbing the liquid crystal. It is
+                        given by our experimental data that \(\theta\) is generally optimal between 0.05 and 0.1. Let
+                        \(b=\frac{K_a}{K_d}\), we can get the relationship:</p>
+                    <p>$$[A]=C_1exp[-K_a(1-\theta)[M_0]t]+\frac{\theta}{b(1-\theta)}$$</p>
+                    <p>In this way we can get the relationship between the residual concentration of the added antigen
+                        and the reaction time (4):</p>
+                    <p>$$[A]=C_1exp[mt]+n\tag{4}$$</p>
+                    <p>Thus, from the relationship we can predict the relationship between the residual antigen
+                        concentration and time, as shown in Fig. 2(a) and (b).</p>
+                    <table class="img">
+                        <tr>
+                            <td><div id="fig2a"></div></td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(a) One Concentration</p></td>
+                        </tr>
+                        <tr>
+                            <td><div id="fig2b"></div></td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">The relationships of multiple concentration</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig. 2 Relationship between residual antigen concentration and time when immobilized antigen</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Combined with formula (2) inside the grayscale model content, we can obtain the following
+                        relationship (5), the relationship between antigen fixed time and gray value. As shown in Fig.
+                        3.</p>
+                    <p>$$Grayscale value=\frac{\sigma_1exp[mt]+\Psi_1}{\beta_0+C_1exp[mt]}\tag{5}$$</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <div id="fig3"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">Fig. 3 Relationship between antigen fixation time and result gray value</p></td>
+                        </tr>
+                    </table>
+                    <p>It can be concluded that the reaction can be stopped by 90% or 80% of the reaction, because it is
+                        uneconomical to continue the reaction. At the same time, for the initial antigen concentration
+                        change, the initial large reaction starts to be fast, while the initial value is small, the
+                        reaction rate starts to be small; at the same time, the optimum reaction time for the different
+                        concentrations of the added antigen is about the same, and has little relationship with the
+                        concentration. Finally, there is a clear relationship between the fixed time of the antigen and
+                        the gray value.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title">Adding antigen concentration and adding antibody concentration ratio relationship</h2>
+                <div class="mainText">
+                    <p>In order to the final result was as expected by making the solubility of the configured
+                        antigen-antibody immobilization solution. It is necessary for us to optimize the concentration
+                        ratio for them.</p>
+                    <p>After fixing the antigen. For immobilized antibodies, there is a reaction \(β\) and the pattern
+                        diagram \(ω_2\):</p>
+                    <p>$$A'+R_T\overset{K_a}{\underset{K_d}{\rightleftharpoons}}R_TA' \tag{ \beta }$$</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/2.png"></td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">Fig. ω<sub>2</sub> Fixed antibody pattern</p></td>
+                        </tr>
+                    </table>
+                    <p>If we define a \(θ_2\), which represents the effect that we would like to achieve when
+                        immobilizing an antibody, it is generally the antibody concentration that can disrupt the
+                        percentage of gray that the liquid crystal reaches our defined full brightness. At this time,
+                        there is also a relation (6):</p>
+                    <p>$$[R_T]=C_2exp[Qt]+P\tag{6}$$</p>
+                    <p>When the reaction is sufficient, it is assumed to be \(t_0\). For the relationship between the
+                        reaction \(\beta\):</p>
+                    <p>$$K_a(1-\theta_2)[R_T]=K_d\theta_2$$</p>
+                    <p>$$\theta_2=\frac{[R_TA']}{[R_{T0}]}$$</p>
+                    <p>Combining relation (4), we can get relation (7):</p>
+                    <p>$$\frac{[R_{T0}]}{A_0}=\alpha+\frac{\beta}{C_1+n}\tag{7}$$</p>
+                    <p>Among them, \(\alpha\) and \(\beta\) have a large correlation with \(\theta_2\), but have little
+                        correlation with \(\theta\). From our experimental data, it can be given that \(\theta_2\) meets
+                        our requirements when it reaches 0.5~0.7. Under the preconditions, relation (8) and Fig. 4 can
+                        be derived:</p>
+                    <p>$$\frac{[R_{T0}]}{A_0}=K\theta_2+b\tag{8}$$</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <div id="fig4"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">Fig. 4 The relationship between the optimal ratio of antibody antigen concentration and θ<sub>2</sub></p></td>
+                        </tr>
+                    </table>
+                    <p>When we determine the residual antigen concentration and time relationship when fixing the
+                        antigen and the residual antibody concentration and time relationship when immobilizing the
+                        antibody, we can use this model to give the optimal concentration ratio for immobilized antigen
+                        and antibody by combining the given \(\theta\) and \(\theta_2\).</p>
+                    <p>At the same time, it can be concluded that the proportional relationship is closely related to
+                        our expected \(\theta_2\), and there is no clear relationship with our expected \(\theta\).</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title">The relationship between the Grayscale value and the reaction time of the liquid to be
+                    tested</h2>
+                <div class="mainText">
+                    <p>When our finished product is inspected, we want to obtain the minimum detection time and
+                        determine the credibility of the test results. Therefore, the relationship between the test
+                        result and time is made. The reaction \(\gamma\) and the pattern diagram ω<sub>3</sub> are as
+                        follows:</p>
+                    <p>$$R_TA\overset{K_{d1}}{\underset{K_{a1}}{\rightleftharpoons}}A+R_T$$</p>
+                    <p>$$P+R_T\overset{K_{a2}}{\underset{K_{d2}}{\rightleftharpoons}}R_TP \tag{ \gamma }$$</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/3.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Figure. ω<sub>3</sub> Detection mode diagram</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>For the detection, we assume that the immobilized antigen is not easily detached outside of the
+                        reaction, and the amount of free antibody during the reaction is very small and remains
+                        substantially unchanged. Using this free antibody steady-state and kinetic knowledge, we derive
+                        the relationship (9):</p>
+                    <p>\begin{equation}\begin{split}
+                        [R_TA]=&Cexp[-(K_{d2}+K_{a2}[R_T])t]\\&+\frac{K_{d2}(K_{d2}[R_TA_0]+[R_T])-K_{a2}([P_0]-[R_TA_0]+[R_T])[R_T]}{K_{d2}+K_{a2}[R_T]}
+                        \end{split}\tag{9}\end{equation}</p>
+                    <p>equal meaning between \([R_TA_0]\) and \([R_TA]_0\).</p>
+                    <p>By simplification of relation (9) and combining relation (2) inside the grayscale model content,
+                        relations (10) and (11) can be obtained:</p>
+                    <p>$$[R_TA]=Cexp[xt]+y\tag{10}$$</p>
+                    <p>$$Grayscale value=\frac{\sigma exp[xt]+Psi}{\beta+Cexp[xt]}\tag{11}$$</p>
+                    <p>According to the relationship, We can obtain a detection curve expressed by the fixed
+                        antigen-antibody concentration. The relationship between high and low sensitivity detection
+                        curves can also be obtained (slide detection sensitivity and antigen-antibody positive
+                        correlation).And we can list Fig. 5 (a)(b)(c):</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <div id="fig5a"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(a) Relationship between fixed antigen-antibody concentration and
+                                detection time</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="fig5b"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(b) Relationship between different fixed antigen-antibody concentration
+                                and detection time</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="fig5c"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(c) Gray value and detection time relationship diagram</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">Fig. 5 Predictive graph during detection</p></td>
+                        </tr>
+                    </table>
+                    <p>From the analysis results, we can optimize the detection time in order to achieve the most
+                        effective time. At the same time, for a fixed antigen-antibody pair, the value is proportional
+                        to the initial reaction rate; the optimal time is approximately the same. Finally, there is a
+                        clear relationship between the detection time and the gray value relationship.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title">LIQUID CRYSTAL MOLECULES PERTURBATIONS MODEL</h2>
+                <div class="mainText">
+                    <p>The field of synthetic biology relies heavily on mathematical models that help simulate and
+                        predict the process and consequence of biological systems. We developed two models, the radial
+                        domino model and the blooming model to describe the potential perturbation mechanism and
+                        interaction modes between protein particles and liquid crystal molecules. The protein density
+                        threshold can be calculated by this model.</p>
+                    <h3 class="title">Purpose</h3>
+                    <p>An important part of our liquid crystal experiment is to find an optimal antigen concentration,
+                        so we creatively proposed two models to calculate the β2-M density microscopically. The trouble
+                        is that we do not know the range of antigen molecules that can perturb liquid crystal
+                        molecules.</p>
+                    <h3 class="title">Parameters</h3>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/4.png"></td>
+                            <td><img src="img/Model/5.png"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p class="footnote">Fig.1 The chemical structure and the simulated structure of 5CB<br>2nm×0.4nm</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/Model/6.png" alt=""></td>
+                            <td><img src="img/Model/7.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.2 The simulated structure of Nanoantibody<br>4nm×2.5nm</p>
+                            </td>
+                            <td>
+                                <p class="footnote">Fig.3 The simulated structure of β2-MG<br>4.5nm×2.5nm×2.0nm</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <h3 class="title">Two conjectures</h3>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/8.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.4 Two possible mechanisms for β2-M to disturb liquid crystal</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>The process of protein perturbation of liquid crystal molecules is particularly complicated， so
+                        we can only guess the disturbance mechanism on our own. Inspired by dominoes and the blossoming
+                        of flowers, we guessed that there might be two mechanisms of disruption. We called them RADIAL
+                        DOMINO MODEL and BLOOMING MODEL</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/9.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.5 RADIAL DOMINO MODEL</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Simplify the β2-M and 5CB into ball and stick. The distance between each two sticks is equal. Due
+                        to the interference of the ball, the first stick next to the ball will be inclined at an angle.
+                        The first stick will affect the next stick until the last stick is aligned vertically.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/10.png" alt="">F</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.6 BLOOMING MODEL</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>This model is actually an extension of the previous model. Simplify the 5CB into one side of the
+                        polygons. As the molecular shells increases, the angle between the two sides of the polygon will
+                        tend to be 90°.</p>
+                    <h3 class="title">Calculation</h3>
+                    <p>1. Obtain the spacing of 5CB molecules</p>
+                    <p>The forces between two molecules are covalent bonds, ionic bonds, metal bonds, hydrogen bonds and
+                        Van der Waals force. Because no other forces are present, the main force is Van der Waals force.
+                        The point at which the force becomes repulsive rather than attractive as two molecules near one
+                        another is called the van der Waals contact distance. Van der Waals force includes electrostatic
+                        force, dispersion force and induction force.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/11.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.7  van der Waals potential energy</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>We can use a simplified formula: the Lennard-Jones potential<sup>[1]</sup>.</p>
+                    <p>$$E=\frac{A}{r^{12}}-\frac{B}{r^6}$$</p>
+                    <p>where \(A=4\epsilon\sigma^{12}\), \(B=4\epsilon\sigma^6\).</p>
+                    <p>However, there is no sigma Lennard-Jones parameters (Angstrom) epsilon Lennard-Jones parameters
+                        (kcal/mol) about 5CB, so we calculate the van der Waals contact distance(\(r_0\)) by statistical
+                        mechanics<sup>[2]</sup>.</p>
+                    <p>In statistical mechanics, the radial distribution function \(g(r)\) in a system of particles
+                        (atoms, molecules, colloids, etc.), describes how density varies as a function of distance from
+                        a reference particle.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/12.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.8 The sketch map of radial distribution function</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>The radial distribution function: </p>
+                    <p>$$\rho g(r)4\pi r^2=dN$$</p>
+                    <p>where \(\rho\) is the density of 5CB, \(N\) is the total number of 5CB molecules. Integrate the
+                        above formula:</p>
+                    <p>$$\int_0^\infty \rho g(r)4\pi r^2 \mathrm{d}r=\int_0^N\mathrm{d}N=N$$</p>
+                    <p>$$g(r)=\frac{\mathrm{d}N}{\rho 4\pi r^2}$$</p>
+                    <p>Molecular dynamics calculation:</p>
+                    <p>$$g(r)=\frac{1}{\rho 4\pi r^2}\frac{\sum_{i=1}^r\sum_{j=1}^N \Delta N(r\to r+\delta r)}{N\times
+                        T}$$</p>
+                    <p>Where \(N\) is the number of molecules and \(T\) is the calculated time (steps), \(\Delta N\) is
+                        the number of molecules between \(r\) and \(r+\delta r\).</p>
+                    <p>The radial distribution function can be computed via computer simulation methods. Because the
+                        peak of the radial distribution function appears at 0.5nm, so the spacing of 5CB molecules is
+                        around 0.5nm.</p>
+
+                    <p>2. Calculate the range of β2-M that can perturb 5CB</p>
+                    <p>We assume 5CB molecule as a ellipse (\(a\)=1nm, \(b\)=0.1nm), we got the tilt angles of three
+                        molecules by Matlab.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/13.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.9  The tilt angles are 43°, 64°, 90° respectively.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/Model/14.png" alt=""></td>
+                        </tr>
+                    </table>
+                    <p>\(\therefore\)Maximum radius of β2-M that can perturb 5CB:</p>
+                    <p>$$R_1=[2\times\sin (64^\circ )+1]\mathrm{nm}=2.8\mathrm{nm}$$</p>
+
+                    <p>3. Verification</p>
+                    <p>In the liquid crystal experiment, the droplets dropped on the slide have a radius of about 2
+                        mm.</p>
+                    <p>$$\therefore S=\pi R^2=4\pi\times 10^{12}\mathrm{nm^2}$$.</p>
+                    <p>The molecular weight of β2-M is 11800, the volume of the droplet is 10μl.</p>
+                    <p></p>
+                    <p>The area disturbed by each protein molecule is:</p>
+                    <p>$$r=2.8\mathrm{nm}$$</p>
+                    <p>$$S_0=\pi r^2=7.84\pi\mathrm{nm^2}$$</p>
+                    <p>When the picture is just full colorful, the number of molecules contained in the droplet
+                        is:</p>
+                    <p>$$N=\frac{S}{S_0}=5.1\times 10^{11}$$</p>
+                    <p>$$m=\frac{11800\times 5.1\times 10^{11}}{6.02\times 10^{23}}=10^{-8}\mathrm{g}$$</p>
+                    <p>\(\therefore\)Maximum concentration is:</p>
+                    <p>$$c=\frac{m}{V}=1000\mathrm{ng/ml}$$</p>
+                    <p>That is to say, when the concentration reaches 1000ng/ml, the image starts to be completely
+                        bright. This is in good agreement with our experimental results. The following are the results
+                        of the liquid crystal experiment.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="img/Model/15.png" alt=""></td>
+                            <td><img src="img/Model/16.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">500ng/ml(β2-M)</p>
+                            </td>
+                            <td>
+                                <p class="footnote">600ng/ml(β2-M)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/Model/17.png" alt=""></td>
+                            <td><img src="img/Model/18.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">700ng/ml(β2-M)</p>
+                            </td>
+                            <td>
+                                <p class="footnote">1000ng/ml(β2-M)</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="footnote">[1] Jones J E. On the determination of molecular fields. From the equation of
+                        state of a gas[J]. Proc. R. Soc. Lond. A, 1924, 106(738): 463-477.</p>
+                    <p class="footnote">[2] Haynes W M. CRC handbook of chemistry and physics[M]. CRC press, 2014.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -56,10 +559,8 @@
                 <p><i class="fab fa-weibo"></i> Weibo</p>
             </div>
             <div id="qrCode">
-                <!--<div><img src="img/wechat.png" width="100"></div>-->
                 <div><img src="http://2018.igem.org/wiki/images/c/c6/T--DLUT_China_B--wechat.png" width="100"></div>
                 <div></div>
-                <!--<div><img src="img/weibo.png" width="100"></div>-->
                 <div><img src="http://2018.igem.org/wiki/images/6/6b/T--DLUT_China_B--weibo.png" width="100"></div>
 
             </div>
@@ -71,7 +572,8 @@
     </div>
 
     <script src="js/script.js"></script>
-    <!--<script src="js/contents.js"></script>-->
+    <script src="js/model.js"></script>
+    <script src="js/contents.js"></script>
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>-->
     <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>-->
     <script>
