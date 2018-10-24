@@ -16,7 +16,7 @@
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
     <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">-->
 
     <!--<script src="js/jquery.js"></script>-->
@@ -35,9 +35,422 @@
         <div class="moduleTitle">Demonstrate</div>
     </div>
 
-    <div id="article">
-        <div class="mainText">
-            <p>There is nothing here at the moment.</p>
+    <div id="mainBody">
+        <div id="contents"></div>
+        <div id="article">
+            <div>
+                <h2 class="title">Background</h2>
+                <div class="mainText">
+                    <p>In order to fulfill the requirements of testing diseases at home for patients instead of going to
+                        hospital tested by high-tech testing equipment. We designed our products which can upload
+                        grayscale data to the cloud and analyze it through mobile devices obviously. What we required is
+                        just a liquid crystal detection scheme, which is sufficient to reflect the change in
+                        β<sub>2</sub>-MG
+                        concentration.</p>
+                    <p>The main purpose of our experiment is to prove whether the change in β<sub>2</sub>-MG
+                        concentration in the
+                        home test box (Dr. Familict) can be reflected in the liquid crystal through a noticeable gray
+                        scale change. Therefore, we have constructed a molecule that is more suitable for the liquid
+                        crystal detection system based on the nano-antibody, a competitive combination which can disturb
+                        the liquid crystal to change the gray level of the image.</p>
+                    <p>We designed a competitive binding method : First, immobilizing a certain amount of β<sub>2</sub>-MG
+                        in a
+                        liquid crystal, and then combining the test solution with an excess of Nanobody. The mixture is
+                        then added to the liquid crystal, and due to the excess of the Nanobody, the excess is bound to
+                        the immobilized β<sub>2</sub>-MG, causing perturbation of the liquid crystal. Since the fixed
+                        β<sub>2</sub>-MG is a
+                        certain amount, the amount of β<sub>2</sub>-MG in the liquid to be tested can be calculated by
+                        the
+                        difference method. However, during the experiment, we found that the nano-antibody itself has
+                        little disturbance to the liquid crystal, so we hope to construct a more interfering molecule
+                        based on the nano-antibody. At the same time, we tested the effects of different β<sub>2</sub>-MG
+                        and
+                        nanobody concentrations on liquid crystal perturbations, and hope to find a set of solutions
+                        with the most obvious gray scale changes.</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="title">Experiment</h2>
+                <div class="mainText">
+                    <div class="img"><img src="http://2018.igem.org/wiki/images/8/8d/T--DLUT_China_B--Demonstrate1.png">
+                    </div>
+                    <p>Our experiments are mainly divided into two parts: molecular biology experiments and liquid
+                        crystal experiments. </p>
+                    <p>We obtained nano-antibodies with aldehyde groups by adding aldehyde-based labels to
+                        nano-antibodies and by FGE treatment. After that, we added C18 to the Nanobody to enhance its
+                        interference. Finally, we verified that the interference of the antigen concentration on the
+                        liquid crystal can be detected.</p>
+                    <p>In the molecular biology sector, we planned to connect a long-chain molecule (C18) on the
+                        nanobody in order to increase the interference of nano-antibodies on liquid crystals.</p>
+                    <p>Firstly, We constructed two plasmids, pET28a and pBAD. The first plasmid pET28a contains a
+                        nanobody and a gene with an aldehyde-based catalytic substrate tag. The second plasmid, pBAD,
+                        contains the FGE (Formylglycine-generating enzyme) gene. Then we changed the conversion plan
+                        several times due to poor conversion efficiency, and finally got a satisfactory conversion
+                        rate.</p>
+                    <p>We wanted to see that the substrate tag can be finally expressed at the inactive end of the
+                        nanobody in E. coli BL21, and has little effect on the conformation of the nanobody. In the
+                        cell, the substrate tag was converted to an aldehyde group by FGE treatment. Subsequently, after
+                        the transformation of aldehyde-based nanobody, we disrupted the cells by sonication and purified
+                        the disrupted cell suspension to obtain the nanobody we needed. Next step, we combined the
+                        Nanobody with C18. We have obtained a better experimental protocol by changing the
+                        conditions.</p>
+                    <p>We designed a liquid crystal cell as the observation carrier. Firstly, we modified the slides
+                        with DMOAP which can induce vertical alignment of the liquid crystals, making the initial state
+                        of the optical imaging of the liquid crystal cell black. Meanwhile, we modified the slides with
+                        APTES so that they can be attached to the β<sub>2</sub>-MG; Then we added β<sub>2</sub>-MG
+                        nanobody to the modified slide. Finally, the upper and lower slides were assembled, and the
+                        liquid crystals were added. We can observe the optical imaging of the liquid crystal cell under
+                        the microscope to judge the β<sub>2</sub>–MG of the detected sample concentration.</p>
+                </div>
+                <div>
+                    <h2 class="title">Verification part of molecular biology</h2>
+                    <div class="mainText">
+                        <h3 class="title">Aldehyde and C18 connection verification</h3>
+                        <table class="img">
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/b/bf/T--DLUT_China_B--Demonstrate3.png"
+                                         alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">Fig.1. Immunoassay for immunoglobulin after aldehyde
+                                        aldolization
+                                        (a) Fluorescent group (b) 25 ° C C18 (c) 37 ° C C18 (d) acidified supernatant
+                                        (e)
+                                        dye-free Marker1 (f) Defective Marker2(g) BL21 cell disrupted supernatant (h)
+                                        BL21
+                                        cell disrupted pellet</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/3/30/T--DLUT_China_B--Demonstrate2.png"
+                                         alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">Fig.2. Analysis of dye-free electrophoresis</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>The molecular weight changes for (b) and (c) do not appear to be obvious, however, the C18
+                            linkage at 37 ° C of (c) produces a certain amount of precipitation, which is not efficient.
+                            The acidification of the supernatant (g) in (d) serves as a purification, that is, the
+                            Nanobodies is separated from the supernatant, so the total protein concentration decreased
+                            significantly and the relative abundance of Nanobodies increased significantly.</p>
+                        <p>After processing, the molecular weight of the Nanobody can be calculated to be about 18 KDa.</p>
+                        <h3 class="title">Nanobody concentration determination</h3>
+                        <table class="img">
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/f/f0/T--DLUT_China_B--Demonstrate4.png"
+                                         alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">Fig.3. Protein concentration - absorbance standard curve</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>Based on the standard curve of protein concentration and then based on the molecular weight
+                            of the nanobody measured by electrophoresis, we can determine the concentration of the
+                            Nanobody for further experiments. </p>
+                        <p>We measured the absorbance of three groups of protein concentrations:</p>
+                        <p>$$ y_1 = 0.520,\quad y_2 = 0.536,\quad y_3 = 0.495 \quad \mathrm{(Abs)}$$</p>
+                        <p>According to the standard curve, the corresponding concentration was obtained.</p>
+                        <p>$$ c_1=392.7,\quad c_2=410.9,\quad c_3=363.2 \quad \mathrm{(μg/mL)}$$</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="title">Liquid crystal verification section</h2>
+                    <div class="mainText">
+                        <p>We designed a liquid crystal cell as an observation supporter. First, the upper glass slide
+                            was modified with 0.2%DMOAP to induce the vertical alignment of the liquid crystals and make
+                            the optical imaging of liquid crystals appear black at the first time.Meanwhile, we modified
+                            the lower slide with a mixture solution of 3% (v) APTES and 1% (v) DMOAP and 1% (v) GA, so
+                            that it could connect to the target protein. Then We mixed the sample with the antibody and
+                            added it to the modified slide. Finally, the upper and lower slides were assembled, and then
+                            the liquid crystals were added. We could observe the optical imaging of the liquid crystals
+                            pool under the microsco-pe, so as to determine the concentration of β<sub>2</sub>-MG of the
+                            sample. The following paragraphs are the results of our investigation on the fixed antigen
+                            and antibody concentration, and the brightne-ss contrast of β<sub>2</sub>-MG nano-antibody
+                            modified by C18 and the normal β<sub>2</sub>-MG nano-antibody combined with the liquid
+                            crystal.</p>
+                        <h3 class="title">Determination of immobilized β<sub>2</sub>-MG concentration</h3>
+                        <p>1. Standard for immobilized β<sub>2</sub>-MG concentration</p>
+                        <p>We have known that the orientation of liquid crystal molecules is very sensitive to the
+                            topographic changes on the substrate surface. When the β<sub>2</sub>-MG and GA are
+                            crosslinked and fixed on the substrate surface, the topographic structure of the surface
+                            will be changed to a certain extent affecting the orientation of the liquid crystal
+                            molecules. Therefore, it is necessary to investigate the effect of the concentration of
+                            immobilized β<sub>2</sub>-MG on the optical imaging of the liquid crystal cell. With the
+                            decrease of the concentration of immobilized β<sub>2</sub>-MG, the perturbation to the
+                            orientation of liquid crystal molecule decreases, and the optical imaging of liquid crystal
+                            cell gradually darkens. Only a few speckles appear in the optical imaging of liquid crystal
+                            cell, which tend to be all-black background. The highest immobilized β<sub>2</sub>-MG
+                            concentration, which can keep the optical imaging background dark, is fixed on the substrate
+                            surface when sufficient antigen and antibody reactions are required. </p>
+                        <p>2. Result</p>
+                        <p>Keeping other conditions unchanged,the concerntration of β<sub>2</sub>-MG is in the range of 250ng/mL to 1000ng/mL,
+                            and the results are shown in Fig. 4.</p>
+                        <table class="img">
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/f/f2/T--DLUT_China_B--Demonstrate5.png"
+                                         alt=""></td>
+                                <td><img src="http://2018.igem.org/wiki/images/2/22/T--DLUT_China_B--Demonstrate6.png"
+                                         alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">(a)</p>
+                                </td>
+                                <td>
+                                    <p class="footnote">(b)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/c/c5/T--DLUT_China_B--Demonstrate7.png"
+                                         alt=""></td>
+                                <td><img src="http://2018.igem.org/wiki/images/c/cd/T--DLUT_China_B--Demonstrate8.png"
+                                         alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">(c)</p>
+                                </td>
+                                <td>
+                                    <p class="footnote">(d)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/2/2b/T--DLUT_China_B--Demonstrate9.png"
+                                         alt=""></td>
+                                <td><img src="http://2018.igem.org/wiki/images/7/7d/T--DLUT_China_B--Demonstrate10.png"
+                                         alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">(e)</p>
+                                </td>
+                                <td>
+                                    <p class="footnote">(f)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/9/98/T--DLUT_China_B--Demonstrate11.png"
+                                         alt=""></td>
+                                <td><img src="http://2018.igem.org/wiki/images/7/75/T--DLUT_China_B--Demonstrate12.png"
+                                         alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">(g)</p>
+                                </td>
+                                <td>
+                                    <p class="footnote">(h)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><img
+                                        src="http://2018.igem.org/wiki/images/5/5c/T--DLUT_China_B--Demonstrate13.png"
+                                        alt=""></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p class="footnote">(i)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p class="footnote">Fig. 4.Optical imaging of liquid crystal cell with different
+                                        concentrations of immobilized β<sub>2</sub>-MG（a）1000ng/mL β<sub>2</sub>-MG
+                                        （b）900ng/mL β<sub>2</sub>-MG（c）800 ng/mL
+                                        β<sub>2</sub>-MG（d）700ng/mL β<sub>2</sub>-MG（e）600ng/mL β<sub>2</sub>-MG（f）500ng/mL
+                                        β<sub>2</sub>-MG（g）400ng/mL β<sub>2</sub>-MG（h）300ng/mL
+                                        β<sub>2</sub>-MG（i）250ng/mL β<sub>2</sub>-MG </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>From the experimental results, the results show when the concentration of β<sub>2</sub>-MG
+                            fixed to the substrate surface is under 500 ng/mL, only a few bright spots appear in the
+                            optical imaging of the liquid crystal cells gradually darkening, approaching the full black
+                            background. When the concentration of β<sub>2</sub>-MG is above 500 ng/mL, the optical
+                            imaging appears obvious bright spot which is becoming brighter gradually.</p>
+
+                        <p>3. Determination of immobilized β<sub>2</sub>-MG concentration</p>
+                        <p>As a result, the results show that the optical imaging of the liquid crystal cell becomes
+                            gradually bright with the increase of the concentration of fixed β<sub>2</sub>-MG under
+                            other conditions unchanged. Therefore, we can determine the change trend of the brightness
+                            of the liquid crystal. The concentration of β<sub>2</sub>-MG increases in the same trend.
+                            The relationship between the luminance of liquid crystal and the concentration of
+                            β<sub>2</sub>-MG can be established, and then determine the corresponding concentration of β<sub>2</sub>-MG
+                            according to the luminance of liquid crystal, so as to achieve the purpose of quantitative
+                            detection. Due to the need of the experiment, the maximum immobilized β<sub>2</sub>-MG
+                            concentration of 500 ng/mL is selected to be fixed on the substrate surface, which can keep
+                            the optical imaging background dark.</p>
+
+                        <h3 class="title">Determination of the concentration of β<sub>2</sub>-MG nano antibody</h3>
+                        <p>1. Screening criteria for the concentration of β<sub>2</sub>-MG nano-antibody</p>
+                        <p> The influence of the concentration of the nano-antibody on the optical imaging of the liquid
+                            crystal cell was further investigated. If we don’t add β<sub>2</sub>-MG in the sample, there
+                            will has color spots in the polarizing microscope imaging. When the concentration of the
+                            nano-antibody in the sample was low, only a few bright spots approached the full black
+                            background. In the subsequent detection, the substrate immobilized β<sub>2</sub>-MG will
+                            compete with the tested sample β<sub>2</sub>-MG to bind the limited reaction sites on the
+                            β<sub>2</sub>-MG nano-antibody. When the concentration of the tested β<sub>2</sub>-MG
+                            approaches zero (detection limit is infinitely low), the β<sub>2</sub>-MG nano-antibody will
+                            combine with the substrate immobilized β<sub>2</sub>-MG to disturb the orientation of the
+                            liquid crystal molecule to the maximum extent, resulting in the optical imaging of the
+                            liquid crystal cell. With the increase of the concentration of β<sub>2</sub>-MG, the binding
+                            of β<sub>2</sub>-MG nano-antibody to the substrate immobilized β<sub>2</sub>-MG decreases,
+                            and the optical imaging becomes dark from, thus completing the detection of β<sub>2</sub>-MG.
+                        </p>
+                        <p>2. Results</p>
+                        <p>Under the condition of 500ng/mL of β<sub>2</sub>-MG, 250ng/mL, 250ng/mL, 500ng/mL, and
+                            600ng/mL of β<sub>2</sub>-MG nano-antibodies were fixed on the glass slides, and the color
+                            and brightness changes of the liquid crystal film were compared, as shown in Fig. 5.</p>
+                        <table class="img">
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/4/4a/T--DLUT_China_B--Demonstrate14.png"
+                                         alt="">
+                                </td>
+                                <td><img src="http://2018.igem.org/wiki/images/7/7b/T--DLUT_China_B--Demonstrate15.png"
+                                         alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">(a)</p>
+                                </td>
+                                <td>
+                                    <p class="footnote">(b)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/e/e8/T--DLUT_China_B--Demonstrate16.png"
+                                         alt="">
+                                </td>
+                                <td><img src="http://2018.igem.org/wiki/images/e/ef/T--DLUT_China_B--Demonstrate17.png"
+                                         alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">(c)</p>
+                                </td>
+                                <td>
+                                    <p class="footnote">(d)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p class="footnote">Fig. 5. Change the concentration of fixed nano-antibodies to
+                                        β<sub>2</sub>-MG
+                                        under the condition of immobilizing 500 ng/mL of β<sub>2</sub>-MG on slide. (a)
+                                        250ng/mL of
+                                        β<sub>2</sub>-MG nano-antibodies (b) 400 ng/mL of β<sub>2</sub>-MG
+                                        nano-antibodies
+                                        (c) 500 ng/mL of β<sub>2</sub>-MG
+                                        nano-antibodies (d) 600 ng/mL of β<sub>2</sub>-MG nano-antibodies</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>The results shows that when the concentration of β<sub>2</sub>-MG nano-antibody was 250
+                            ng/mL, the optical imaging spot of liquid crystal cell was star-shaped, whose quantity was
+                            more than that of the non-fixed β<sub>2</sub>-MG antibody, but the change was not obvious.
+                            When the concentration of β<sub>2</sub>-MG nano-antibody is above 400 ng/mL, the
+                            distribution of the optical imaging spot of the liquid crystal cell is similar to the
+                            phenomena of the concentration of β<sub>2</sub>-MG nano-antibody which is 400 ng/mL.</p>
+
+                        <p>3. Determination of the concentration of β<sub>2</sub>-MG nano antibody</p>
+                        <p>Through the experimental results, we could find that as the concentration of antibody
+                            increased , the crystal molecular orientation is getting more messy, and the bright spots
+                            gradually enhance in the optical imaging. However, 400ng/mL is the threshold of the
+                            concentration of β<sub>2</sub>-MG nano-antibodies. When the concentration of nano-antibodies
+                            increases again, the bright spots in the liquid crystal imaging did not enhance
+                            significantly. Therefore, the lowest antibody concentration at 400ng/mL was selected for the
+                            immobilization of β<sub>2</sub>-MG on the substrate surface, which could maintain the
+                            maximum bright spots in the optical imaging background.</p>
+
+                        <h3 class="title">Different effects of common β<sub>2</sub>-MG nano-antibodies and C18-modified
+                            β<sub>2</sub>-MG
+                            nano-antibodies on optical imaging of liquid crystal cells at the same concentration</h3>
+                        <p>1. Standard for the concentration of β<sub>2</sub>-MG antibody</p>
+                        <p>The β<sub>2</sub>-MG nano-antibody modified by the long chain of C18 is larger than that of β<sub>2</sub>-MG
+                            nano-antibody. Therefore, it is necessary to further investigate the effects of ordinary
+                            β<sub>2</sub>-MG nano-antibodies and C18 long-chain modified β<sub>2</sub>-MG
+                            nano-antibodies on the optical imaging of liquid crystal cells. </p>
+                        <p>2. Result</p>
+                        <p>Under the condition of 500ng/mL of β<sub>2</sub>-MG, 250ng/mL C18 modified of β<sub>2</sub>-MG
+                            nano-antibodies, 250ng/mL and 400ng/mL of β<sub>2</sub>-MG nano-antibodies were fixed on the
+                            glass slides, and color and brightness changes of liquid crystal film were compared, as
+                            shown in Fig. 6.</p>
+                        <table class="img">
+                            <tr>
+                                <td><img src="http://2018.igem.org/wiki/images/3/36/T--DLUT_China_B--Demonstrate18.png"
+                                         alt=""></td>
+                                <td><img src="http://2018.igem.org/wiki/images/1/1b/T--DLUT_China_B--Demonstrate19.png"
+                                         alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="footnote">(a)</p>
+                                </td>
+                                <td>
+                                    <p class="footnote">(b)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <img src="http://2018.igem.org/wiki/images/3/3c/T--DLUT_China_B--Demonstrate20.png">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p class="footnote">(c)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p class="footnote">Fig. 6. Change the concentration and types of fixed
+                                        β<sub>2</sub>-MG
+                                        nano-antibodies when 500 ng/mL β<sub>2</sub>-MG is immobilized on slide. (a)
+                                        250ng/mL modified
+                                        C18 β<sub>2</sub>-MG nano-antibodies. (b) 250ng/mL β<sub>2</sub>-MG
+                                        nano-antibodies.
+                                        (c) 400ng/mL β<sub>2</sub>-MG
+                                        nano-antibodies </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>From the experimental results, fixed with the same concentration of β<sub>2</sub>-MG nano
+                            antibody (both with a concentration of 250ng/mL), the brightness of the liquid crystal cell
+                            with C18 modified β<sub>2</sub>-MG nano-antibody is higher than the threshold of normal
+                            nano-antibody.</p>
+                        <p>3 Comparison of sensitivity between normal β<sub>2</sub>-MG nano antibody and C18 modified
+                            β<sub>2</sub>-MG antibody</p>
+                        <p>From the experimental results, we can find that the C18 modified β<sub>2</sub>-MG
+                            nano-antibody has greater disturbance to the liquid crystal molecules, so we can judge that
+                            the sensitivity of the C18 modified β<sub>2</sub>-MG nano-antibody is higher.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="title">Conclusion</h2>
+                    <div class="mainText">
+                        <p>Through experiments, we finally decided to immobilize 500ng/mL β<sub>2</sub>-MG on the
+                            substrate , binding with 400ng/mL β<sub>2</sub>-MG nano-antibody. In addition, we determined
+                            that the detection sensitivity of the antibody at β<sub>2</sub>-MG modified by C18 was
+                            higher. Therefore, we can detect the concentration of β<sub>2</sub>-MG in the range of
+                            100ng/ ml-400ng /mL (a theoretical estimate) by this method, which meets our requirements
+                            for the early diagnosis of nephropathy patients.</p>
+                        <p>Through a series of Confirmatory experiment, we have proved that in the early stage of
+                            chronic
+                            kidney disease, our detection system can indeed reflect the changes in β<sub>2</sub>-MG
+                            concentration,
+                            which can remind users to go to the hospital for further testing.</p>
+                        <p>In the future, we plan to establish a more complete back-office system, which can directly
+                            obtain more accurate test results based on the user's past physical indicators.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -71,11 +484,15 @@
     <!--<script src="js/script.js"></script>-->
     <!--<script src="js/contents.js"></script>-->
     <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>
-    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>-->
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>
+    <script src="http://2018.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
                 topToggle();
+            });
+            $(window).scroll(function () {
+                contentsAnchor();
             });
         });
     </script>

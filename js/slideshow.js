@@ -32,7 +32,7 @@ function slideshow(data) {
         move(false);
     };
 
-    let si = setInterval(move, interval);
+    let si = setInterval(move, interval, true);
     $('#box').hover(function () {
         clearInterval(si);
     }, function () {

@@ -1,0 +1,20 @@
+#dlutb #article .mainText p.footnote{
+    text-align: center;
+}
+#dlutb #article .mainText table.data{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: solid 2px #7f5115;
+    background: none;
+}
+#dlutb #article .mainText table.data td,#dlutb #article .mainText table.data th{
+    border: solid 1px #7f5115;
+    padding: 5px;
+    color: #7f5115;
+    font-size: 16px;
+    background: none;
+}
+#dlutb #article .mainText table.data thead{
+    text-align: center;
+}

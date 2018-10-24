@@ -35,7 +35,6 @@ body {
 }
 #dlutb{
     background-color: #fbf2e6;
-    /*background:linear-gradient(to left,#ee9e3f,#f6c954);*/
 }
 #dlutb p, #dlutb .mainText ol, #dlutb .mainText ul, #dlutb .mainText li {
     font-size: 18px;
@@ -245,7 +244,6 @@ body {
 }
 #dlutb .mainText p.footnote  {
     font-size: 12px;
-    /*text-align: center;*/
     margin: 0;
     padding: 0;
 }
@@ -385,4 +383,13 @@ body {
 #dlutb .js-plotly-plot{
     display: table;
     margin:0 auto;
+}
+#dlutb span.highlight{
+    color:red;
+    font-weight: bold;
+}
+#dlutb video{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
 }

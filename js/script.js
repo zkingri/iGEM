@@ -36,7 +36,20 @@ let navData = [
     },
     {
         "menu": "Model",
-        "link": "http://2018.igem.org/Team:DLUT_China_B/Model"
+        "subMenu": [
+            {
+                "name": "Gray Value-Concentration Model",
+                "link": "http://2018.igem.org/Team:DLUT_China_B/GrayValueConcentrationModel"
+            },
+            {
+                "name": "Kinetic Model",
+                "link": "http://2018.igem.org/Team:DLUT_China_B/KineticModel"
+            },
+            {
+                "name": "Liquid Crystal Molecules Perturbations Model",
+                "link": "http://2018.igem.org/Team:DLUT_China_B/LiquidCrystalMoleculesPerturbationsModel"
+            }
+        ]
     },
     {
         "menu": "Awards",

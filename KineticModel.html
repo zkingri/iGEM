@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kinetic Model</title>
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <!--<link rel="stylesheet" href="css/nav.css">-->
+    <!--<link rel="stylesheet" href="css/bubbles.css">-->
+    <!--<link rel="stylesheet" href="css/slideshow.css">-->
+    <!--<link rel="stylesheet" href="css/fontawesome.css">-->
+    <!--<link rel="stylesheet" href="css/contents.css">-->
+    <!--<link rel="stylesheet" href="css/parts.css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">-->
+
+    <!--<script src="js/jquery.js"></script>-->
+    <!--<script src="js/slideshow.js"></script>-->
+    <!--<script src="js/bubbles.js"></script>-->
+    <!--<script src="js/typed.js"></script>-->
+    <!--<script src="js/plotly.min.js"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/bubbles.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/typed.js&action=raw&ctype=text/javascript"></script>-->
+
+    <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
+    <!--尝试各种办法就是不能把plotly.js上传上去只能从外面引用，妈耶是谁规定编辑内容不能超过2MB的-->
+    <!--掀桌 (┛❍ᴥ❍)┛彡┻━┻ -->
+    <!--摆好摆好 ┬─┬ノ( º _ ºノ) -->
+    <!--再掀一次 (╯°□°）╯︵ ┻━┻ -->
+
+</head>
+<body>
+<div id="dlutb">
+    <div id="moduleHeader">
+        <div id="nav"></div>
+        <div id="background" class="model"></div>
+        <div class="moduleTitle">Kinetic Model</div>
+    </div>
+
+    <div id="mainBody">
+        <div id="contents"></div>
+        <div id="article">
+            <div>
+                <h2 class="title">The relationship between residual antigen concentration and
+                    time</h2>
+                <div class="mainText">
+                    <p>In order to optimize the antigen fixation time, the relationship between the remaining antigen
+                        concentration and the fixed time was made.</p>
+                    <p>From this, the reaction formula \(\mathrm{α}\) can be obtained and the pattern diagram
+                        ω<sub>1</sub> is given, where \(A\) is the antigen and \(M\) is the concentration of the
+                        reaction site on the slide. Since the addition liquid fixing and treatment methods are
+                        unchanged, \(M_0\) does not change.</p>
+                    <p>$$A+M\overset{K_a}{\underset{K_d}{\rightleftharpoons}}A-M \tag{ α }$$</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/a/ae/T--DLUT_China_B--Model1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.ω<sub>1</sub> Fixed antigen pattern</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>If \(\theta=\frac{[A-M]}{M_0}\), that is, the position occupied by the immobilized antigen
+                        accounts for the percentage of all positions of the entire slide. Then by the dynamics
+                        relationship, the following relationships can be listed:</p>
+                    <p>$$-\frac{d[A]}{dt}=K_a(1-\theta)[M_0][A]-K_d\theta[M_0]$$</p>
+                    <p>If \(θ\) is determined, that is, the proportion of the number of fixed positions of the
+                        slide, it is usually the maximum concentration under the premise of disturbing the liquid
+                        crystal. Experimental data gives that \(θ\) is generally optimal between 0.05 and 0.1. Let
+                        \(b=\frac{K_a}{K_d}\), the relationship can be got:</p>
+                    <p>$$[A]=C_1exp[-K_a(1-\theta)[M_0]t]+\frac{\theta}{b(1-\theta)}$$</p>
+                    <p>In this way, the relationship between the residual concentration of the added antigen and the
+                        reaction time can be obtained (4):</p>
+                    <p>$$[A]=C_1exp[mt]+n\tag{4}$$</p>
+                    <p>Therefore, based on this relationship, the relationship between the residual antigen
+                        concentration and time can be predicted, as shown in Fig. 2(a) and (b).</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/b/b9/T--DLUT_China_B--Model21.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(a) One Concentration</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/9/9f/T--DLUT_China_B--Model22.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(b) The relationships of multiple concentration</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.2 Relationship between residual antigen concentration and time
+                                    when immobilized antigen</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Combining the formula (2) in the content of the gray scale model, the relationship between the
+                        fixed time and the gray value of the relationship (5) can be obtained. As shown in Fig. 3.</p>
+                    <p>$$\mathrm{Grayscale \ value}=\frac{\sigma_1exp[mt]+\Psi_1}{\beta_0+C_1exp[mt]}\tag{5}$$</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/e/e3/T--DLUT_China_B--Model23.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">Fig.3 Relationship between antigen fixation time and result gray
+                                value</p></td>
+                        </tr>
+                    </table>
+                    <p>It can be concluded that the reaction can be stopped in certain stage of the reaction, because it
+                        is uneconomical to continue the reaction. At the same time, for the initial antigen
+                        concentration change, the initial large reaction starts to be fast, while the initial value is
+                        small, the reaction rate starts to be small; at the same time, the optimum reaction time for the
+                        different concentrations of the added antigen is about the same, and has little relationship
+                        with the concentration. Finally, there is a clear relationship between the fixed time of the
+                        antigen and the gray value.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title">Adding antigen concentration and adding antibody concentration ratio relationship</h2>
+                <div class="mainText">
+                    <p>In order to the final result was as expected by making the solubility of the configured
+                        antigen-antibody immobilization solution. It is necessary to optimize the concentration
+                        ratio for them.</p>
+                    <p>After fixing the antigen. For immobilized antibodies, there is a reaction \(β\) and the pattern
+                        diagram ω<sub>2</sub>:</p>
+                    <p>$$A'+R_T\overset{K_a}{\underset{K_d}{\rightleftharpoons}}R_TA' \tag{ β }$$</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/b/ba/T--DLUT_China_B--Model2.png"></td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">Fig.ω<sub>2</sub> Fixed antibody pattern</p></td>
+                        </tr>
+                    </table>
+                    <p>If \(θ_2\) is defined, it represents the effect that is desired to be achieved when immobilizing
+                        the antibody, and typically the antibody concentration can destroy the grayscale percentage of
+                        the liquid crystal to a defined full brightness. At this time, there is another relationship
+                        (6):</p>
+                    <p>$$[R_T]=C_2exp[Qt]+P\tag{6}$$</p>
+                    <p>When the reaction is sufficient, it is assumed to be \(t_0\). For the relationship between the
+                        reaction \(\beta\):</p>
+                    <p>$$K_a(1-\theta_2)[R_T]=K_d\theta_2$$</p>
+                    <p>$$\theta_2=\frac{[R_TA']}{[R_{T0}]}$$</p>
+                    <p>Combining relation (4), we can get relation (7):</p>
+                    <p>$$\frac{[R_{T0}]}{A_0}=\alpha+\frac{\beta}{C_1+n}\tag{7}$$</p>
+                    <p>Among them, \(\alpha\) and \(\beta\) have a large correlation with \(\theta_2\), but have little
+                        correlation with \(\theta\). From the experimental data, it can be given that \(\theta_2\) meets
+                        the requirements when it reaches 0.5~0.7. Under the preconditions, relation (8) and Fig. 4 can
+                        be derived:</p>
+                    <p>$$\frac{[R_{T0}]}{A_0}=K\theta_2+b\tag{8}$$</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/1/17/T--DLUT_China_B--Model24.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">Fig.4 The relationship between the optimal ratio of antibody
+                                antigen concentration and θ<sub>2</sub></p></td>
+                        </tr>
+                    </table>
+                    <p>There are then two scenarios. Scheme 1: immobilized antigen, test substance and antibody mixed
+                        detection. Scheme 2: After the antigen is fixed and the excess antibody is added, the test
+                        substance is added for competitive reaction. These two options need to be compared.</p>
+                    <p>At present, the gray scale model and the dynamic model are discussed in the first scheme.</p>
+                    <p>When determining the residual antigen concentration and time relationship when immobilizing an
+                        antigen and the residual antibody concentration and time relationship when the antibody is
+                        attached, the model can be used to give an optimal concentration ratio of the immobilized
+                        antigen and the antibody by combining given \(θ\) and \(θ_2\).</p>
+                    <p>At the same time, it can be concluded that the proportional relationship is closely related to
+                        the expected \(θ_2\) and has no obvious relationship with the expected \(θ\).</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title">The relationship between the Grayscale value and the reaction time of the liquid to be
+                    tested</h2>
+                <div class="mainText">
+                    <p>When inspecting the finished product, it is desirable to obtain the shortest test time to
+                        determine the credibility of the test results. Therefore, the relationship between the test
+                        results and time is completed. The reaction \(\mathrm{γ}\) and the pattern diagram ω<sub>3</sub>
+                        are as follows:</p>
+                    <p>$$R_TA\overset{K_{d1}}{\underset{K_{a1}}{\rightleftharpoons}}A+R_T$$</p>
+                    <p>$$P+R_T\overset{K_{a2}}{\underset{K_{d2}}{\rightleftharpoons}}R_TP \tag{ γ }$$</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/5/5a/T--DLUT_China_B--Model3.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.ω<sub>3</sub> Detection mode diagram</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>For detection, it is assumed that the immobilized antigen is not easily detached outside the
+                        reaction, and the amount of free antibody during the reaction is very small and remains
+                        substantially unchanged. Using the steady-state and kinetic knowledge of the antibody, derive
+                        the relationship (9):</p>
+                    <p>\begin{equation}\begin{split}
+                        [R_TA]=&Cexp[-(K_{d2}+K_{a2}[R_T])t]\\&+\frac{K_{d2}(K_{d2}[R_TA_0]+[R_T])-K_{a2}([P_0]-[R_TA_0]+[R_T])[R_T]}{K_{d2}+K_{a2}[R_T]}
+                        \end{split}\tag{9}\end{equation}</p>
+                    <p>equal meaning between \([R_TA_0]\) and \([R_TA]_0\).</p>
+                    <p>By simplification of relation (9) and combining relation (2) inside the grayscale model content,
+                        relations (10) and (11) can be obtained:</p>
+                    <p>$$[R_TA]=Cexp[xt]+y\tag{10}$$</p>
+                    <p>$$\mathrm{Grayscale \ value}=\frac{\sigma exp[xt]+Psi}{\beta+Cexp[xt]}\tag{11}$$</p>
+                    <p>According to this relationship, a detection curve expressed by a fixed antigen-antibody
+                        concentration can be obtained. The relationship between the high-sensitivity detection curve and
+                        the low-sensitivity detection curve (slide detection sensitivity and positive correlation of
+                        antigen-antibody pairs) can also be obtained. Fig. 5(a)(b)(c) can be listed:</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/1/12/T--DLUT_China_B--Model25.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(a) Relationship between fixed antigen-antibody concentration and
+                                detection time</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/5/54/T--DLUT_China_B--Model26.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(b) Relationship between different fixed antigen-antibody
+                                concentration
+                                and detection time</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/3/34/T--DLUT_China_B--Model27.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(c) Gray value and detection time relationship diagram</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">Fig.5 Predictive graph during detection</p></td>
+                        </tr>
+                    </table>
+                    <p>From the analysis results, the detection time can be optimized to achieve the most effective
+                        time. At the same time, for a fixed antigen-antibody pair, this value is proportional to the
+                        initial reaction rate; the optimal time is approximately the same. Finally, there is a clear
+                        relationship between the detection time and the gray value relationship.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="address">
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p>No.2 Linggong Road, Ganjingzi District, Dalian City, Liaoning Province, P.R.C., 116024</p>
+            <h3><i class="fas fa-at"></i> E-mail</h3>
+            <p>igem_dlut_china_B#163.com (Please replace # with @)</p>
+        </div>
+        <div id="follow">
+            <h3>Follow Us</h3>
+            <div id="platformName">
+                <p><i class="fab fa-weixin"></i> WeChat</p>
+                <p></p>
+                <p><i class="fab fa-weibo"></i> Weibo</p>
+            </div>
+            <div id="qrCode">
+                <div><img src="http://2018.igem.org/wiki/images/c/c6/T--DLUT_China_B--wechat.png" width="100"></div>
+                <div></div>
+                <div><img src="http://2018.igem.org/wiki/images/6/6b/T--DLUT_China_B--weibo.png" width="100"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="back" class="btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!--<script src="js/script.js"></script>-->
+    <!--<script src="js/model.js"></script>-->
+    <!--<script src="js/contents.js"></script>-->
+    <!--<script type="text/javascript" async src="js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>-->
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/model.js&action=raw&ctype=text/javascript"></script>-->
+    <script src="http://2018.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                topToggle();
+            });
+            $(window).scroll(function () {
+                contentsAnchor();
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

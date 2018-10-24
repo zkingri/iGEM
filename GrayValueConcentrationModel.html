@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gray Value-Concentration Model</title>
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <!--<link rel="stylesheet" href="css/nav.css">-->
+    <!--<link rel="stylesheet" href="css/bubbles.css">-->
+    <!--<link rel="stylesheet" href="css/slideshow.css">-->
+    <!--<link rel="stylesheet" href="css/fontawesome.css">-->
+    <!--<link rel="stylesheet" href="css/contents.css">-->
+    <!--<link rel="stylesheet" href="css/parts.css">-->
+    <link rel="stylesheet"
+          href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">
+    <link rel="stylesheet"
+          href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
+    <link rel="stylesheet"
+          href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">
+    <link rel="stylesheet"
+          href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">-->
+
+    <!--<script src="js/jquery.js"></script>-->
+    <!--<script src="js/slideshow.js"></script>-->
+    <!--<script src="js/bubbles.js"></script>-->
+    <!--<script src="js/typed.js"></script>-->
+    <!--<script src="js/plotly.min.js"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/bubbles.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/typed.js&action=raw&ctype=text/javascript"></script>-->
+
+    <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
+    <!--尝试各种办法就是不能把plotly.js上传上去只能从外面引用，妈耶是谁规定编辑内容不能超过2MB的-->
+    <!--掀桌 (┛❍ᴥ❍)┛彡┻━┻ -->
+    <!--摆好摆好 ┬─┬ノ( º _ ºノ) -->
+    <!--再掀一次 (╯°□°）╯︵ ┻━┻ -->
+
+</head>
+<body>
+<div id="dlutb">
+    <div id="moduleHeader">
+        <div id="nav"></div>
+        <div id="background" class="model"></div>
+        <div class="moduleTitle">Gray Value-Concentration Model</div>
+    </div>
+
+    <div id="mainBody">
+        <div id="contents"></div>
+        <div id="article">
+            <div class="mainText">
+                <p>By building a mathematical model, we demonstrate the principles of the project and provide guidance
+                    for optimizing product design and its application.</p>
+                <p>By building a mathematical model, we demonstrate the principles of the project and provide guidance
+                    for optimizing product design and its application.</p>
+                <p>A grayscale model is built to solve the image quantization problem.</p>
+                <p>A kinetic model was established to solve the problem of time optimization of antigen fixation,
+                    reaction concentration ratio and detection time optimization.</p>
+                <p>The spatial perturbation model provides relevant conclusions about liquid crystal interference. A
+                    fixed antigen concentration threshold is given.</p>
+            </div>
+
+            <div>
+                <h2 class="title">The relationship between the gray value and the added substance
+                    concentration</h2>
+                <div class="mainText">
+                    <p>To describe our results in antigen fixation, antibody ligation, and detection, a grayscale model
+                        was established. The model can more accurately reflect the results of the three phases.
+                        Especially in the test, the results can be digitized to provide better detection limits.</p>
+                    <p>For the result of the gray value calculation, it is firstly grayscaled. Since it is a color
+                        picture, it needs to be grayed out first with Matlab. At the same time, in order to give a clear
+                        grayscale image, image equalization is performed and a balanced image is given<sup>[Attachment
+                            1]</sup>. After obtaining the grayscale image, it is necessary to calculate the grayscale of
+                        the image using the formula (1). To make it easier to get accurate data, design a small software<sup>[Attachment
+                            2]</sup> in a programming language that calculates the average grayscale of the image. There
+                        is an error in the data of the grayscale image. According to the experimental results, when the
+                        gray value is not too low, it is about 5%. The error is about 10% compared to the balanced
+                        grayscale image.</p>
+                    <p>$$ g_w = \sum_{i=0}^{255} i \times T_i \div T \tag{1} $$</p>
+                    <p>For the experimental results, no matter which process. In the initial stage, the gray value is
+                        positively correlated with the concentration of the additive; as the additive concentration
+                        increases, the gray value is not proportional to the increase. There are two models that satisfy
+                        these properties, equation (2) and equation (3):</p>
+                    <p>Michaelis-Menten model: $$ y = \frac{\alpha x}{\beta + x} \tag{2} $$</p>
+                    <p>Exponential growth model: $$ y = \alpha (1- exp(-\beta x)) \tag{3} $$</p>
+                    <p>Substituting the above two formulas into the relevant literature [2], where model (2) is very
+                        consistent. Simultaneous model (2) If the enzyme is compared to a slide, the substrate is
+                        similar to the additive. The resulting enzymatic reaction rate - substrate concentration and
+                        gray value - has a good fit to the added concentration. So using this model is very suitable. In
+                        other literature [1], the results obtained are also consistent. The relationship between gray
+                        value and concentration in this model is shown in Figure 1(a), which applies to multiple stages
+                        of the project. The different substances added are shown in Figure 2(b).</p>
+                    <table class="img">
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/5/5a/T--DLUT_China_B--Model18.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(a) Addition of added substances</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/3/33/T--DLUT_China_B--Model19.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="footnote">(b) Relationship between different additions and gray values (joined
+                                separately)</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="http://2018.igem.org/wiki/images/b/b3/T--DLUT_China_B--Model20.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">(c) Fixed antigen grayscale model curve</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.1 Gray value and additive concentration relationship</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>In the step of immobilizing the antigen, other conditions are controlled and a large amount of
+                        experimental data is used to reduce the error. Experimental Results After data processing,
+                        Figure 1 (c), Equation \(\mathrm{Y_1}\), can be obtained. The resulting image was used to
+                        predict
+                        other data and found good consistency. The established gray value - concentration model is
+                        consistent with the experiment. Therefore, the antibody immobilization model was further
+                        established and the result of the equation \(\mathrm{Z_1}\) was obtained. It can be seen from
+                        the
+                        model and experimental data that the gray value is positively correlated with the additive
+                        concentration when the concentration is not large. It can be seen from the model and
+                        experimental data that the gray value is positively correlated with the additive concentration
+                        when the concentration is not large and is greater than 0.4 μg/ml.</p>
+                    <p>$$ y = \frac{\alpha}{\beta} x \quad \mathrm{(Ψ_q)} $$</p>
+                    <p>$$ y = 6.4904 x \quad \mathrm{(Y_1)} $$</p>
+                    <p>$$ y = 9.3506 x \quad \mathrm{(Z_1)} $$</p>
+                    <p>When the concentration of the additive is not very large, the formula (2) can be changed to the
+                        formula \(\mathrm{Ψ_q}\).</p>
+                    <p>Grayscale values are also available when the slide is fixed to anything. Therefore, it is
+                        meaningful to perform statistics on the gray value of the unfixed antigen. The \(\mathrm{Y_1}\)
+                        equation is
+                        the result of correcting the zero point deviation and comparing the relationship
+                        \(\mathrm{Ψ_q}\). \(\mathrm{Z_1}\) can be
+                        obtained by treating the modified antibody model in the same manner.</p>
+                    <p class="footnote">[1]Zhang Jiao, Su Xiuxia, Yang Dong, Luan Chonglin,Label-free liquid crystal
+                        biosensor for cecropin B detection,Talanta,Volume 186,2018,Pages 60-64,ISSN 0039-9140, <a
+                                href="https://doi.org/10.1016/j.talanta.2018.04.004">https://doi.org/10.1016/j.talanta.2018.04.004</a>.
+                    </p>
+                    <p class="footnote">[2]Li Xian, Li Guang, Yang Meng, Chen Long-Cong, Xiong Xing-Liang,Gold
+                        nanoparticle based signal enhancement liquid crystal biosensors for tyrosine assays,Sensors and
+                        Actuators B: Chemical,Volume 215,2015,Pages 152-158,ISSN 0925-4005, <a
+                                href="https://doi.org/10.1016/j.snb.2015.03.054">https://doi.org/10.1016/j.snb.2015.03.054</a>.
+                    </p>
+                    <p class="footnote">[Attachment 1] Name:(Picture grayscale processing code) <a
+                            href="https://github.com/zkingri/gray">https://github.com/zkingri/gray</a></p>
+                    <p class="footnote">[Attachment 2] Except for all documents in Annex 1. <a
+                            href="https://github.com/zkingri/gray">https://github.com/zkingri/gray</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="address">
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p>No.2 Linggong Road, Ganjingzi District, Dalian City, Liaoning Province, P.R.C., 116024</p>
+            <h3><i class="fas fa-at"></i> E-mail</h3>
+            <p>igem_dlut_china_B#163.com (Please replace # with @)</p>
+        </div>
+        <div id="follow">
+            <h3>Follow Us</h3>
+            <div id="platformName">
+                <p><i class="fab fa-weixin"></i> WeChat</p>
+                <p></p>
+                <p><i class="fab fa-weibo"></i> Weibo</p>
+            </div>
+            <div id="qrCode">
+                <div><img src="http://2018.igem.org/wiki/images/c/c6/T--DLUT_China_B--wechat.png" width="100"></div>
+                <div></div>
+                <div><img src="http://2018.igem.org/wiki/images/6/6b/T--DLUT_China_B--weibo.png" width="100"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="back" class="btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!--<script src="js/script.js"></script>-->
+    <!--<script src="js/model.js"></script>-->
+    <!--<script src="js/contents.js"></script>-->
+    <!--<script type="text/javascript" async src="js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>-->
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/model.js&action=raw&ctype=text/javascript"></script>-->
+    <script src="http://2018.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                topToggle();
+            });
+            $(window).scroll(function () {
+                contentsAnchor();
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

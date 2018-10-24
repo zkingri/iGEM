@@ -10,7 +10,8 @@ let time=[
     "12 Sept",
     "15 Sept",
     "19 Sept",
-    "26 Sept ~ 27 Sept"
+    "26 Sept ~ 27 Sept",
+    "Later On"
 ];
 for (let i = 0; i < elem.length; ++i) {
     node = document.createElement("li");

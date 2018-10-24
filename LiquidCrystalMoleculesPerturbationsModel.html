@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Liquid Crystal Molecules Perturbations Model</title>
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <!--<link rel="stylesheet" href="css/nav.css">-->
+    <!--<link rel="stylesheet" href="css/bubbles.css">-->
+    <!--<link rel="stylesheet" href="css/slideshow.css">-->
+    <!--<link rel="stylesheet" href="css/fontawesome.css">-->
+    <!--<link rel="stylesheet" href="css/contents.css">-->
+    <!--<link rel="stylesheet" href="css/parts.css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">-->
+
+    <!--<script src="js/jquery.js"></script>-->
+    <!--<script src="js/slideshow.js"></script>-->
+    <!--<script src="js/bubbles.js"></script>-->
+    <!--<script src="js/typed.js"></script>-->
+    <!--<script type="text/javascript" async src="js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>-->
+    <!--<script src="js/plotly.min.js"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/bubbles.js&action=raw&ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/typed.js&action=raw&ctype=text/javascript"></script>-->
+
+    <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
+    <!--尝试各种办法就是不能把plotly.js上传上去只能从外面引用，妈耶是谁规定编辑内容不能超过2MB的-->
+    <!--掀桌 (┛❍ᴥ❍)┛彡┻━┻ -->
+    <!--摆好摆好 ┬─┬ノ( º _ ºノ) -->
+    <!--再掀一次 (╯°□°）╯︵ ┻━┻ -->
+
+</head>
+<body>
+<div id="dlutb">
+    <div id="moduleHeader">
+        <div id="nav"></div>
+        <div id="background" class="model"></div>
+        <div class="moduleTitle">Liquid Crystal Molecules Perturbations Model</div>
+    </div>
+
+    <div id="mainBody">
+        <div id="contents"></div>
+        <div id="article">
+            <div class="mainText">
+                <p>The field of synthetic biology relies heavily on mathematical models that help simulate and
+                    predict the process and consequence of biological systems. We developed two models, the radial
+                    domino model and the blooming model to describe the potential perturbation mechanism and
+                    interaction modes between protein particles and liquid crystal molecules. The protein density
+                    threshold can be calculated by this model.</p>
+            </div>
+            <div>
+                <h2 class="title">Purpose</h2>
+                <div class="mainText">
+                    <p>An important part of our liquid crystal experiment is to determine an optimal antigen
+                        concentration, so we creatively proposed two models to calculate the β<sub>2</sub>-M density
+                        microscopically. The trouble is that we do not know the range of antigen molecules that can
+                        perturb liquid crystal molecules. Therefore, we consulted the relevant parameters, proposed two
+                        models, calculated the range of the single antigen molecule to perturb the liquid crystal, and
+                        finally determined the threshold of the antigen concentration, which was consistent with our
+                        experimental results.</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="title">Parameters</h2>
+                <div class="mainText">
+                    <table class="img">
+                        <tr>
+                            <td colspan="2"><img
+                                    src="http://2018.igem.org/wiki/images/e/e2/T--DLUT_China_B--Model4.png"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img
+                                    src="http://2018.igem.org/wiki/images/c/c3/T--DLUT_China_B--Model5.png"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p class="footnote">Fig.1 The chemical structure (A) and the simulated structure (B) of
+                                    5CB<br>2nm×0.4nm</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/6/6e/T--DLUT_China_B--Model6.png" alt="">
+                            </td>
+                            <td><img src="http://2018.igem.org/wiki/images/4/41/T--DLUT_China_B--Model7.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.2 The simulated structure of Nanoantibody<br>4nm×2.5nm</p>
+                            </td>
+                            <td>
+                                <p class="footnote">Fig.3 The simulated structure of β<sub>2</sub>-MG<br>4.5nm×2.5nm×2.0nm
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h2 class="title">Hypothesis</h2>
+                <div class="mainText">
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/9/90/T--DLUT_China_B--Model8.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.4 Two possible mechanisms for β<sub>2</sub>-M to disturb liquid
+                                    crystal</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>The process of protein perturbation of liquid crystal molecules is particularly complicated, so
+                        we can only guess the disturbance mechanism on our own. Inspired by dominoes and the blossoming
+                        of flowers, we proposed that there might be two mechanisms of disruption. We called them RADIAL
+                        DOMINO MODEL and BLOOMING MODEL</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3d/T--DLUT_China_B--Model9.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.5 RADIAL DOMINO MODEL</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Simplify the β<sub>2</sub>-M and 5CB as ball and stick. The distance between each two sticks is
+                        equal. Due
+                        to the interference of the ball, the first stick next to the ball will be inclined at an angle.
+                        The first stick will affect the next stick until the last stick is aligned vertically.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/f/f5/T--DLUT_China_B--Model10.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.6 BLOOMING MODEL</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>This model is actually an extension of the previous model. Simplify the 5CB into one side of the
+                        polygons. As the molecular shells increases, the angle between the two sides of the polygon will
+                        tend to be 90°.</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="title">Calculation</h2>
+                <div class="mainText">
+                    <h3 class="title">Obtain the spacing of 5CB molecules</h3>
+                    <p>The forces between two molecules are covalent bonds, ionic bonds, metal bonds, hydrogen bonds and
+                        Van der Waals force. Because no other forces are present, the main force is Van der Waals force.
+                        The point at which the force becomes repulsive rather than attractive as two molecules near one
+                        another is called the van der Waals contact distance. Van der Waals force includes electrostatic
+                        force, dispersion force and induction force.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/c/ca/T--DLUT_China_B--Model11.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.7 van der Waals potential energy</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>We can use a simplified formula: the Lennard-Jones potential<sup>[1]</sup>.</p>
+                    <p>$$E=\frac{A}{r^{12}}-\frac{B}{r^6}$$</p>
+                    <p>where \(A=4\epsilon\sigma^{12}\), \(B=4\epsilon\sigma^6\).</p>
+                    <p>However, there is no sigma Lennard-Jones parameters (Angstrom) epsilon Lennard-Jones parameters
+                        (kcal/mol) about 5CB, so we calculate the van der Waals contact distance(\(r_0\)) by statistical
+                        mechanics<sup>[2]</sup>.</p>
+                    <p>In statistical mechanics, the radial distribution function \(g(r)\) in a system of particles
+                        (atoms, molecules, colloids, etc.), describes how density varies as a function of distance from
+                        a reference particle.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/9/94/T--DLUT_China_B--Model12.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.8 The sketch map of radial distribution function</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>The radial distribution function: </p>
+                    <p>$$\rho g(r)4\pi r^2=dN$$</p>
+                    <p>where \(\rho\) is the density of 5CB, \(N\) is the total number of 5CB molecules. Integrate the
+                        above formula:</p>
+                    <p>$$\int_0^\infty \rho g(r)4\pi r^2 \mathrm{d}r=\int_0^N\mathrm{d}N=N$$</p>
+                    <p>$$g(r)=\frac{\mathrm{d}N}{\rho 4\pi r^2}$$</p>
+                    <p>Molecular dynamics calculation:</p>
+                    <p>$$g(r)=\frac{1}{\rho 4\pi r^2}\frac{\sum_{i=1}^r\sum_{j=1}^N \Delta N(r\to r+\delta r)}{N\times
+                        T}$$</p>
+                    <p>Where \(N\) is the number of molecules and \(T\) is the calculated time (steps), \(\Delta N\) is
+                        the number of molecules between \(r\) and \(r+\delta r\).</p>
+                    <p>The radial distribution function can be computed via computer simulation methods. Because the
+                        peak of the radial distribution function appears at 0.5nm, so the spacing of 5CB molecules is
+                        around <span class="highlight">0.5nm</span>.</p>
+
+                    <h3 class="title">Calculate the range of β<sub>2</sub>-M that can perturb 5CB</h3>
+                    <p>We assume 5CB molecule as a ellipse (\(a\)=1nm, \(b\)=0.1nm), we got the tilt angles of three
+                        molecules by Matlab.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/8/82/T--DLUT_China_B--Model13.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">Fig.9 The tilt angles are 43°, 64°, 90° respectively.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3d/T--DLUT_China_B--Model9.png" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                    <p>\(\therefore\)Maximum radius of β<sub>2</sub>-M that can perturb 5CB (Fig. 5):</p>
+                    <p>\(R_1=[2\times\sin (64^\circ )+1]\mathrm{nm}=\)<span class="highlight">2.8nm</span></p>
+
+                    <h3 class="title">Verification</h3>
+                    <p>In the liquid crystal experiment, the droplets dropped on the slide have a radius of about 2
+                        mm.</p>
+                    <p>$$\therefore S=\pi R^2=4\pi\times 10^{12}\mathrm{nm^2}$$</p>
+                    <p>The molecular weight of β<sub>2</sub>-M is 11800, the volume of the droplet is 10μL.</p>
+                    <p></p>
+                    <p>The area disturbed by each protein molecule is:</p>
+                    <p>$$r=2.8\mathrm{nm}$$</p>
+                    <p>$$S_0=\pi r^2=7.84\pi\mathrm{nm^2}$$</p>
+                    <p>When the picture is just full colorful, the number of molecules contained in the droplet
+                        is:</p>
+                    <p>$$N=\frac{S}{S_0}=5.1\times 10^{11}$$</p>
+                    <p>$$m=\frac{11800\times 5.1\times 10^{11}}{6.02\times 10^{23}}=10^{-8}\mathrm{g}$$</p>
+                    <p>\(\therefore\)Maximum concentration is:</p>
+                    <p>\(c=\frac{m}{V}=\)<span class="highlight">1000ng/mL</span></p>
+                    <p>That is to say, when the concentration reaches 1000ng/mL, the image starts to be completely
+                        bright. This is in good agreement with our experimental results. The following are the results
+                        of the liquid crystal experiment.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3a/T--DLUT_China_B--Model14.png" alt="">
+                            </td>
+                            <td><img src="http://2018.igem.org/wiki/images/7/7a/T--DLUT_China_B--Model15.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">A. 500ng/ml(β<sub>2</sub>-M)</p>
+                            </td>
+                            <td>
+                                <p class="footnote">B. 600ng/ml(β<sub>2</sub>-M)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3c/T--DLUT_China_B--Model16.png" alt="">
+                            </td>
+                            <td><img src="http://2018.igem.org/wiki/images/5/57/T--DLUT_China_B--Model17.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="footnote">C. 700ng/ml(β<sub>2</sub>-M)</p>
+                            </td>
+                            <td>
+                                <p class="footnote">D. 1000ng/ml(β<sub>2</sub>-M)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p class="footnote">Photographs of different antigen
+                                concentrations(photographed through a polarizing microscope)</p></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p class="footnote">[1] Jones J E. On the determination of molecular fields. From the equation of
+                        state of a gas[J]. Proc. R. Soc. Lond. A, 1924, 106(738): 463-477.</p>
+                    <p class="footnote">[2] Haynes W M. CRC handbook of chemistry and physics[M]. CRC press, 2014.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="address">
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p>No.2 Linggong Road, Ganjingzi District, Dalian City, Liaoning Province, P.R.C., 116024</p>
+            <h3><i class="fas fa-at"></i> E-mail</h3>
+            <p>igem_dlut_china_B#163.com (Please replace # with @)</p>
+        </div>
+        <div id="follow">
+            <h3>Follow Us</h3>
+            <div id="platformName">
+                <p><i class="fab fa-weixin"></i> WeChat</p>
+                <p></p>
+                <p><i class="fab fa-weibo"></i> Weibo</p>
+            </div>
+            <div id="qrCode">
+                <div><img src="http://2018.igem.org/wiki/images/c/c6/T--DLUT_China_B--wechat.png" width="100"></div>
+                <div></div>
+                <div><img src="http://2018.igem.org/wiki/images/6/6b/T--DLUT_China_B--weibo.png" width="100"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="back" class="btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!--<script src="js/script.js"></script>-->
+    <!--<script src="js/model.js"></script>-->
+    <!--<script src="js/contents.js"></script>-->
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/model.js&action=raw&ctype=text/javascript"></script>-->
+    <script src="http://2018.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                topToggle();
+            });
+            $(window).scroll(function () {
+                contentsAnchor();
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

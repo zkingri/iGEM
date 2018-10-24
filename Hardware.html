@@ -16,7 +16,7 @@
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
     <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">-->
+    <link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">
     <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">-->
 
     <!--<script src="js/jquery.js"></script>-->
@@ -35,9 +35,66 @@
         <div class="moduleTitle">Hardware</div>
     </div>
 
-    <div id="article">
-        <div class="mainText">
-            <p>There is nothing here at the moment.</p>
+    <div id="mainBody">
+        <div id="contents"></div>
+        <div id="article">
+            <div>
+                <h2 class="title">The First Generation of Dr. Familict</h2>
+                <div class="mainText">
+                    <p>The first generation hardware design is very simple, consisting of only one square box, cool
+                        polarizer, one card slot, and one chip. This also brings the trouble of the user, the user needs
+                        to time and rinse. Below is the structure diagram and physical map of the first generation
+                        product.</p>
+                    <table class="img">
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3f/T--DLUT_China_B--Hardware7.png"></td>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3c/T--DLUT_China_B--AppliedDesign5.jpg"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p class="footnote">Fig.1 The First Generation of Dr. Familict</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h2 class="title">The Second Generation of Dr. Familict</h2>
+                <div class="mainText">
+                    <h3 class="title">Instruction</h3>
+                    <p>Dr. Familict, the visualized liquid-crystal-based urine protein detector, is a 20cm&times;20cm&times;10cm
+                        brick-sized box. It consists mainly a slide holder slot, a wash buffer chamber, a waste
+                        collector, a liquid-crystal cell, polarizer and analyzer. Up on using, just plug in a
+                        antigen-coated glass slide to the slot, a drop of antibody solution is loaded automatically when
+                        the slide is placed properly. The user then only needs to add a drop of urine to the test zone,
+                        and press the bottom to start timing. The following operations will be done automatically. After
+                        the reaction is completed, the slide is rinsed for 30 s. Then it is drove slightly to the
+                        detection area. Upon slide positioning, liquid-crystal is loaded and the bottom light is
+                        switched on upon slide positioning. After the polarized light passes, visible color changes are
+                        produced. Users can take a picture and upload the result to the Mobile APP and get medication
+                        advice.</p>
+                    <div class="img"><img src="http://2018.igem.org/wiki/images/f/fa/T--DLUT_China_B--Hardware8.png">
+                    </div>
+                    <h3 class="title">Liquid-crystal Cell</h3>
+                    <p>The liquid crystal cell is the most important part of the test box. When the upper slider slides
+                        to the observation area, it is assembled with the upper slide of the liquid crystal cell into a
+                        self-assembled film spaced 6 micrometers apart, and then the liquid crystal cell on the left
+                        side of the slide is opened, and the liquid crystal enters between the upper and lower slides
+                        due to capillary action. At this point, the microstructure of the slide will affect the
+                        orientation change of the liquid crystal. After turning on the light at the bottom of the test
+                        box, the light passes through the polarizer, then through the cell, and finally through the
+                        analyzer above the cell, so we can observe changes in brightness and color.</p>
+                    <div class="img"><img src="http://2018.igem.org/wiki/images/1/14/T--DLUT_China_B--Hardware9.png">
+                    </div>
+                    <h3 class="title">Wash buffer chamber and waste collector</h3>
+                    <p>These two components are used to wash unfixed antigens, antibodies and other impurity proteins on
+                        the slide. When the user drops the urine and the antibody solution, the test box starts to
+                        timing. After the reaction reaches 40 minutes, the time is over, the buffer chamber gate is
+                        opened, the slide is started to be washed for 30 seconds, and the buffer flows into the waste
+                        collector. When the waste collection area is full and can be replaced, as the same user can
+                        easily replace the buffer box by himself.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -71,11 +128,14 @@
     <!--<script src="js/script.js"></script>-->
     <!--<script src="js/contents.js"></script>-->
     <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>
-    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>-->
+    <script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
                 topToggle();
+            });
+            $(window).scroll(function () {
+                contentsAnchor();
             });
         });
     </script>

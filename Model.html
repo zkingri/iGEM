@@ -6,28 +6,21 @@
     <title>Model</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
-    <!--<link rel="stylesheet" href="css/bubbles.css">-->
-    <!--<link rel="stylesheet" href="css/slideshow.css">-->
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/contents.css">
-    <!--<link rel="stylesheet" href="css/parts.css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/bubbles.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/slideshow.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&action=raw&ctype=text/css">-->
-    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/parts.css&action=raw&ctype=text/css">-->
 
     <script src="js/jquery.js"></script>
-    <!--<script src="js/slideshow.js"></script>-->
-    <!--<script src="js/bubbles.js"></script>-->
-    <!--<script src="js/typed.js"></script>-->
-    <script type="text/javascript" async src="js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script src="js/plotly.min.js"></script>
-    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/slideshow.js&action=raw&ctype=text/javascript"></script>-->
-    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/bubbles.js&action=raw&ctype=text/javascript"></script>-->
-    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/typed.js&action=raw&ctype=text/javascript"></script>-->
+
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/style.css&amp;action=raw&amp;ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/nav.css&amp;action=raw&amp;ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/fontawesome.css&amp;action=raw&amp;ctype=text/css">-->
+    <!--<link rel="stylesheet" href="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/css/contents.css&amp;action=raw&amp;ctype=text/css">-->
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!--尝试各种办法就是不能把plotly.js上传上去只能从外面引用，妈耶是谁规定编辑内容不能超过2MB的-->
+    <!--掀桌 (┛❍ᴥ❍)┛彡┻━┻ -->
+    <!--摆好摆好 ┬─┬ノ( º _ ºノ) -->
+    <!--再掀一次 (╯°□°）╯︵ ┻━┻ -->
 
 </head>
 <body>
@@ -72,14 +65,16 @@
                         namely equation (2) and formula (3):</p>
                     <p>Michaelis-Menten model: $$ y = \frac{\alpha x}{\beta + x} \tag{2} $$</p>
                     <p>Exponential growth model: $$ y = \alpha (1- exp(-\beta x)) \tag{3} $$</p>
-                    <p>We substituting the above two formulas into the literature we examined<sup>[2]</sup>, where model (2) is in
+                    <p>We substituting the above two formulas into the literature we examined<sup>[2]</sup>, where model
+                        (2) is in
                         good agreement. At the same time model (2) if the enzyme is compared to our slide, the substrate
                         is analogous to our addition. The resulting enzymatic reaction rate-substrate concentration and
                         gray value-addition concentration have a good fit. So we decided to use this model. And in the
-                        other literature<sup>[1]</sup> of the model, the results obtained are also consistent. The gray value and
+                        other literature<sup>[1]</sup> of the model, the results obtained are also consistent. The gray
+                        value and
                         concentration relationship in this model are shown in Fig. 1(a), This applies to both fixed
                         antigens, immobilized antibodies and assays. The different added substances are shown in
-                        Fig.2(b).</p>
+                        Fig. 2(b).</p>
                     <table class="img">
                         <tr>
                             <td>
@@ -95,7 +90,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="footnote">(b) Relationship between different additions and gray values (joined separately)</p></td>
+                            <td><p class="footnote">(b) Relationship between different additions and gray values (joined
+                                separately)</p></td>
                         </tr>
                         <tr>
                             <td>
@@ -109,7 +105,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">Fig. 1 Gray value and additive concentration relationship</p>
+                                <p class="footnote">Fig.1 Gray value and additive concentration relationship</p>
                             </td>
                         </tr>
                     </table>
@@ -117,19 +113,23 @@
                     <p>In the step of immobilizing the antigen, we control the amount of antigen added, the fixed time,
                         and the brightness and the observation magnification at the time of sampling, and use a large
                         amount of experimental data to average and reduce the error. Experimental Results After data
-                        processing, the Figures 1(c), Equations \(\mathrm{Y_1}\), can be obtained. The resulting image was used to
+                        processing, the Figures 1(c), Equations \(\mathrm{Y_1}\), can be obtained. The resulting image
+                        was used to
                         predict other data and found good agreement. Explain that the gray value-concentration model we
                         built is in line with our experiments. Thus, we further established the model on antibody
-                        immobilization and obtained the results of equations \(\mathrm{Z_1}\). From the model and our experimental
+                        immobilization and obtained the results of equations \(\mathrm{Z_1}\). From the model and our
+                        experimental
                         data, it can be stated that the gray value and the additive concentration are positively
                         correlated when the concentration is not large. From the model and our experimental data, it can
                         be stated that the gray value and the additive concentration are positively correlated when the
                         concentration is not very large and more than 0.4 μg/ml.</p>
-                    <p>$$ y = 6.4904 x \tag{Y_1} $$</p>
-                    <p>$$ y = 9.3506 x \tag{Z_1} $$</p>
+                    <p>$$ y = 6.4904 x \quad \mathrm{(Y_1)} $$</p>
+                    <p>$$ y = 9.3506 x \quad \mathrm{(Z_1)} $$</p>
                     <p>There is a bias when the antigen is not fixed. Therefore, we perform a statistical average of the
-                        gray values of the unfixed antigen. The \(\mathrm{Y_1}\) equation is the result of correcting the zero
-                        point deviation and the post-processing of the comparison relation \(\mathrm{Ψ_q}\). \(\mathrm{Z_1}\) can be obtained
+                        gray values of the unfixed antigen. The \(\mathrm{Y_1}\) equation is the result of correcting
+                        the zero
+                        point deviation and the post-processing of the comparison relation \(\mathrm{Ψ_q}\).
+                        \(\mathrm{Z_1}\) can be obtained
                         by treating the modified antibody model in the same manner.
                     </p>
                     <p class="footnote">[1]Zhang Jiao, Su Xiuxia, Yang Dong, Luan Chonglin,Label-free liquid crystal
@@ -154,13 +154,15 @@
                 <div class="mainText">
                     <p>In order to optimize the antigen fixation time, we did the relationship between the remaining
                         antigen concentration and time when the antigen was immobilized.</p>
-                    <p>In our step of fixing the antigen concentration, we can get the reaction formula \(\mathrm{\alpha}\) and give the
-                        pattern diagram ω<sub>1</sub>, where \(A\) is the antigen and \(M\) is the reaction site concentration
+                    <p>In our step of fixing the antigen concentration, we can get the reaction formula
+                        \(\mathrm{\alpha}\) and give the
+                        pattern diagram ω<sub>1</sub>, where \(A\) is the antigen and \(M\) is the reaction site
+                        concentration
                         on the
                         slide. Since the addition liquid fixation and treatment methods are unchanged, \(M_0\) does not
                         change.</p>
-                    <p>$$A+M\overset{K_a}{\underset{K_d}{\rightleftharpoons}}A-M \tag{ \alpha }$$</p>
-                    <div class="img"><img src="img/Model/1.png"></div>
+                    <p>$$A+M\overset{K_a}{\underset{K_d}{\rightleftharpoons}}A-M \tag{ α }$$</p>
+                    <div class="img"><img src="http://2018.igem.org/wiki/images/a/ae/T--DLUT_China_B--Model1.png"></div>
                     <p>If \(\theta=\frac{[A-M]}{M_0}\), that is, the position occupied by the immobilized antigen
                         accounts for the percentage of all positions of the entire slide. Then by the dynamics
                         relationship, we can list the relationship:</p>
@@ -177,20 +179,25 @@
                         concentration and time, as shown in Fig. 2(a) and (b).</p>
                     <table class="img">
                         <tr>
-                            <td><div id="fig2a"></div></td>
+                            <td>
+                                <div id="fig2a"></div>
+                            </td>
                         </tr>
                         <tr>
                             <td><p class="footnote">(a) One Concentration</p></td>
                         </tr>
                         <tr>
-                            <td><div id="fig2b"></div></td>
+                            <td>
+                                <div id="fig2b"></div>
+                            </td>
                         </tr>
                         <tr>
                             <td><p class="footnote">The relationships of multiple concentration</p></td>
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">Fig. 2 Relationship between residual antigen concentration and time when immobilized antigen</p>
+                                <p class="footnote">Fig.2 Relationship between residual antigen concentration and time
+                                    when immobilized antigen</p>
                             </td>
                         </tr>
                     </table>
@@ -205,7 +212,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="footnote">Fig. 3 Relationship between antigen fixation time and result gray value</p></td>
+                            <td><p class="footnote">Fig.3 Relationship between antigen fixation time and result gray
+                                value</p></td>
                         </tr>
                     </table>
                     <p>It can be concluded that the reaction can be stopped by 90% or 80% of the reaction, because it is
@@ -226,13 +234,13 @@
                         ratio for them.</p>
                     <p>After fixing the antigen. For immobilized antibodies, there is a reaction \(β\) and the pattern
                         diagram \(ω_2\):</p>
-                    <p>$$A'+R_T\overset{K_a}{\underset{K_d}{\rightleftharpoons}}R_TA' \tag{ \beta }$$</p>
+                    <p>$$A'+R_T\overset{K_a}{\underset{K_d}{\rightleftharpoons}}R_TA' \tag{ β }$$</p>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/2.png"></td>
+                            <td><img src="http://2018.igem.org/wiki/images/b/ba/T--DLUT_China_B--Model2.png"></td>
                         </tr>
                         <tr>
-                            <td><p class="footnote">Fig. ω<sub>2</sub> Fixed antibody pattern</p></td>
+                            <td><p class="footnote">Fig.ω<sub>2</sub> Fixed antibody pattern</p></td>
                         </tr>
                     </table>
                     <p>If we define a \(θ_2\), which represents the effect that we would like to achieve when
@@ -258,7 +266,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="footnote">Fig. 4 The relationship between the optimal ratio of antibody antigen concentration and θ<sub>2</sub></p></td>
+                            <td><p class="footnote">Fig.4 The relationship between the optimal ratio of antibody
+                                antigen concentration and θ<sub>2</sub></p></td>
                         </tr>
                     </table>
                     <p>When we determine the residual antigen concentration and time relationship when fixing the
@@ -279,10 +288,11 @@
                         result and time is made. The reaction \(\gamma\) and the pattern diagram ω<sub>3</sub> are as
                         follows:</p>
                     <p>$$R_TA\overset{K_{d1}}{\underset{K_{a1}}{\rightleftharpoons}}A+R_T$$</p>
-                    <p>$$P+R_T\overset{K_{a2}}{\underset{K_{d2}}{\rightleftharpoons}}R_TP \tag{ \gamma }$$</p>
+                    <p>$$P+R_T\overset{K_{a2}}{\underset{K_{d2}}{\rightleftharpoons}}R_TP \tag{ γ }$$</p>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/3.png" alt=""></td>
+                            <td><img src="http://2018.igem.org/wiki/images/5/5a/T--DLUT_China_B--Model3.png" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td>
@@ -295,7 +305,7 @@
                         substantially unchanged. Using this free antibody steady-state and kinetic knowledge, we derive
                         the relationship (9):</p>
                     <p>\begin{equation}\begin{split}
-                        [R_TA]=&Cexp[-(K_{d2}+K_{a2}[R_T])t]\\&+\frac{K_{d2}(K_{d2}[R_TA_0]+[R_T])-K_{a2}([P_0]-[R_TA_0]+[R_T])[R_T]}{K_{d2}+K_{a2}[R_T]}
+                        [R_TA]=&amp;Cexp[-(K_{d2}+K_{a2}[R_T])t]\\&amp;+\frac{K_{d2}(K_{d2}[R_TA_0]+[R_T])-K_{a2}([P_0]-[R_TA_0]+[R_T])[R_T]}{K_{d2}+K_{a2}[R_T]}
                         \end{split}\tag{9}\end{equation}</p>
                     <p>equal meaning between \([R_TA_0]\) and \([R_TA]_0\).</p>
                     <p>By simplification of relation (9) and combining relation (2) inside the grayscale model content,
@@ -322,7 +332,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="footnote">(b) Relationship between different fixed antigen-antibody concentration
+                            <td><p class="footnote">(b) Relationship between different fixed antigen-antibody
+                                concentration
                                 and detection time</p></td>
                         </tr>
                         <tr>
@@ -334,7 +345,7 @@
                             <td><p class="footnote">(c) Gray value and detection time relationship diagram</p></td>
                         </tr>
                         <tr>
-                            <td><p class="footnote">Fig. 5 Predictive graph during detection</p></td>
+                            <td><p class="footnote">Fig.5 Predictive graph during detection</p></td>
                         </tr>
                     </table>
                     <p>From the analysis results, we can optimize the detection time in order to achieve the most
@@ -353,69 +364,82 @@
                         interaction modes between protein particles and liquid crystal molecules. The protein density
                         threshold can be calculated by this model.</p>
                     <h3 class="title">Purpose</h3>
-                    <p>An important part of our liquid crystal experiment is to find an optimal antigen concentration,
-                        so we creatively proposed two models to calculate the β2-M density microscopically. The trouble
-                        is that we do not know the range of antigen molecules that can perturb liquid crystal
-                        molecules.</p>
+                    <p>An important part of our liquid crystal experiment is to determine an optimal antigen
+                        concentration, so we creatively proposed two models to calculate the β<sub>2</sub>-M density
+                        microscopically. The trouble is that we do not know the range of antigen molecules that can
+                        perturb liquid crystal molecules. Therefore, we consulted the relevant parameters, proposed two
+                        models, calculated the range of the single antigen molecule to perturb the liquid crystal, and
+                        finally determined the threshold of the antigen concentration, which was consistent with our
+                        experimental results.</p>
                     <h3 class="title">Parameters</h3>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/4.png"></td>
-                            <td><img src="img/Model/5.png"></td>
+                            <td colspan="2"><img
+                                    src="http://2018.igem.org/wiki/images/e/e2/T--DLUT_China_B--Model4.png"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img
+                                    src="http://2018.igem.org/wiki/images/c/c3/T--DLUT_China_B--Model5.png"></td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <p class="footnote">Fig.1 The chemical structure and the simulated structure of 5CB<br>2nm×0.4nm</p>
+                                <p class="footnote">Fig.6 The chemical structure (A) and the simulated structure (B) of
+                                    5CB<br>2nm×0.4nm</p>
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="img/Model/6.png" alt=""></td>
-                            <td><img src="img/Model/7.png" alt=""></td>
+                            <td><img src="http://2018.igem.org/wiki/images/6/6e/T--DLUT_China_B--Model6.png" alt="">
+                            </td>
+                            <td><img src="http://2018.igem.org/wiki/images/4/41/T--DLUT_China_B--Model7.png" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">Fig.2 The simulated structure of Nanoantibody<br>4nm×2.5nm</p>
+                                <p class="footnote">Fig.7 The simulated structure of Nanoantibody<br>4nm×2.5nm</p>
                             </td>
                             <td>
-                                <p class="footnote">Fig.3 The simulated structure of β2-MG<br>4.5nm×2.5nm×2.0nm</p>
+                                <p class="footnote">Fig.8 The simulated structure of β<sub>2</sub>-MG<br>4.5nm×2.5nm×2.0nm</p>
                             </td>
                         </tr>
                     </table>
-                    <h3 class="title">Two conjectures</h3>
+                    <h3 class="title">Hypothesis</h3>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/8.png" alt=""></td>
+                            <td><img src="http://2018.igem.org/wiki/images/9/90/T--DLUT_China_B--Model8.png" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">Fig.4 Two possible mechanisms for β2-M to disturb liquid crystal</p>
+                                <p class="footnote">Fig.9 Two possible mechanisms for β<sub>2</sub>-M to disturb liquid crystal</p>
                             </td>
                         </tr>
                     </table>
-                    <p>The process of protein perturbation of liquid crystal molecules is particularly complicated， so
+                    <p>The process of protein perturbation of liquid crystal molecules is particularly complicated, so
                         we can only guess the disturbance mechanism on our own. Inspired by dominoes and the blossoming
-                        of flowers, we guessed that there might be two mechanisms of disruption. We called them RADIAL
+                        of flowers, we proposed that there might be two mechanisms of disruption. We called them RADIAL
                         DOMINO MODEL and BLOOMING MODEL</p>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/9.png" alt=""></td>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3d/T--DLUT_China_B--Model9.png" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">Fig.5 RADIAL DOMINO MODEL</p>
+                                <p class="footnote">Fig.10 RADIAL DOMINO MODEL</p>
                             </td>
                         </tr>
                     </table>
-                    <p>Simplify the β2-M and 5CB into ball and stick. The distance between each two sticks is equal. Due
+                    <p>Simplify the β<sub>2</sub>-M and 5CB as ball and stick. The distance between each two sticks is equal. Due
                         to the interference of the ball, the first stick next to the ball will be inclined at an angle.
                         The first stick will affect the next stick until the last stick is aligned vertically.</p>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/10.png" alt="">F</td>
+                            <td><img src="http://2018.igem.org/wiki/images/f/f5/T--DLUT_China_B--Model10.png" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">Fig.6 BLOOMING MODEL</p>
+                                <p class="footnote">Fig.11 BLOOMING MODEL</p>
                             </td>
                         </tr>
                     </table>
@@ -431,11 +455,12 @@
                         force, dispersion force and induction force.</p>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/11.png" alt=""></td>
+                            <td><img src="http://2018.igem.org/wiki/images/c/ca/T--DLUT_China_B--Model11.png" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">Fig.7  van der Waals potential energy</p>
+                                <p class="footnote">Fig.12 van der Waals potential energy</p>
                             </td>
                         </tr>
                     </table>
@@ -450,11 +475,12 @@
                         a reference particle.</p>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/12.png" alt=""></td>
+                            <td><img src="http://2018.igem.org/wiki/images/9/94/T--DLUT_China_B--Model12.png" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">Fig.8 The sketch map of radial distribution function</p>
+                                <p class="footnote">Fig.13 The sketch map of radial distribution function</p>
                             </td>
                         </tr>
                     </table>
@@ -473,30 +499,32 @@
                         peak of the radial distribution function appears at 0.5nm, so the spacing of 5CB molecules is
                         around 0.5nm.</p>
 
-                    <p>2. Calculate the range of β2-M that can perturb 5CB</p>
+                    <p>2. Calculate the range of β<sub>2</sub>-M that can perturb 5CB</p>
                     <p>We assume 5CB molecule as a ellipse (\(a\)=1nm, \(b\)=0.1nm), we got the tilt angles of three
                         molecules by Matlab.</p>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/13.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="footnote">Fig.9  The tilt angles are 43°, 64°, 90° respectively.</p>
+                            <td><img src="http://2018.igem.org/wiki/images/8/82/T--DLUT_China_B--Model13.png" alt="">
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="img/Model/14.png" alt=""></td>
+                            <td>
+                                <p class="footnote">Fig.14 The tilt angles are 43°, 64°, 90° respectively.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3d/T--DLUT_China_B--Model9.png" alt="">
+                            </td>
                         </tr>
                     </table>
-                    <p>\(\therefore\)Maximum radius of β2-M that can perturb 5CB:</p>
-                    <p>$$R_1=[2\times\sin (64^\circ )+1]\mathrm{nm}=2.8\mathrm{nm}$$</p>
+                    <p>\(\therefore\)Maximum radius of β<sub>2</sub>-M that can perturb 5CB (Fig. 10):</p>
+                    <p>\(R_1=[2\times\sin (64^\circ )+1]\mathrm{nm}=\)<span class="highlight">2.8nm</span></p>
 
                     <p>3. Verification</p>
                     <p>In the liquid crystal experiment, the droplets dropped on the slide have a radius of about 2
                         mm.</p>
-                    <p>$$\therefore S=\pi R^2=4\pi\times 10^{12}\mathrm{nm^2}$$.</p>
-                    <p>The molecular weight of β2-M is 11800, the volume of the droplet is 10μl.</p>
+                    <p>$$\therefore S=\pi R^2=4\pi\times 10^{12}\mathrm{nm^2}$$</p>
+                    <p>The molecular weight of β<sub>2</sub>-M is 11800, the volume of the droplet is 10μL.</p>
                     <p></p>
                     <p>The area disturbed by each protein molecule is:</p>
                     <p>$$r=2.8\mathrm{nm}$$</p>
@@ -506,34 +534,41 @@
                     <p>$$N=\frac{S}{S_0}=5.1\times 10^{11}$$</p>
                     <p>$$m=\frac{11800\times 5.1\times 10^{11}}{6.02\times 10^{23}}=10^{-8}\mathrm{g}$$</p>
                     <p>\(\therefore\)Maximum concentration is:</p>
-                    <p>$$c=\frac{m}{V}=1000\mathrm{ng/ml}$$</p>
-                    <p>That is to say, when the concentration reaches 1000ng/ml, the image starts to be completely
+                    <p>\(c=\frac{m}{V}=\)<span class="highlight">1000ng/mL</span></p>
+                    <p>That is to say, when the concentration reaches 1000ng/mL, the image starts to be completely
                         bright. This is in good agreement with our experimental results. The following are the results
                         of the liquid crystal experiment.</p>
                     <table class="img">
                         <tr>
-                            <td><img src="img/Model/15.png" alt=""></td>
-                            <td><img src="img/Model/16.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="footnote">500ng/ml(β2-M)</p>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3a/T--DLUT_China_B--Model14.png" alt="">
                             </td>
-                            <td>
-                                <p class="footnote">600ng/ml(β2-M)</p>
+                            <td><img src="http://2018.igem.org/wiki/images/7/7a/T--DLUT_China_B--Model15.png" alt="">
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="img/Model/17.png" alt=""></td>
-                            <td><img src="img/Model/18.png" alt=""></td>
+                            <td>
+                                <p class="footnote">A. 500ng/ml(β<sub>2</sub>-M)</p>
+                            </td>
+                            <td>
+                                <p class="footnote">B. 600ng/ml(β<sub>2</sub>-M)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://2018.igem.org/wiki/images/3/3c/T--DLUT_China_B--Model16.png" alt="">
+                            </td>
+                            <td><img src="http://2018.igem.org/wiki/images/5/57/T--DLUT_China_B--Model17.png" alt="">
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <p class="footnote">700ng/ml(β2-M)</p>
+                                <p class="footnote">C. 700ng/ml(β<sub>2</sub>-M)</p>
                             </td>
                             <td>
-                                <p class="footnote">1000ng/ml(β2-M)</p>
+                                <p class="footnote">D. 1000ng/ml(β<sub>2</sub>-M)</p>
                             </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p class="footnote">Photographs of different antigen concentrations(photographed through a polarizing microscope)</p></td>
                         </tr>
                     </table>
                     <p class="footnote">[1] Jones J E. On the determination of molecular fields. From the equation of
@@ -574,12 +609,18 @@
     <script src="js/script.js"></script>
     <script src="js/model.js"></script>
     <script src="js/contents.js"></script>
-    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&action=raw&ctype=text/javascript"></script>-->
-    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&action=raw&ctype=text/javascript"></script>-->
+    <script type="text/javascript" async src="js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/script.js&amp;action=raw&amp;ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/contents.js&amp;action=raw&amp;ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/wiki/index.php?title=Template:DLUT_China_B/js/model.js&amp;action=raw&amp;ctype=text/javascript"></script>-->
+    <!--<script src="http://2018.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
                 topToggle();
+            });
+            $(window).scroll(function () {
+                contentsAnchor();
             });
         });
     </script>
